@@ -12,11 +12,12 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Utils\LogUtils;
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\HttpServer\Contract\ResponseInterface;
 use Psr\Container\ContainerInterface;
 
-abstract class Controller
+abstract class AbstractController
 {
     /**
      * @var ContainerInterface
@@ -33,10 +34,17 @@ abstract class Controller
      */
     protected $response;
 
+    /**
+     * @var \Psr\Log\LoggerInterface
+     */
+    private $logger;
+
     public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
         $this->request = $container->get(RequestInterface::class);
         $this->response = $container->get(ResponseInterface::class);
+
+        $this->logger = LogUtils::get(static::class);
     }
 }

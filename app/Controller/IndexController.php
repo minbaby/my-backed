@@ -12,8 +12,23 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-class IndexController extends Controller
+use App\Utils\LogUtils;
+use Hyperf\HttpServer\Annotation\Controller;
+use Hyperf\HttpServer\Annotation\GetMapping;
+use Psr\Container\ContainerInterface;
+use Psr\Log\LoggerInterface;
+
+/**
+ * Class IndexController
+ * @package App\Controller
+ * @Controller(prefix="/api/")
+ */
+class IndexController extends AbstractController
 {
+    /**
+     * @return array
+     * @GetMapping(path="/api/")
+     */
     public function index()
     {
         $user = $this->request->input('user', 'Hyperf');

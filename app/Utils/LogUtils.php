@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Utils;
+
+use Hyperf\Logger\LoggerFactory;
+use Hyperf\Utils\ApplicationContext;
+
+class LogUtils
+{
+    public static function get(string $name = 'app')
+    {
+        return ApplicationContext::getContainer()->get(LoggerFactory::class)->get($name);
+    }
+}
