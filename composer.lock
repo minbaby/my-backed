@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8090a9e6a530e902724e741e711d7617",
+    "content-hash": "ef41411caf929b2b72a7b9b1a7c29b7d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1477,16 +1477,16 @@
         },
         {
             "name": "hyperf/http-server",
-            "version": "v1.0.6",
+            "version": "v1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/http-server.git",
-                "reference": "fdfb4e6ee2efff6be65757f619fc4b9e1598272c"
+                "reference": "0c0a4b04288d5e4fad84136fa4d18a8a326bb3c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/http-server/zipball/fdfb4e6ee2efff6be65757f619fc4b9e1598272c",
-                "reference": "fdfb4e6ee2efff6be65757f619fc4b9e1598272c",
+                "url": "https://api.github.com/repos/hyperf-cloud/http-server/zipball/0c0a4b04288d5e4fad84136fa4d18a8a326bb3c0",
+                "reference": "0c0a4b04288d5e4fad84136fa4d18a8a326bb3c0",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1544,7 +1544,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-07-23T12:10:16+00:00"
+            "time": "2019-07-30T02:18:33+00:00"
         },
         {
             "name": "hyperf/logger",
@@ -2917,16 +2917,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.3.2",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "b592b26a24265a35172d8a2094d8b10f22b7cc39"
+                "reference": "8b0ae5742ce9aaa8b0075665862c1ca397d1c1d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/b592b26a24265a35172d8a2094d8b10f22b7cc39",
-                "reference": "b592b26a24265a35172d8a2094d8b10f22b7cc39",
+                "url": "https://api.github.com/repos/symfony/console/zipball/8b0ae5742ce9aaa8b0075665862c1ca397d1c1d9",
+                "reference": "8b0ae5742ce9aaa8b0075665862c1ca397d1c1d9",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2994,7 +2994,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-06-13T11:03:18+00:00"
+            "time": "2019-07-24T17:13:59+00:00"
         },
         {
             "name": "symfony/finder",
@@ -5444,18 +5444,18 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 },
                 {
                     "name": "Sebastian Heuer",
-                    "email": "sebastian@phpeople.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpeople.de"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Library for handling version information and constraints",
