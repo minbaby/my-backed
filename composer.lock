@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8090a9e6a530e902724e741e711d7617",
+    "content-hash": "ef41411caf929b2b72a7b9b1a7c29b7d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1294,16 +1294,16 @@
         },
         {
             "name": "hyperf/framework",
-            "version": "v1.0.6",
+            "version": "v1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/framework.git",
-                "reference": "4e31514d369f9230d61af5359422e604b8029916"
+                "reference": "a80008f303083028251f7851b5aa6c6f96c5c126"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/framework/zipball/4e31514d369f9230d61af5359422e604b8029916",
-                "reference": "4e31514d369f9230d61af5359422e604b8029916",
+                "url": "https://api.github.com/repos/hyperf-cloud/framework/zipball/a80008f303083028251f7851b5aa6c6f96c5c126",
+                "reference": "a80008f303083028251f7851b5aa6c6f96c5c126",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1362,7 +1362,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-07-19T03:13:35+00:00"
+            "time": "2019-07-28T15:23:50+00:00"
         },
         {
             "name": "hyperf/guzzle",
@@ -5444,18 +5444,18 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 },
                 {
                     "name": "Sebastian Heuer",
-                    "email": "sebastian@phpeople.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpeople.de"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Library for handling version information and constraints",
