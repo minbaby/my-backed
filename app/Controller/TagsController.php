@@ -14,7 +14,7 @@ use Hyperf\HttpServer\Contract\ResponseInterface;
 /**
  * Class TagsController
  * @package App\Controller
- * @Controller(prefix="/tags")
+ * @Controller(prefix="/api/tags")
  */
 class TagsController extends AbstractController
 {
@@ -28,7 +28,7 @@ class TagsController extends AbstractController
      * @param RequestInterface $request
      * @param ResponseInterface $response
      * @return \Psr\Http\Message\ResponseInterface
-     * @GetMapping(path="/tags")
+     * @GetMapping(path="list")
      */
     public function index(RequestInterface $request, ResponseInterface $response)
     {
