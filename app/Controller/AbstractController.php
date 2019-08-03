@@ -47,4 +47,29 @@ abstract class AbstractController
 
         $this->logger = LogUtils::get(static::class);
     }
+
+    /**
+     * @param RequestInterface $request
+     * @return array
+     */
+    protected function validatePageLimit(RequestInterface $request): array
+    {
+        $page = (int) $request->query('page', 1);
+        $limit = (int) $request->query('limit', 10);
+
+        if ($page <= 0) {
+            $this->logger->info("page {$page} ==> 1");
+            $page = 1;
+        }
+
+        if ($limit < 5) {
+            $this->logger->info("limit {$limit} ==> 5");
+            $limit = 5;
+        } elseif ($limit > 50) {
+            $this->logger->info("limit {$limit} ==> 50");
+            $limit = 50;
+        }
+
+        return [$page, $limit];
+    }
 }

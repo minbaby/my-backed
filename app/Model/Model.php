@@ -12,11 +12,12 @@ declare(strict_types=1);
 
 namespace App\Model;
 
+use Hyperf\Database\Model\SoftDeletes;
 use Hyperf\DbConnection\Model\Model as BaseModel;
-use Hyperf\ModelCache\Cacheable;
-use Hyperf\ModelCache\CacheableInterface;
 
-abstract class Model extends BaseModel implements CacheableInterface
+abstract class Model extends BaseModel
 {
-    use Cacheable;
+    use SoftDeletes;
+
+    protected $hidden = ['deleted_at'];
 }

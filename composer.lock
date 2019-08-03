@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8090a9e6a530e902724e741e711d7617",
+    "content-hash": "ea5ed0f1f5db6d5c6511ffaa49707d5c",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1731,16 +1731,16 @@
         },
         {
             "name": "hyperf/paginator",
-            "version": "v1.0.5",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/paginator.git",
-                "reference": "a9c6a97f5490287b1d17504d2cf87378602b5c95"
+                "reference": "b782a9d85453b37df3f2742fb99548e68f727ea6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/paginator/zipball/a9c6a97f5490287b1d17504d2cf87378602b5c95",
-                "reference": "a9c6a97f5490287b1d17504d2cf87378602b5c95",
+                "url": "https://api.github.com/repos/hyperf-cloud/paginator/zipball/b782a9d85453b37df3f2742fb99548e68f727ea6",
+                "reference": "b782a9d85453b37df3f2742fb99548e68f727ea6",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1778,7 +1778,6 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
                     "Hyperf\\Paginator\\": "src/"
                 }
@@ -1793,7 +1792,7 @@
                 "paginator",
                 "php"
             ],
-            "time": "2019-07-13T01:38:03+00:00"
+            "time": "2019-08-02T01:57:05+00:00"
         },
         {
             "name": "hyperf/pool",

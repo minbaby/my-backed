@@ -27,16 +27,22 @@ class IndexController extends AbstractController
 {
     /**
      * @return array
-     * @GetMapping(path="/api/")
+     * @GetMapping(path="/api/home/index")
      */
     public function index()
     {
         $user = $this->request->input('user', 'Hyperf');
         $method = $this->request->getMethod();
 
-        return [
-            'method' => $method,
-            'message' => "Hello {$user}.",
-        ];
+        $ret = [];
+        foreach(range(0, 100) as $i) {
+            $ret[] = [
+                "name" => "key=>{$i}",
+                "age" => $i,
+                "address" => "stress $i",
+                "tags" => ["tag->{$i}"],
+            ];
+        }
+        return $ret;
     }
 }
