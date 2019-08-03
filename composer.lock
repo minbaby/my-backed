@@ -1477,16 +1477,16 @@
         },
         {
             "name": "hyperf/http-server",
-            "version": "v1.0.6",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/http-server.git",
-                "reference": "fdfb4e6ee2efff6be65757f619fc4b9e1598272c"
+                "reference": "fd83693503d6fb81869120620c3e4837e98b9b28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/http-server/zipball/fdfb4e6ee2efff6be65757f619fc4b9e1598272c",
-                "reference": "fdfb4e6ee2efff6be65757f619fc4b9e1598272c",
+                "url": "https://api.github.com/repos/hyperf-cloud/http-server/zipball/fd83693503d6fb81869120620c3e4837e98b9b28",
+                "reference": "fd83693503d6fb81869120620c3e4837e98b9b28",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1527,9 +1527,8 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\HttpServer\\": "src"
+                    "Hyperf\\HttpServer\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1544,7 +1543,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-07-23T12:10:16+00:00"
+            "time": "2019-08-02T01:57:05+00:00"
         },
         {
             "name": "hyperf/logger",
@@ -1987,16 +1986,16 @@
         },
         {
             "name": "hyperf/server",
-            "version": "v1.0.6",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/server.git",
-                "reference": "60fd28519c39ff49d84c51aabacf184c92d70c27"
+                "reference": "6f2449e7915d57e91d11f77cbb76f6c4e2ff8307"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/server/zipball/60fd28519c39ff49d84c51aabacf184c92d70c27",
-                "reference": "60fd28519c39ff49d84c51aabacf184c92d70c27",
+                "url": "https://api.github.com/repos/hyperf-cloud/server/zipball/6f2449e7915d57e91d11f77cbb76f6c4e2ff8307",
+                "reference": "6f2449e7915d57e91d11f77cbb76f6c4e2ff8307",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2035,9 +2034,8 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\Server\\": "src"
+                    "Hyperf\\Server\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2051,7 +2049,7 @@
                 "server",
                 "swoole"
             ],
-            "time": "2019-07-14T01:05:25+00:00"
+            "time": "2019-08-02T01:57:05+00:00"
         },
         {
             "name": "hyperf/utils",
@@ -2916,16 +2914,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.3.2",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "b592b26a24265a35172d8a2094d8b10f22b7cc39"
+                "reference": "8b0ae5742ce9aaa8b0075665862c1ca397d1c1d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/b592b26a24265a35172d8a2094d8b10f22b7cc39",
-                "reference": "b592b26a24265a35172d8a2094d8b10f22b7cc39",
+                "url": "https://api.github.com/repos/symfony/console/zipball/8b0ae5742ce9aaa8b0075665862c1ca397d1c1d9",
+                "reference": "8b0ae5742ce9aaa8b0075665862c1ca397d1c1d9",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2993,7 +2991,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-06-13T11:03:18+00:00"
+            "time": "2019-07-24T17:13:59+00:00"
         },
         {
             "name": "symfony/finder",
@@ -5443,18 +5441,18 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 },
                 {
                     "name": "Sebastian Heuer",
-                    "email": "sebastian@phpeople.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpeople.de"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Library for handling version information and constraints",
@@ -6075,8 +6073,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "FilterIterator implementation that filters files based on a list of suffixes.",
@@ -6123,8 +6121,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Simple template engine.",
@@ -6178,8 +6176,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Utility class for timing",
@@ -6958,8 +6956,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
