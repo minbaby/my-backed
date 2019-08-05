@@ -1666,16 +1666,16 @@
         },
         {
             "name": "hyperf/model-cache",
-            "version": "v1.0.5",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/model-cache.git",
-                "reference": "5b1a83ad33706826d37da18069de262b43361525"
+                "reference": "213d2c74e586a8a0512ed82b7aa69aa9809c119f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/model-cache/zipball/5b1a83ad33706826d37da18069de262b43361525",
-                "reference": "5b1a83ad33706826d37da18069de262b43361525",
+                "url": "https://api.github.com/repos/hyperf-cloud/model-cache/zipball/213d2c74e586a8a0512ed82b7aa69aa9809c119f",
+                "reference": "213d2c74e586a8a0512ed82b7aa69aa9809c119f",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1712,9 +1712,8 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\ModelCache\\": "src"
+                    "Hyperf\\ModelCache\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1727,7 +1726,7 @@
                 "model-cache",
                 "php"
             ],
-            "time": "2019-07-13T01:38:03+00:00"
+            "time": "2019-08-02T01:57:05+00:00"
         },
         {
             "name": "hyperf/paginator",
@@ -5443,18 +5442,18 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 },
                 {
                     "name": "Sebastian Heuer",
-                    "email": "sebastian@phpeople.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpeople.de"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Library for handling version information and constraints",
@@ -6075,8 +6074,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "FilterIterator implementation that filters files based on a list of suffixes.",
@@ -6123,8 +6122,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Simple template engine.",
@@ -6178,8 +6177,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Utility class for timing",
@@ -6958,8 +6957,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
