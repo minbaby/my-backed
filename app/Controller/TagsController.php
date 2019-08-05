@@ -33,8 +33,7 @@ class TagsController extends AbstractController
     public function index(RequestInterface $request, ResponseInterface $response)
     {
         [$page, $limit] = $this->validatePageLimit($request);
-        return $response
-            ->json($this->tagService->list($page, $limit))
+        return $this->success($response, $this->tagService->list($page, $limit))
             ->withAddedHeader('page', (string) $page)
             ->withAddedHeader('limit', (string) $limit);
     }

@@ -6,6 +6,7 @@ namespace App\Repository;
 use App\Model\Tags;
 use Hyperf\Contract\LengthAwarePaginatorInterface;
 use Hyperf\Di\Annotation\Inject;
+use Hyperf\Paginator\LengthAwarePaginator;
 
 class TagRepository
 {
@@ -18,7 +19,7 @@ class TagRepository
     /**
      * @param int $page
      * @param int $limit
-     * @return LengthAwarePaginatorInterface
+     * @return LengthAwarePaginatorInterface|LengthAwarePaginator
      */
     public function list(int $page, int $limit): LengthAwarePaginatorInterface
     {

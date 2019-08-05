@@ -72,4 +72,20 @@ abstract class AbstractController
 
         return [$page, $limit];
     }
+
+    /**
+     * @param ResponseInterface $response
+     * @param object|array $data
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    protected function success(ResponseInterface $response, $data): \Psr\Http\Message\ResponseInterface
+    {
+        $data = [
+            'code' => 0,
+            'message' => 'success',
+            'data' => $data
+        ];
+
+        return $response->json($data);
+    }
 }

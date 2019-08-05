@@ -21,6 +21,6 @@ class TagService
      */
     public function list(int $page, int $limit): array
     {
-        return $this->tagRepository->list($page, $limit)->items();
+        return $this->tagRepository->list($page, $limit)->toArray();
     }
 }
