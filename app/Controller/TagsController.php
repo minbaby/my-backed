@@ -7,6 +7,7 @@ namespace App\Controller;
 use App\Service\TagService;
 use Hyperf\Di\Annotation\Inject;
 use Hyperf\HttpServer\Annotation\Controller;
+use Hyperf\HttpServer\Annotation\DeleteMapping;
 use Hyperf\HttpServer\Annotation\GetMapping;
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\HttpServer\Contract\ResponseInterface;
@@ -43,9 +44,17 @@ class TagsController extends AbstractController
 
     }
 
-    public function remove(RequestInterface $request, ResponseInterface $response)
+    /**
+     * @param RequestInterface $request
+     * @param ResponseInterface $response
+     * @param string $id
+     * @return \Psr\Http\Message\ResponseInterface
+     * @DeleteMapping(path="{id}")
+     */
+    public function remove(RequestInterface $request, ResponseInterface $response, $id)
     {
-
+        $this->tagService->remove((int) $id);
+        return $this->success($response, []);
     }
 
     public function save(RequestInterface $request, ResponseInterface $response)

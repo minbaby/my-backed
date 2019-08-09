@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "doctrine/annotations",
-            "version": "v1.6.1",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "53120e0eb10355388d6ccbe462f1fea34ddadb24"
+                "reference": "fa4c4e861e809d6a1103bd620cce63ed91aedfeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/53120e0eb10355388d6ccbe462f1fea34ddadb24",
-                "reference": "53120e0eb10355388d6ccbe462f1fea34ddadb24",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/fa4c4e861e809d6a1103bd620cce63ed91aedfeb",
+                "reference": "fa4c4e861e809d6a1103bd620cce63ed91aedfeb",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -32,12 +32,12 @@
             },
             "require-dev": {
                 "doctrine/cache": "1.*",
-                "phpunit/phpunit": "^6.4"
+                "phpunit/phpunit": "^7.5@dev"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6.x-dev"
+                    "dev-master": "1.7.x-dev"
                 }
             },
             "autoload": {
@@ -51,16 +51,16 @@
             ],
             "authors": [
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
                     "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Jonathan Wage",
@@ -78,7 +78,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2019-03-25T19:12:02+00:00"
+            "time": "2019-08-08T18:11:40+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -217,16 +217,16 @@
         },
         {
             "name": "doctrine/lexer",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8"
+                "reference": "e17f069ede36f7534b95adec71910ed1b49c74ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/1febd6c3ef84253d7c815bed85fc622ad207a9f8",
-                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/e17f069ede36f7534b95adec71910ed1b49c74ea",
+                "reference": "e17f069ede36f7534b95adec71910ed1b49c74ea",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -236,15 +236,17 @@
                 ]
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": "^7.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.5"
+                "doctrine/coding-standard": "^6.0",
+                "phpstan/phpstan": "^0.11.8",
+                "phpunit/phpunit": "^8.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -258,12 +260,12 @@
             ],
             "authors": [
                 {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
                     "name": "Guilherme Blanco",
                     "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Johannes Schmitt",
@@ -279,7 +281,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-06-08T11:03:04+00:00"
+            "time": "2019-07-30T19:33:28+00:00"
         },
         {
             "name": "fig/http-message-util",
@@ -544,16 +546,16 @@
         },
         {
             "name": "hyperf/cache",
-            "version": "v1.0.6",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/cache.git",
-                "reference": "cf4b0bec830bcf849ab889109dc80cbbe3b89fec"
+                "reference": "6cb8806e81890199b6a2905de747402fcda5cb00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/cache/zipball/cf4b0bec830bcf849ab889109dc80cbbe3b89fec",
-                "reference": "cf4b0bec830bcf849ab889109dc80cbbe3b89fec",
+                "url": "https://api.github.com/repos/hyperf-cloud/cache/zipball/6cb8806e81890199b6a2905de747402fcda5cb00",
+                "reference": "6cb8806e81890199b6a2905de747402fcda5cb00",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -591,9 +593,8 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\Cache\\": "src"
+                    "Hyperf\\Cache\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -606,7 +607,7 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2019-07-23T07:03:25+00:00"
+            "time": "2019-08-07T06:53:49+00:00"
         },
         {
             "name": "hyperf/command",
@@ -667,16 +668,16 @@
         },
         {
             "name": "hyperf/config",
-            "version": "v1.0.4",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/config.git",
-                "reference": "26fca9332ed15329e80fa5371bf9aeb7a2e56c70"
+                "reference": "12ddee5b439caf2226abc45b2f507e7621bcd64e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/config/zipball/26fca9332ed15329e80fa5371bf9aeb7a2e56c70",
-                "reference": "26fca9332ed15329e80fa5371bf9aeb7a2e56c70",
+                "url": "https://api.github.com/repos/hyperf-cloud/config/zipball/12ddee5b439caf2226abc45b2f507e7621bcd64e",
+                "reference": "12ddee5b439caf2226abc45b2f507e7621bcd64e",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -722,7 +723,7 @@
                     "./src/Functions.php"
                 ],
                 "psr-4": {
-                    "Hyperf\\Config\\": "src"
+                    "Hyperf\\Config\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -737,20 +738,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-07-04T12:07:15+00:00"
+            "time": "2019-08-07T08:45:36+00:00"
         },
         {
             "name": "hyperf/constants",
-            "version": "v1.0.5",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/constants.git",
-                "reference": "8eb729de9f95f5b74b5eecd93fe98c5d8d73ad90"
+                "reference": "cc294c9b46a33b7f74ee5f26570e8e01452e8c35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/constants/zipball/8eb729de9f95f5b74b5eecd93fe98c5d8d73ad90",
-                "reference": "8eb729de9f95f5b74b5eecd93fe98c5d8d73ad90",
+                "url": "https://api.github.com/repos/hyperf-cloud/constants/zipball/cc294c9b46a33b7f74ee5f26570e8e01452e8c35",
+                "reference": "cc294c9b46a33b7f74ee5f26570e8e01452e8c35",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -778,9 +779,8 @@
                 "hyperf": []
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\Constants\\": "src"
+                    "Hyperf\\Constants\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -793,20 +793,20 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2019-07-13T01:38:03+00:00"
+            "time": "2019-08-02T01:57:05+00:00"
         },
         {
             "name": "hyperf/contract",
-            "version": "v1.0.6",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/contract.git",
-                "reference": "276b3ff34f13b032f5f5e34f758a222f13902e15"
+                "reference": "a163eec6b41e8e38bc35a630738097510f4c00c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/contract/zipball/276b3ff34f13b032f5f5e34f758a222f13902e15",
-                "reference": "276b3ff34f13b032f5f5e34f758a222f13902e15",
+                "url": "https://api.github.com/repos/hyperf-cloud/contract/zipball/a163eec6b41e8e38bc35a630738097510f4c00c5",
+                "reference": "a163eec6b41e8e38bc35a630738097510f4c00c5",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -832,9 +832,8 @@
                 "hyperf": []
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\Contract\\": "src"
+                    "Hyperf\\Contract\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -847,20 +846,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-07-23T16:08:38+00:00"
+            "time": "2019-08-02T08:45:43+00:00"
         },
         {
             "name": "hyperf/database",
-            "version": "v1.0.5",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/database.git",
-                "reference": "8de7cfcbcd51f3b91d0a525554da62d4ab7adaf3"
+                "reference": "ea79c1a04af448363f06144fbbbf0ebd6ccf6d73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/database/zipball/8de7cfcbcd51f3b91d0a525554da62d4ab7adaf3",
-                "reference": "8de7cfcbcd51f3b91d0a525554da62d4ab7adaf3",
+                "url": "https://api.github.com/repos/hyperf-cloud/database/zipball/ea79c1a04af448363f06144fbbbf0ebd6ccf6d73",
+                "reference": "ea79c1a04af448363f06144fbbbf0ebd6ccf6d73",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -894,9 +893,8 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\Database\\": "src"
+                    "Hyperf\\Database\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -909,20 +907,20 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2019-07-13T01:38:03+00:00"
+            "time": "2019-08-09T02:13:35+00:00"
         },
         {
             "name": "hyperf/db-connection",
-            "version": "v1.0.5",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/db-connection.git",
-                "reference": "92bfd16b3869ac67323b5227426ad8d68ebecb65"
+                "reference": "560e6e3d399c54ee193676b0132e0d2722037dd7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/db-connection/zipball/92bfd16b3869ac67323b5227426ad8d68ebecb65",
-                "reference": "92bfd16b3869ac67323b5227426ad8d68ebecb65",
+                "url": "https://api.github.com/repos/hyperf-cloud/db-connection/zipball/560e6e3d399c54ee193676b0132e0d2722037dd7",
+                "reference": "560e6e3d399c54ee193676b0132e0d2722037dd7",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -956,9 +954,8 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\DbConnection\\": "src"
+                    "Hyperf\\DbConnection\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -972,20 +969,20 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2019-07-13T01:38:03+00:00"
+            "time": "2019-08-02T02:00:46+00:00"
         },
         {
             "name": "hyperf/devtool",
-            "version": "v1.0.1",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/devtool.git",
-                "reference": "9c872b5b055a6ff3c41bd612c6589616dd67e8d3"
+                "reference": "813e187ed7e6df41cf8ca21b2518f53e0c840a42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/devtool/zipball/9c872b5b055a6ff3c41bd612c6589616dd67e8d3",
-                "reference": "9c872b5b055a6ff3c41bd612c6589616dd67e8d3",
+                "url": "https://api.github.com/repos/hyperf-cloud/devtool/zipball/813e187ed7e6df41cf8ca21b2518f53e0c840a42",
+                "reference": "813e187ed7e6df41cf8ca21b2518f53e0c840a42",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1017,9 +1014,8 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\Devtool\\": "src"
+                    "Hyperf\\Devtool\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1033,20 +1029,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-06-21T05:26:14+00:00"
+            "time": "2019-08-05T01:33:36+00:00"
         },
         {
             "name": "hyperf/di",
-            "version": "v1.0.6",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/di.git",
-                "reference": "ab3bc45e1c900069d01a7824e4a3d76468283eaf"
+                "reference": "8b7bd69c69f73a1853f39c98ead1cb530200574b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/di/zipball/ab3bc45e1c900069d01a7824e4a3d76468283eaf",
-                "reference": "ab3bc45e1c900069d01a7824e4a3d76468283eaf",
+                "url": "https://api.github.com/repos/hyperf-cloud/di/zipball/8b7bd69c69f73a1853f39c98ead1cb530200574b",
+                "reference": "8b7bd69c69f73a1853f39c98ead1cb530200574b",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1089,7 +1085,7 @@
                     "src/Functions.php"
                 ],
                 "psr-4": {
-                    "Hyperf\\Di\\": "src"
+                    "Hyperf\\Di\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1104,20 +1100,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-07-23T09:21:44+00:00"
+            "time": "2019-08-07T08:45:36+00:00"
         },
         {
             "name": "hyperf/dispatcher",
-            "version": "v1.0.6",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/dispatcher.git",
-                "reference": "e694ee653065219f2969d5133034484780dc9881"
+                "reference": "22427bff97e76d366f535cd82db0157089347309"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/dispatcher/zipball/e694ee653065219f2969d5133034484780dc9881",
-                "reference": "e694ee653065219f2969d5133034484780dc9881",
+                "url": "https://api.github.com/repos/hyperf-cloud/dispatcher/zipball/22427bff97e76d366f535cd82db0157089347309",
+                "reference": "22427bff97e76d366f535cd82db0157089347309",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1149,9 +1145,8 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\Dispatcher\\": "src"
+                    "Hyperf\\Dispatcher\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1167,20 +1162,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-07-17T03:41:51+00:00"
+            "time": "2019-08-02T01:57:05+00:00"
         },
         {
             "name": "hyperf/event",
-            "version": "v1.0.5",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/event.git",
-                "reference": "547f862df57c3c13eec7afbb40c2f1a99c39766a"
+                "reference": "a5c0645848042a023950e3a8787df9d069939c52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/event/zipball/547f862df57c3c13eec7afbb40c2f1a99c39766a",
-                "reference": "547f862df57c3c13eec7afbb40c2f1a99c39766a",
+                "url": "https://api.github.com/repos/hyperf-cloud/event/zipball/a5c0645848042a023950e3a8787df9d069939c52",
+                "reference": "a5c0645848042a023950e3a8787df9d069939c52",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1214,9 +1209,8 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\Event\\": "src"
+                    "Hyperf\\Event\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1230,20 +1224,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-07-13T01:38:03+00:00"
+            "time": "2019-08-02T01:57:05+00:00"
         },
         {
             "name": "hyperf/exception-handler",
-            "version": "v1.0.1",
+            "version": "v1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/exception-handler.git",
-                "reference": "c28f9ed6f90a50ce8009b3048546ffe8787937a6"
+                "reference": "3287d5b9ecda883c1aa401b9b27b0f0cf643722b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/exception-handler/zipball/c28f9ed6f90a50ce8009b3048546ffe8787937a6",
-                "reference": "c28f9ed6f90a50ce8009b3048546ffe8787937a6",
+                "url": "https://api.github.com/repos/hyperf-cloud/exception-handler/zipball/3287d5b9ecda883c1aa401b9b27b0f0cf643722b",
+                "reference": "3287d5b9ecda883c1aa401b9b27b0f0cf643722b",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1290,20 +1284,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-06-20T09:52:16+00:00"
+            "time": "2019-07-28T15:23:28+00:00"
         },
         {
             "name": "hyperf/framework",
-            "version": "v1.0.6",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/framework.git",
-                "reference": "4e31514d369f9230d61af5359422e604b8029916"
+                "reference": "63954e55bd20eaf9f2fd99e0fe96ffc2bf62bc03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/framework/zipball/4e31514d369f9230d61af5359422e604b8029916",
-                "reference": "4e31514d369f9230d61af5359422e604b8029916",
+                "url": "https://api.github.com/repos/hyperf-cloud/framework/zipball/63954e55bd20eaf9f2fd99e0fe96ffc2bf62bc03",
+                "reference": "63954e55bd20eaf9f2fd99e0fe96ffc2bf62bc03",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1344,9 +1338,8 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\Framework\\": "src"
+                    "Hyperf\\Framework\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1362,20 +1355,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-07-19T03:13:35+00:00"
+            "time": "2019-08-07T08:24:13+00:00"
         },
         {
             "name": "hyperf/guzzle",
-            "version": "v1.0.5",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/guzzle.git",
-                "reference": "93af249117ecc3b6248d9bfa4c670b0a8bcbef00"
+                "reference": "efe2760f2ba5b6f0de07e3d45c6ea11d6ccc751d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/guzzle/zipball/93af249117ecc3b6248d9bfa4c670b0a8bcbef00",
-                "reference": "93af249117ecc3b6248d9bfa4c670b0a8bcbef00",
+                "url": "https://api.github.com/repos/hyperf-cloud/guzzle/zipball/efe2760f2ba5b6f0de07e3d45c6ea11d6ccc751d",
+                "reference": "efe2760f2ba5b6f0de07e3d45c6ea11d6ccc751d",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1420,20 +1413,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-07-16T05:47:06+00:00"
+            "time": "2019-08-02T02:25:44+00:00"
         },
         {
             "name": "hyperf/http-message",
-            "version": "v1.0.6",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/http-message.git",
-                "reference": "74a1623f2fa1c263b04ccf7a2ea0f48c98567bf0"
+                "reference": "a7c417913bcf4e5eb6edd1dda5d6bc6ac6eccc92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/http-message/zipball/74a1623f2fa1c263b04ccf7a2ea0f48c98567bf0",
-                "reference": "74a1623f2fa1c263b04ccf7a2ea0f48c98567bf0",
+                "url": "https://api.github.com/repos/hyperf-cloud/http-message/zipball/a7c417913bcf4e5eb6edd1dda5d6bc6ac6eccc92",
+                "reference": "a7c417913bcf4e5eb6edd1dda5d6bc6ac6eccc92",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1473,20 +1466,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-07-23T17:52:40+00:00"
+            "time": "2019-08-07T08:24:13+00:00"
         },
         {
             "name": "hyperf/http-server",
-            "version": "v1.0.6",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/http-server.git",
-                "reference": "fdfb4e6ee2efff6be65757f619fc4b9e1598272c"
+                "reference": "c3ab62a5fed8f42d6df9135a9e1a9a1827564a83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/http-server/zipball/fdfb4e6ee2efff6be65757f619fc4b9e1598272c",
-                "reference": "fdfb4e6ee2efff6be65757f619fc4b9e1598272c",
+                "url": "https://api.github.com/repos/hyperf-cloud/http-server/zipball/c3ab62a5fed8f42d6df9135a9e1a9a1827564a83",
+                "reference": "c3ab62a5fed8f42d6df9135a9e1a9a1827564a83",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1527,9 +1520,8 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\HttpServer\\": "src"
+                    "Hyperf\\HttpServer\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1544,20 +1536,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-07-23T12:10:16+00:00"
+            "time": "2019-08-07T08:25:17+00:00"
         },
         {
             "name": "hyperf/logger",
-            "version": "v1.0.5",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/logger.git",
-                "reference": "1b46309cdd8ce26afde301bee5e13f7b6d4e95d5"
+                "reference": "1898aff7983b6c3d60289dab875874a140cd3f19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/logger/zipball/1b46309cdd8ce26afde301bee5e13f7b6d4e95d5",
-                "reference": "1b46309cdd8ce26afde301bee5e13f7b6d4e95d5",
+                "url": "https://api.github.com/repos/hyperf-cloud/logger/zipball/1898aff7983b6c3d60289dab875874a140cd3f19",
+                "reference": "1898aff7983b6c3d60289dab875874a140cd3f19",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1590,9 +1582,8 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\Logger\\": "src"
+                    "Hyperf\\Logger\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1605,20 +1596,20 @@
                 "logger",
                 "php"
             ],
-            "time": "2019-07-13T01:38:03+00:00"
+            "time": "2019-08-02T01:57:05+00:00"
         },
         {
             "name": "hyperf/memory",
-            "version": "v1.0.1",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/memory.git",
-                "reference": "2a5780a1cbd3425f5cfd4298379341f33bd6c246"
+                "reference": "df00bdda75c1d0e27a7e3f5aa65971bba91ace0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/memory/zipball/2a5780a1cbd3425f5cfd4298379341f33bd6c246",
-                "reference": "2a5780a1cbd3425f5cfd4298379341f33bd6c246",
+                "url": "https://api.github.com/repos/hyperf-cloud/memory/zipball/df00bdda75c1d0e27a7e3f5aa65971bba91ace0e",
+                "reference": "df00bdda75c1d0e27a7e3f5aa65971bba91ace0e",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1646,9 +1637,8 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\Memory\\": "src"
+                    "Hyperf\\Memory\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1662,20 +1652,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-06-20T09:52:16+00:00"
+            "time": "2019-08-02T01:57:05+00:00"
         },
         {
             "name": "hyperf/model-cache",
-            "version": "v1.0.5",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/model-cache.git",
-                "reference": "5b1a83ad33706826d37da18069de262b43361525"
+                "reference": "14c41609f647a64f442af13ea9bc070325586ea0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/model-cache/zipball/5b1a83ad33706826d37da18069de262b43361525",
-                "reference": "5b1a83ad33706826d37da18069de262b43361525",
+                "url": "https://api.github.com/repos/hyperf-cloud/model-cache/zipball/14c41609f647a64f442af13ea9bc070325586ea0",
+                "reference": "14c41609f647a64f442af13ea9bc070325586ea0",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1712,9 +1702,8 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\ModelCache\\": "src"
+                    "Hyperf\\ModelCache\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1727,7 +1716,7 @@
                 "model-cache",
                 "php"
             ],
-            "time": "2019-07-13T01:38:03+00:00"
+            "time": "2019-08-07T08:21:06+00:00"
         },
         {
             "name": "hyperf/paginator",
@@ -1796,16 +1785,16 @@
         },
         {
             "name": "hyperf/pool",
-            "version": "v1.0.4",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/pool.git",
-                "reference": "c5ab630b2fc1714649b0d3538db27488c608be9b"
+                "reference": "77385a3e0d3c624ab315a38b7e8f99f9cfe4958a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/pool/zipball/c5ab630b2fc1714649b0d3538db27488c608be9b",
-                "reference": "c5ab630b2fc1714649b0d3538db27488c608be9b",
+                "url": "https://api.github.com/repos/hyperf-cloud/pool/zipball/77385a3e0d3c624ab315a38b7e8f99f9cfe4958a",
+                "reference": "77385a3e0d3c624ab315a38b7e8f99f9cfe4958a",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1836,9 +1825,8 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\Pool\\": "src"
+                    "Hyperf\\Pool\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1852,20 +1840,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-07-08T06:57:34+00:00"
+            "time": "2019-08-02T01:57:05+00:00"
         },
         {
             "name": "hyperf/process",
-            "version": "v1.0.1",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/process.git",
-                "reference": "86c6a5daa1427a164e593511f9d92325269da58e"
+                "reference": "cda7302ffbb1d5c38aa187778782ef2c2901b8c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/process/zipball/86c6a5daa1427a164e593511f9d92325269da58e",
-                "reference": "86c6a5daa1427a164e593511f9d92325269da58e",
+                "url": "https://api.github.com/repos/hyperf-cloud/process/zipball/cda7302ffbb1d5c38aa187778782ef2c2901b8c1",
+                "reference": "cda7302ffbb1d5c38aa187778782ef2c2901b8c1",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1903,7 +1891,6 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
                     "Hyperf\\Process\\": "src/"
                 }
@@ -1918,20 +1905,20 @@
                 "php",
                 "process"
             ],
-            "time": "2019-06-20T09:52:16+00:00"
+            "time": "2019-08-02T07:46:12+00:00"
         },
         {
             "name": "hyperf/redis",
-            "version": "v1.0.5",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/redis.git",
-                "reference": "4a49c5ab6e492b5d67c3ad2399268a4ce626ae9d"
+                "reference": "fdd81e8775f8d8f45c12d3f7a95e914e78d8010b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/redis/zipball/4a49c5ab6e492b5d67c3ad2399268a4ce626ae9d",
-                "reference": "4a49c5ab6e492b5d67c3ad2399268a4ce626ae9d",
+                "url": "https://api.github.com/repos/hyperf-cloud/redis/zipball/fdd81e8775f8d8f45c12d3f7a95e914e78d8010b",
+                "reference": "fdd81e8775f8d8f45c12d3f7a95e914e78d8010b",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1967,7 +1954,6 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
                     "Hyperf\\Redis\\": "src/"
                 }
@@ -1983,20 +1969,20 @@
                 "pool",
                 "redis"
             ],
-            "time": "2019-07-13T01:38:03+00:00"
+            "time": "2019-08-02T01:57:05+00:00"
         },
         {
             "name": "hyperf/server",
-            "version": "v1.0.6",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/server.git",
-                "reference": "60fd28519c39ff49d84c51aabacf184c92d70c27"
+                "reference": "6f2449e7915d57e91d11f77cbb76f6c4e2ff8307"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/server/zipball/60fd28519c39ff49d84c51aabacf184c92d70c27",
-                "reference": "60fd28519c39ff49d84c51aabacf184c92d70c27",
+                "url": "https://api.github.com/repos/hyperf-cloud/server/zipball/6f2449e7915d57e91d11f77cbb76f6c4e2ff8307",
+                "reference": "6f2449e7915d57e91d11f77cbb76f6c4e2ff8307",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2035,9 +2021,8 @@
                 }
             },
             "autoload": {
-                "files": [],
                 "psr-4": {
-                    "Hyperf\\Server\\": "src"
+                    "Hyperf\\Server\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2051,20 +2036,20 @@
                 "server",
                 "swoole"
             ],
-            "time": "2019-07-14T01:05:25+00:00"
+            "time": "2019-08-02T01:57:05+00:00"
         },
         {
             "name": "hyperf/utils",
-            "version": "v1.0.6",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/utils.git",
-                "reference": "d97a3be0994209cebf4a3086f6d0a92718cce495"
+                "reference": "141799eeb4a1b0e35890883d91e0bbed97983525"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/utils/zipball/d97a3be0994209cebf4a3086f6d0a92718cce495",
-                "reference": "d97a3be0994209cebf4a3086f6d0a92718cce495",
+                "url": "https://api.github.com/repos/hyperf-cloud/utils/zipball/141799eeb4a1b0e35890883d91e0bbed97983525",
+                "reference": "141799eeb4a1b0e35890883d91e0bbed97983525",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2083,13 +2068,20 @@
                 "malukenho/docheader": "^0.1.6",
                 "mockery/mockery": "^1.0",
                 "phpunit/phpunit": "^7.0.0",
+                "symfony/property-access": "^4.3",
+                "symfony/serializer": "^4.3",
                 "symfony/var-dumper": "^4.1"
             },
             "suggest": {
+                "symfony/property-access": "Required to use SymfonyNormalizer (^4.3)",
+                "symfony/serializer": "Required to use SymfonyNormalizer (^4.3)",
                 "symfony/var-dumper": "Required to use the dd function (^4.1)."
             },
             "type": "library",
             "extra": {
+                "hyperf": {
+                    "config": "Hyperf\\Utils\\ConfigProvider"
+                },
                 "branch-alias": {
                     "dev-master": "1.0-dev"
                 }
@@ -2099,7 +2091,7 @@
                     "src/Functions.php"
                 ],
                 "psr-4": {
-                    "Hyperf\\Utils\\": "src"
+                    "Hyperf\\Utils\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2113,7 +2105,7 @@
                 "swoole",
                 "utils"
             ],
-            "time": "2019-07-18T08:02:35+00:00"
+            "time": "2019-08-07T09:33:45+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2201,16 +2193,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.21.3",
+            "version": "2.22.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "58bdbbfab17ccd2ec7347b99e997f18232def4dc"
+                "reference": "738fbd8d80b2c5e158fda76c29c2de432fcc6f7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/58bdbbfab17ccd2ec7347b99e997f18232def4dc",
-                "reference": "58bdbbfab17ccd2ec7347b99e997f18232def4dc",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/738fbd8d80b2c5e158fda76c29c2de432fcc6f7e",
+                "reference": "738fbd8d80b2c5e158fda76c29c2de432fcc6f7e",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2227,7 +2219,7 @@
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.14 || ^3.0",
                 "kylekatarnls/multi-tester": "^1.1",
-                "phpmd/phpmd": "^2.6",
+                "phpmd/phpmd": "dev-php-7.1-compatibility",
                 "phpstan/phpstan": "^0.11",
                 "phpunit/phpunit": "^7.5 || ^8.0",
                 "squizlabs/php_codesniffer": "^3.4"
@@ -2270,7 +2262,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-07-18T18:47:28+00:00"
+            "time": "2019-08-07T12:36:44+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -2916,16 +2908,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.3.2",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "b592b26a24265a35172d8a2094d8b10f22b7cc39"
+                "reference": "8b0ae5742ce9aaa8b0075665862c1ca397d1c1d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/b592b26a24265a35172d8a2094d8b10f22b7cc39",
-                "reference": "b592b26a24265a35172d8a2094d8b10f22b7cc39",
+                "url": "https://api.github.com/repos/symfony/console/zipball/8b0ae5742ce9aaa8b0075665862c1ca397d1c1d9",
+                "reference": "8b0ae5742ce9aaa8b0075665862c1ca397d1c1d9",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2993,20 +2985,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-06-13T11:03:18+00:00"
+            "time": "2019-07-24T17:13:59+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v4.3.2",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "33c21f7d5d3dc8a140c282854a7e13aeb5d0f91a"
+                "reference": "9638d41e3729459860bb96f6247ccb61faaa45f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/33c21f7d5d3dc8a140c282854a7e13aeb5d0f91a",
-                "reference": "33c21f7d5d3dc8a140c282854a7e13aeb5d0f91a",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/9638d41e3729459860bb96f6247ccb61faaa45f2",
+                "reference": "9638d41e3729459860bb96f6247ccb61faaa45f2",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3048,20 +3040,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2019-06-13T11:03:18+00:00"
+            "time": "2019-06-28T13:16:30+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.11.0",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "82ebae02209c21113908c229e9883c419720738a"
+                "reference": "550ebaac289296ce228a706d0867afc34687e3f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/82ebae02209c21113908c229e9883c419720738a",
-                "reference": "82ebae02209c21113908c229e9883c419720738a",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/550ebaac289296ce228a706d0867afc34687e3f4",
+                "reference": "550ebaac289296ce228a706d0867afc34687e3f4",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3079,7 +3071,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -3096,12 +3088,12 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                },
-                {
                     "name": "Gert de Pagter",
                     "email": "BackEndTea@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -3112,20 +3104,20 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2019-02-06T07:57:58+00:00"
+            "time": "2019-08-06T08:03:45+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.11.0",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609"
+                "reference": "b42a2f66e8f1b15ccf25652c3424265923eb4f17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
-                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/b42a2f66e8f1b15ccf25652c3424265923eb4f17",
+                "reference": "b42a2f66e8f1b15ccf25652c3424265923eb4f17",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3143,7 +3135,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -3177,20 +3169,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-02-06T07:57:58+00:00"
+            "time": "2019-08-06T08:03:45+00:00"
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.11.0",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
-                "reference": "d1fb4abcc0c47be136208ad9d68bf59f1ee17abd"
+                "reference": "2ceb49eaccb9352bff54d22570276bb75ba4a188"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/d1fb4abcc0c47be136208ad9d68bf59f1ee17abd",
-                "reference": "d1fb4abcc0c47be136208ad9d68bf59f1ee17abd",
+                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/2ceb49eaccb9352bff54d22570276bb75ba4a188",
+                "reference": "2ceb49eaccb9352bff54d22570276bb75ba4a188",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3205,7 +3197,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -3241,7 +3233,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-02-06T07:57:58+00:00"
+            "time": "2019-08-06T08:03:45+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -3309,16 +3301,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v4.3.2",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "934ab1d18545149e012aa898cf02e9f23790f7a0"
+                "reference": "4e3e39cc485304f807622bdc64938e4633396406"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/934ab1d18545149e012aa898cf02e9f23790f7a0",
-                "reference": "934ab1d18545149e012aa898cf02e9f23790f7a0",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/4e3e39cc485304f807622bdc64938e4633396406",
+                "reference": "4e3e39cc485304f807622bdc64938e4633396406",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3387,7 +3379,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2019-06-13T11:03:18+00:00"
+            "time": "2019-07-18T10:34:59+00:00"
         },
         {
             "name": "symfony/translation-contracts",
@@ -4499,16 +4491,16 @@
         },
         {
             "name": "mockery/mockery",
-            "version": "1.2.2",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mockery/mockery.git",
-                "reference": "0eb0b48c3f07b3b89f5169ce005b7d05b18cf1d2"
+                "reference": "4eff936d83eb809bde2c57a3cea0ee9643769031"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mockery/mockery/zipball/0eb0b48c3f07b3b89f5169ce005b7d05b18cf1d2",
-                "reference": "0eb0b48c3f07b3b89f5169ce005b7d05b18cf1d2",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/4eff936d83eb809bde2c57a3cea0ee9643769031",
+                "reference": "4eff936d83eb809bde2c57a3cea0ee9643769031",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -4566,7 +4558,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2019-02-13T09:37:52+00:00"
+            "time": "2019-08-07T15:01:07+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -4703,16 +4695,16 @@
         },
         {
             "name": "nette/di",
-            "version": "v3.0.0",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/di.git",
-                "reference": "19d83539245aaacb59470828919182411061841f"
+                "reference": "4aff517a1c6bb5c36fa09733d4cea089f529de6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/di/zipball/19d83539245aaacb59470828919182411061841f",
-                "reference": "19d83539245aaacb59470828919182411061841f",
+                "url": "https://api.github.com/repos/nette/di/zipball/4aff517a1c6bb5c36fa09733d4cea089f529de6d",
+                "reference": "4aff517a1c6bb5c36fa09733d4cea089f529de6d",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -4778,7 +4770,7 @@
                 "nette",
                 "static"
             ],
-            "time": "2019-04-03T19:35:46+00:00"
+            "time": "2019-08-07T12:11:33+00:00"
         },
         {
             "name": "nette/finder",
@@ -5689,16 +5681,16 @@
         },
         {
             "name": "phpmd/phpmd",
-            "version": "2.6.1",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpmd/phpmd.git",
-                "reference": "7425e155cf22cdd2b4dd3458a7da4cf6c0201562"
+                "reference": "a05a999c644f4bc9a204846017db7bb7809fbe4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpmd/phpmd/zipball/7425e155cf22cdd2b4dd3458a7da4cf6c0201562",
-                "reference": "7425e155cf22cdd2b4dd3458a7da4cf6c0201562",
+                "url": "https://api.github.com/repos/phpmd/phpmd/zipball/a05a999c644f4bc9a204846017db7bb7809fbe4c",
+                "reference": "a05a999c644f4bc9a204846017db7bb7809fbe4c",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -5713,13 +5705,15 @@
                 "php": ">=5.3.9"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.0",
+                "gregwar/rst": "^1.0",
+                "mikey179/vfsstream": "^1.6.4",
+                "phpunit/phpunit": "^4.8.36 || ^5.7.27",
                 "squizlabs/php_codesniffer": "^2.0"
             },
             "bin": [
                 "src/bin/phpmd"
             ],
-            "type": "project",
+            "type": "library",
             "autoload": {
                 "psr-0": {
                     "PHPMD\\": "src/main/php"
@@ -5737,19 +5731,19 @@
                     "homepage": "https://github.com/manuelpichler"
                 },
                 {
-                    "name": "Other contributors",
-                    "role": "Contributors",
-                    "homepage": "https://github.com/phpmd/phpmd/graphs/contributors"
-                },
-                {
                     "name": "Marc Würth",
                     "role": "Project Maintainer",
                     "email": "ravage@bluewin.ch",
                     "homepage": "https://github.com/ravage84"
+                },
+                {
+                    "name": "Other contributors",
+                    "role": "Contributors",
+                    "homepage": "https://github.com/phpmd/phpmd/graphs/contributors"
                 }
             ],
             "description": "PHPMD is a spin-off project of PHP Depend and aims to be a PHP equivalent of the well known Java tool PMD.",
-            "homepage": "http://phpmd.org/",
+            "homepage": "https://phpmd.org/",
             "keywords": [
                 "mess detection",
                 "mess detector",
@@ -5757,7 +5751,7 @@
                 "phpmd",
                 "pmd"
             ],
-            "time": "2019-07-05T23:07:02+00:00"
+            "time": "2019-07-30T21:13:32+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -7002,16 +6996,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v4.3.2",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "9198eea354be75794a7b1064de00d9ae9ae5090f"
+                "reference": "a17a2aea43950ce83a0603ed301bac362eb86870"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/9198eea354be75794a7b1064de00d9ae9ae5090f",
-                "reference": "9198eea354be75794a7b1064de00d9ae9ae5090f",
+                "url": "https://api.github.com/repos/symfony/config/zipball/a17a2aea43950ce83a0603ed301bac362eb86870",
+                "reference": "a17a2aea43950ce83a0603ed301bac362eb86870",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -7068,20 +7062,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2019-06-08T06:33:08+00:00"
+            "time": "2019-07-18T10:34:59+00:00"
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v4.3.2",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "b851928be349c065197fdc0832f78d85139e3903"
+                "reference": "9ad1b83d474ae17156f6914cb81ffe77aeac3a9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/b851928be349c065197fdc0832f78d85139e3903",
-                "reference": "b851928be349c065197fdc0832f78d85139e3903",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/9ad1b83d474ae17156f6914cb81ffe77aeac3a9b",
+                "reference": "9ad1b83d474ae17156f6914cb81ffe77aeac3a9b",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -7147,20 +7141,20 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2019-06-15T04:08:07+00:00"
+            "time": "2019-07-26T07:03:43+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v4.3.2",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "d257021c1ab28d48d24a16de79dfab445ce93398"
+                "reference": "212b020949331b6531250584531363844b34a94e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/d257021c1ab28d48d24a16de79dfab445ce93398",
-                "reference": "d257021c1ab28d48d24a16de79dfab445ce93398",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/212b020949331b6531250584531363844b34a94e",
+                "reference": "212b020949331b6531250584531363844b34a94e",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -7223,7 +7217,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2019-06-13T11:03:18+00:00"
+            "time": "2019-06-27T06:42:14+00:00"
         },
         {
             "name": "symfony/event-dispatcher-contracts",
@@ -7291,7 +7285,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.3.2",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -7347,7 +7341,7 @@
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v4.3.2",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
@@ -7407,16 +7401,16 @@
         },
         {
             "name": "symfony/polyfill-php70",
-            "version": "v1.11.0",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php70.git",
-                "reference": "bc4858fb611bda58719124ca079baff854149c89"
+                "reference": "54b4c428a0054e254223797d2713c31e08610831"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/bc4858fb611bda58719124ca079baff854149c89",
-                "reference": "bc4858fb611bda58719124ca079baff854149c89",
+                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/54b4c428a0054e254223797d2713c31e08610831",
+                "reference": "54b4c428a0054e254223797d2713c31e08610831",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -7432,7 +7426,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -7468,20 +7462,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-02-06T07:57:58+00:00"
+            "time": "2019-08-06T08:03:45+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.11.0",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
-                "reference": "ab50dcf166d5f577978419edd37aa2bb8eabce0c"
+                "reference": "04ce3335667451138df4307d6a9b61565560199e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/ab50dcf166d5f577978419edd37aa2bb8eabce0c",
-                "reference": "ab50dcf166d5f577978419edd37aa2bb8eabce0c",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/04ce3335667451138df4307d6a9b61565560199e",
+                "reference": "04ce3335667451138df4307d6a9b61565560199e",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -7496,7 +7490,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -7529,11 +7523,11 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-02-06T07:57:58+00:00"
+            "time": "2019-08-06T08:03:45+00:00"
         },
         {
             "name": "symfony/process",
-            "version": "v4.3.2",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -7588,7 +7582,7 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v4.3.2",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",

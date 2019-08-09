@@ -25,4 +25,9 @@ class TagRepository
     {
         return $this->tags->newQuery()->paginate($limit, ['*'], 'page', $page);
     }
+
+    public function remove(int $id)
+    {
+        $this->tags->newQuery()->where('id', $id)->delete();
+    }
 }

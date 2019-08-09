@@ -23,4 +23,9 @@ class TagService
     {
         return $this->tagRepository->list($page, $limit)->toArray();
     }
+
+    public function remove(int $id)
+    {
+        return $this->tagRepository->remove($id);
+    }
 }
