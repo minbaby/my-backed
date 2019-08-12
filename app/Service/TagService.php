@@ -28,4 +28,9 @@ class TagService
     {
         return $this->tagRepository->remove($id);
     }
+
+    public function getById(int $id)
+    {
+        return $this->tagRepository->get($id);
+    }
 }

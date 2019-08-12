@@ -49,6 +49,18 @@ class TagsController extends AbstractController
      * @param ResponseInterface $response
      * @param string $id
      * @return \Psr\Http\Message\ResponseInterface
+     * @GetMapping(path="{id}")
+     */
+    public function getById(RequestInterface $request, ResponseInterface $response, string $id)
+    {
+        return $this->success($response, $this->tagService->getById((int) $id));
+    }
+
+    /**
+     * @param RequestInterface $request
+     * @param ResponseInterface $response
+     * @param string $id
+     * @return \Psr\Http\Message\ResponseInterface
      * @DeleteMapping(path="{id}")
      */
     public function remove(RequestInterface $request, ResponseInterface $response, $id)

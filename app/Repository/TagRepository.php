@@ -30,4 +30,9 @@ class TagRepository
     {
         $this->tags->newQuery()->where('id', $id)->delete();
     }
+
+    public function get(int $id)
+    {
+        return $this->tags->newQuery()->where('id', $id)->first();
+    }
 }
