@@ -78,7 +78,7 @@ abstract class AbstractController
      * @param object|array $data
      * @return \Psr\Http\Message\ResponseInterface
      */
-    protected function success(ResponseInterface $response, $data): \Psr\Http\Message\ResponseInterface
+    protected function success(ResponseInterface $response, $data = []): \Psr\Http\Message\ResponseInterface
     {
         $data = [
             'code' => 0,

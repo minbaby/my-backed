@@ -797,16 +797,16 @@
         },
         {
             "name": "hyperf/contract",
-            "version": "v1.0.10",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/contract.git",
-                "reference": "a163eec6b41e8e38bc35a630738097510f4c00c5"
+                "reference": "628469f1465f5c5739d8e2061ef6e4fa3cc385c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/contract/zipball/a163eec6b41e8e38bc35a630738097510f4c00c5",
-                "reference": "a163eec6b41e8e38bc35a630738097510f4c00c5",
+                "url": "https://api.github.com/repos/hyperf-cloud/contract/zipball/628469f1465f5c5739d8e2061ef6e4fa3cc385c5",
+                "reference": "628469f1465f5c5739d8e2061ef6e4fa3cc385c5",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -846,20 +846,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-08-02T08:45:43+00:00"
+            "time": "2019-08-15T01:27:06+00:00"
         },
         {
             "name": "hyperf/database",
-            "version": "v1.0.10",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/database.git",
-                "reference": "ea79c1a04af448363f06144fbbbf0ebd6ccf6d73"
+                "reference": "36ab678825868483cc988cd594621841109b9edc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/database/zipball/ea79c1a04af448363f06144fbbbf0ebd6ccf6d73",
-                "reference": "ea79c1a04af448363f06144fbbbf0ebd6ccf6d73",
+                "url": "https://api.github.com/repos/hyperf-cloud/database/zipball/36ab678825868483cc988cd594621841109b9edc",
+                "reference": "36ab678825868483cc988cd594621841109b9edc",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -907,7 +907,7 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2019-08-09T02:13:35+00:00"
+            "time": "2019-08-14T05:29:20+00:00"
         },
         {
             "name": "hyperf/db-connection",
@@ -973,16 +973,16 @@
         },
         {
             "name": "hyperf/devtool",
-            "version": "v1.0.10",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/devtool.git",
-                "reference": "813e187ed7e6df41cf8ca21b2518f53e0c840a42"
+                "reference": "9e801b1d32970451e2b54870aad336fafa7d55f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/devtool/zipball/813e187ed7e6df41cf8ca21b2518f53e0c840a42",
-                "reference": "813e187ed7e6df41cf8ca21b2518f53e0c840a42",
+                "url": "https://api.github.com/repos/hyperf-cloud/devtool/zipball/9e801b1d32970451e2b54870aad336fafa7d55f5",
+                "reference": "9e801b1d32970451e2b54870aad336fafa7d55f5",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1029,20 +1029,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-08-05T01:33:36+00:00"
+            "time": "2019-08-08T09:48:23+00:00"
         },
         {
             "name": "hyperf/di",
-            "version": "v1.0.10",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/di.git",
-                "reference": "8b7bd69c69f73a1853f39c98ead1cb530200574b"
+                "reference": "5139ee890014f7924441eb0d80ede198d1e56bd7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/di/zipball/8b7bd69c69f73a1853f39c98ead1cb530200574b",
-                "reference": "8b7bd69c69f73a1853f39c98ead1cb530200574b",
+                "url": "https://api.github.com/repos/hyperf-cloud/di/zipball/5139ee890014f7924441eb0d80ede198d1e56bd7",
+                "reference": "5139ee890014f7924441eb0d80ede198d1e56bd7",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1100,7 +1100,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-08-07T08:45:36+00:00"
+            "time": "2019-08-08T05:59:25+00:00"
         },
         {
             "name": "hyperf/dispatcher",
@@ -1166,16 +1166,16 @@
         },
         {
             "name": "hyperf/event",
-            "version": "v1.0.9",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/event.git",
-                "reference": "a5c0645848042a023950e3a8787df9d069939c52"
+                "reference": "25ba50e60b10af122703fe9ff045356a660ecb7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/event/zipball/a5c0645848042a023950e3a8787df9d069939c52",
-                "reference": "a5c0645848042a023950e3a8787df9d069939c52",
+                "url": "https://api.github.com/repos/hyperf-cloud/event/zipball/25ba50e60b10af122703fe9ff045356a660ecb7d",
+                "reference": "25ba50e60b10af122703fe9ff045356a660ecb7d",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1224,7 +1224,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-08-02T01:57:05+00:00"
+            "time": "2019-08-09T03:35:47+00:00"
         },
         {
             "name": "hyperf/exception-handler",
@@ -1288,16 +1288,16 @@
         },
         {
             "name": "hyperf/framework",
-            "version": "v1.0.10",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/framework.git",
-                "reference": "63954e55bd20eaf9f2fd99e0fe96ffc2bf62bc03"
+                "reference": "3cda200b0d53d73df213c5f6df81594c42b4d0f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/framework/zipball/63954e55bd20eaf9f2fd99e0fe96ffc2bf62bc03",
-                "reference": "63954e55bd20eaf9f2fd99e0fe96ffc2bf62bc03",
+                "url": "https://api.github.com/repos/hyperf-cloud/framework/zipball/3cda200b0d53d73df213c5f6df81594c42b4d0f7",
+                "reference": "3cda200b0d53d73df213c5f6df81594c42b4d0f7",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1355,7 +1355,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-08-07T08:24:13+00:00"
+            "time": "2019-08-08T10:44:50+00:00"
         },
         {
             "name": "hyperf/guzzle",
@@ -1470,16 +1470,16 @@
         },
         {
             "name": "hyperf/http-server",
-            "version": "v1.0.10",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/http-server.git",
-                "reference": "c3ab62a5fed8f42d6df9135a9e1a9a1827564a83"
+                "reference": "2cf65048ddd601e90c1b4c3830d302bd385b9f91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/http-server/zipball/c3ab62a5fed8f42d6df9135a9e1a9a1827564a83",
-                "reference": "c3ab62a5fed8f42d6df9135a9e1a9a1827564a83",
+                "url": "https://api.github.com/repos/hyperf-cloud/http-server/zipball/2cf65048ddd601e90c1b4c3830d302bd385b9f91",
+                "reference": "2cf65048ddd601e90c1b4c3830d302bd385b9f91",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1536,7 +1536,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-08-07T08:25:17+00:00"
+            "time": "2019-08-13T01:57:51+00:00"
         },
         {
             "name": "hyperf/logger",
@@ -1973,16 +1973,16 @@
         },
         {
             "name": "hyperf/server",
-            "version": "v1.0.9",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/server.git",
-                "reference": "6f2449e7915d57e91d11f77cbb76f6c4e2ff8307"
+                "reference": "f187f65a83654b0d4349ea0894ec3ff33593812e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/server/zipball/6f2449e7915d57e91d11f77cbb76f6c4e2ff8307",
-                "reference": "6f2449e7915d57e91d11f77cbb76f6c4e2ff8307",
+                "url": "https://api.github.com/repos/hyperf-cloud/server/zipball/f187f65a83654b0d4349ea0894ec3ff33593812e",
+                "reference": "f187f65a83654b0d4349ea0894ec3ff33593812e",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2036,20 +2036,20 @@
                 "server",
                 "swoole"
             ],
-            "time": "2019-08-02T01:57:05+00:00"
+            "time": "2019-08-09T03:35:47+00:00"
         },
         {
             "name": "hyperf/utils",
-            "version": "v1.0.10",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/utils.git",
-                "reference": "141799eeb4a1b0e35890883d91e0bbed97983525"
+                "reference": "c5171d7fb6db33f44e58ff4ee6a6bd0e69722f82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/utils/zipball/141799eeb4a1b0e35890883d91e0bbed97983525",
-                "reference": "141799eeb4a1b0e35890883d91e0bbed97983525",
+                "url": "https://api.github.com/repos/hyperf-cloud/utils/zipball/c5171d7fb6db33f44e58ff4ee6a6bd0e69722f82",
+                "reference": "c5171d7fb6db33f44e58ff4ee6a6bd0e69722f82",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2105,7 +2105,7 @@
                 "swoole",
                 "utils"
             ],
-            "time": "2019-08-07T09:33:45+00:00"
+            "time": "2019-08-14T02:58:32+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2193,16 +2193,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.22.3",
+            "version": "2.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "738fbd8d80b2c5e158fda76c29c2de432fcc6f7e"
+                "reference": "97a08830a22ce0b69549a4966773c0eae900468d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/738fbd8d80b2c5e158fda76c29c2de432fcc6f7e",
-                "reference": "738fbd8d80b2c5e158fda76c29c2de432fcc6f7e",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/97a08830a22ce0b69549a4966773c0eae900468d",
+                "reference": "97a08830a22ce0b69549a4966773c0eae900468d",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2255,14 +2255,14 @@
                     "homepage": "http://github.com/kylekatarnls"
                 }
             ],
-            "description": "A simple API extension for DateTime.",
+            "description": "A API extension for DateTime that supports 281 different languages.",
             "homepage": "http://carbon.nesbot.com",
             "keywords": [
                 "date",
                 "datetime",
                 "time"
             ],
-            "time": "2019-08-07T12:36:44+00:00"
+            "time": "2019-08-12T17:19:41+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -2318,16 +2318,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.2.2",
+            "version": "v4.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "1bd73cc04c3843ad8d6b0bfc0956026a151fc420"
+                "reference": "e612609022e935f3d0337c1295176505b41188c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/1bd73cc04c3843ad8d6b0bfc0956026a151fc420",
-                "reference": "1bd73cc04c3843ad8d6b0bfc0956026a151fc420",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/e612609022e935f3d0337c1295176505b41188c8",
+                "reference": "e612609022e935f3d0337c1295176505b41188c8",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2341,7 +2341,7 @@
                 "php": ">=7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.5 || ^7.0"
+                "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0"
             },
             "bin": [
                 "bin/php-parse"
@@ -2371,7 +2371,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-05-25T20:07:01+00:00"
+            "time": "2019-08-12T20:17:41+00:00"
         },
         {
             "name": "php-di/phpdoc-reader",
@@ -4562,16 +4562,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.9.1",
+            "version": "1.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "e6828efaba2c9b79f4499dae1d66ef8bfa7b2b72"
+                "reference": "007c053ae6f31bba39dfa19a7726f56e9763bbea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/e6828efaba2c9b79f4499dae1d66ef8bfa7b2b72",
-                "reference": "e6828efaba2c9b79f4499dae1d66ef8bfa7b2b72",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/007c053ae6f31bba39dfa19a7726f56e9763bbea",
+                "reference": "007c053ae6f31bba39dfa19a7726f56e9763bbea",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -4612,7 +4612,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2019-04-07T13:18:21+00:00"
+            "time": "2019-08-09T12:45:53+00:00"
         },
         {
             "name": "nette/bootstrap",
@@ -5877,16 +5877,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.11.12",
+            "version": "0.11.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "56b3eb2a371b60537fd20794e24af9e7e8ed4e30"
+                "reference": "b343bbf83d0dd08db917408d8efd99b140ce04c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/56b3eb2a371b60537fd20794e24af9e7e8ed4e30",
-                "reference": "56b3eb2a371b60537fd20794e24af9e7e8ed4e30",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/b343bbf83d0dd08db917408d8efd99b140ce04c6",
+                "reference": "b343bbf83d0dd08db917408d8efd99b140ce04c6",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -5903,7 +5903,7 @@
                 "nette/robot-loader": "^3.0.1",
                 "nette/schema": "^1.0",
                 "nette/utils": "^2.4.5 || ^3.0",
-                "nikic/php-parser": "^4.0.2",
+                "nikic/php-parser": "^4.2.3",
                 "php": "~7.1",
                 "phpstan/phpdoc-parser": "^0.3.5",
                 "symfony/console": "~3.2 || ~4.0",
@@ -5913,7 +5913,7 @@
                 "symfony/console": "3.4.16 || 4.1.5"
             },
             "require-dev": {
-                "brianium/paratest": "^2.0",
+                "brianium/paratest": "^2.0 || ^3.0",
                 "consistence/coding-standard": "^3.5",
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
                 "ext-intl": "*",
@@ -5928,7 +5928,7 @@
                 "phpstan/phpstan-php-parser": "^0.11",
                 "phpstan/phpstan-phpunit": "^0.11",
                 "phpstan/phpstan-strict-rules": "^0.11",
-                "phpunit/phpunit": "^7.0",
+                "phpunit/phpunit": "^7.5.14 || ^8.0",
                 "slevomat/coding-standard": "^4.7.2",
                 "squizlabs/php_codesniffer": "^3.3.2"
             },
@@ -5954,7 +5954,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2019-07-08T06:55:18+00:00"
+            "time": "2019-08-17T12:49:22+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -6572,16 +6572,16 @@
         },
         {
             "name": "sebastian/exporter",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/exporter.git",
-                "reference": "234199f4528de6d12aaa58b612e98f7d36adb937"
+                "reference": "06a9a5947f47b3029d76118eb5c22802e5869687"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/234199f4528de6d12aaa58b612e98f7d36adb937",
-                "reference": "234199f4528de6d12aaa58b612e98f7d36adb937",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/06a9a5947f47b3029d76118eb5c22802e5869687",
+                "reference": "06a9a5947f47b3029d76118eb5c22802e5869687",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -6615,6 +6615,10 @@
             ],
             "authors": [
                 {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                },
+                {
                     "name": "Jeff Welch",
                     "email": "whatthejeff@gmail.com"
                 },
@@ -6623,16 +6627,12 @@
                     "email": "github@wallbash.com"
                 },
                 {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@2bepublished.at"
-                },
-                {
-                    "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de"
-                },
-                {
                     "name": "Adam Harvey",
                     "email": "aharvey@php.net"
+                },
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
                 }
             ],
             "description": "Provides the functionality to export PHP variables for visualization",
@@ -6641,7 +6641,7 @@
                 "export",
                 "exporter"
             ],
-            "time": "2017-04-03T13:19:02+00:00"
+            "time": "2019-08-11T12:43:14+00:00"
         },
         {
             "name": "sebastian/global-state",

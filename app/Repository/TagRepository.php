@@ -35,4 +35,12 @@ class TagRepository
     {
         return $this->tags->newQuery()->where('id', $id)->first();
     }
+
+    public function save(int $id, string $cnName, string $enName):int
+    {
+        return $this->tags->newQuery()->where('id', $id)->update([
+            'cn_name' => $cnName,
+            'name' => $enName,
+        ]);
+    }
 }

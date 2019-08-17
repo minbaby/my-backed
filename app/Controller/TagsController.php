@@ -9,6 +9,7 @@ use Hyperf\Di\Annotation\Inject;
 use Hyperf\HttpServer\Annotation\Controller;
 use Hyperf\HttpServer\Annotation\DeleteMapping;
 use Hyperf\HttpServer\Annotation\GetMapping;
+use Hyperf\HttpServer\Annotation\PutMapping;
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\HttpServer\Contract\ResponseInterface;
 
@@ -69,8 +70,21 @@ class TagsController extends AbstractController
         return $this->success($response, []);
     }
 
-    public function save(RequestInterface $request, ResponseInterface $response)
+    /**
+     * @param RequestInterface $request
+     * @param ResponseInterface $response
+     * @param string $id
+     * @PutMapping(path="{id}")
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    public function save(RequestInterface $request, ResponseInterface $response, string $id)
     {
+        $id = (int) $id;
+        $cnName = (string) $request->post('cn_name');
+        $enName = (string) $request->post('en_name');
 
+        $this->tagService->save($id, $cnName, $enName);
+
+        return $this->success($response);
     }
 }

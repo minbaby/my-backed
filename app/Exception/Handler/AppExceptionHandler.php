@@ -32,9 +32,21 @@ class AppExceptionHandler extends ExceptionHandler
 
     public function handle(Throwable $throwable, ResponseInterface $response)
     {
-        $this->logger->error(sprintf('%s[%s] in %s', $throwable->getMessage(), $throwable->getLine(), $throwable->getFile()));
-        $this->logger->error($throwable->getTraceAsString());
-        return $response->withStatus(500)->withBody(new SwooleStream('<pre>' . $throwable->getTraceAsString() . '</pre>'));
+        $code = $throwable->getCode();
+        if ($code >= 500) {
+            $this->logger->error(sprintf('%s[%s] in %s', $throwable->getMessage(), $throwable->getLine(), $throwable->getFile()));
+            $this->logger->error($throwable->getTraceAsString());
+        } if ($code < 100 && $code >= 600) {
+            $code = 500;
+        }
+
+        return $response->withStatus($code)
+            ->withAddedHeader('content-type', 'application/json')
+            ->withBody(new SwooleStream(json_encode([
+                'code' => $code,
+                'msg' => $throwable->getMessage(),
+                'data' => [],
+            ])));
     }
 
     public function isValid(Throwable $throwable): bool

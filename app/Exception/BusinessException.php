@@ -26,4 +26,18 @@ class BusinessException extends ServerException
 
         parent::__construct($message, $code, $previous);
     }
+
+    /**
+     * @param int $code
+     * @param string|null $message
+     * @param array $params
+     */
+    public static function throw(int $code = 0, string $message = null, $params = [])
+    {
+        if (is_null($message)) {
+            $message = ErrorCode::getMessage($code, ...$params);
+        }
+        throw new static($code, $message);
+    }
+
 }
