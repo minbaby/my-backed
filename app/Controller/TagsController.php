@@ -9,6 +9,7 @@ use Hyperf\Di\Annotation\Inject;
 use Hyperf\HttpServer\Annotation\Controller;
 use Hyperf\HttpServer\Annotation\DeleteMapping;
 use Hyperf\HttpServer\Annotation\GetMapping;
+use Hyperf\HttpServer\Annotation\PostMapping;
 use Hyperf\HttpServer\Annotation\PutMapping;
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\HttpServer\Contract\ResponseInterface;
@@ -40,9 +41,20 @@ class TagsController extends AbstractController
             ->withAddedHeader('limit', (string) $limit);
     }
 
+    /**
+     * @param RequestInterface $request
+     * @param ResponseInterface $response
+     * @return \Psr\Http\Message\ResponseInterface
+     * @PostMapping(path="/api/tags")
+     */
     public function create(RequestInterface $request, ResponseInterface $response)
     {
+        $cnName = (string) $request->input('cn_name');
+        $enName = (string) $request->input('en_name');
 
+        $this->tagService->create($cnName, $enName);
+
+        return $this->success($response);
     }
 
     /**

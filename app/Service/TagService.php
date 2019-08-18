@@ -58,4 +58,9 @@ class TagService
 
         return $this->tagRepository->save($id, $cnName, $enName);
     }
+
+    public function create(string $cnName, string $enName)
+    {
+        $this->tagRepository->create($cnName, $enName);
+    }
 }

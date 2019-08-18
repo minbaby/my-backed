@@ -43,4 +43,12 @@ class TagRepository
             'name' => $enName,
         ]);
     }
+
+    public function create(string $cnName, string $enName)
+    {
+        return $this->tags->newQuery()->create([
+            'cn_name' => $cnName,
+            'name' => $enName,
+        ]);
+    }
 }
