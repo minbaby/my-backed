@@ -80,8 +80,8 @@ class TagsController extends AbstractController
     public function save(RequestInterface $request, ResponseInterface $response, string $id)
     {
         $id = (int) $id;
-        $cnName = (string) $request->post('cn_name');
-        $enName = (string) $request->post('en_name');
+        $cnName = (string) $request->input('cn_name');
+        $enName = (string) $request->input('en_name');
 
         $this->tagService->save($id, $cnName, $enName);
 

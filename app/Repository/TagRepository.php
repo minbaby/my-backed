@@ -23,7 +23,7 @@ class TagRepository
      */
     public function list(int $page, int $limit): LengthAwarePaginatorInterface
     {
-        return $this->tags->newQuery()->paginate($limit, ['*'], 'page', $page);
+        return $this->tags->newQuery()->orderBy('updated_at', 'desc')->paginate($limit, ['*'], 'page', $page);
     }
 
     public function remove(int $id)
