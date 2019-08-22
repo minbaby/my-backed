@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea5ed0f1f5db6d5c6511ffaa49707d5c",
+    "content-hash": "98c092c693b78d776794e963557eebf2",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2040,16 +2040,16 @@
         },
         {
             "name": "hyperf/utils",
-            "version": "v1.0.11",
+            "version": "v1.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/utils.git",
-                "reference": "c5171d7fb6db33f44e58ff4ee6a6bd0e69722f82"
+                "reference": "8d91a428693d06fb8d27d22484243c46993c1c75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/utils/zipball/c5171d7fb6db33f44e58ff4ee6a6bd0e69722f82",
-                "reference": "c5171d7fb6db33f44e58ff4ee6a6bd0e69722f82",
+                "url": "https://api.github.com/repos/hyperf-cloud/utils/zipball/8d91a428693d06fb8d27d22484243c46993c1c75",
+                "reference": "8d91a428693d06fb8d27d22484243c46993c1c75",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2105,7 +2105,7 @@
                 "swoole",
                 "utils"
             ],
-            "time": "2019-08-14T02:58:32+00:00"
+            "time": "2019-08-16T01:46:03+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -5382,18 +5382,18 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 },
                 {
                     "name": "Sebastian Heuer",
-                    "email": "sebastian@phpeople.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpeople.de"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
@@ -5435,18 +5435,18 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 },
                 {
                     "name": "Sebastian Heuer",
-                    "email": "sebastian@phpeople.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpeople.de"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Library for handling version information and constraints",
@@ -6069,8 +6069,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "FilterIterator implementation that filters files based on a list of suffixes.",
@@ -6117,8 +6117,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Simple template engine.",
@@ -6172,8 +6172,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Utility class for timing",
@@ -6952,8 +6952,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
@@ -7675,8 +7675,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
@@ -7747,7 +7747,8 @@
     "prefer-lowest": false,
     "platform": {
         "php": ">=7.2",
-        "ext-swoole": ">=4.2"
+        "ext-swoole": ">=4.2",
+        "ext-json": "*"
     },
     "platform-dev": []
 }
