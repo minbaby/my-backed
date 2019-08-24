@@ -1,6 +1,10 @@
 version: '3'
 services:
-  run:
+  app:
     build: .
+    volumes:
+      - ${VOL_APP:-.}/:/opt/www
+    ports:
+      - 9501:9501
   redis:
     image: redis
