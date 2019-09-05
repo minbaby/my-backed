@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea5ed0f1f5db6d5c6511ffaa49707d5c",
+    "content-hash": "98c092c693b78d776794e963557eebf2",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1417,16 +1417,16 @@
         },
         {
             "name": "hyperf/http-message",
-            "version": "v1.0.10",
+            "version": "v1.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/http-message.git",
-                "reference": "a7c417913bcf4e5eb6edd1dda5d6bc6ac6eccc92"
+                "reference": "9c522a92d1efdfe3d095e426626e99b26c40af96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/http-message/zipball/a7c417913bcf4e5eb6edd1dda5d6bc6ac6eccc92",
-                "reference": "a7c417913bcf4e5eb6edd1dda5d6bc6ac6eccc92",
+                "url": "https://api.github.com/repos/hyperf-cloud/http-message/zipball/9c522a92d1efdfe3d095e426626e99b26c40af96",
+                "reference": "9c522a92d1efdfe3d095e426626e99b26c40af96",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1466,20 +1466,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-08-07T08:24:13+00:00"
+            "time": "2019-09-04T16:54:15+00:00"
         },
         {
             "name": "hyperf/http-server",
-            "version": "v1.0.11",
+            "version": "v1.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/http-server.git",
-                "reference": "2cf65048ddd601e90c1b4c3830d302bd385b9f91"
+                "reference": "5f786a4b22f73ff0d838ce833ad38faf878e7f22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/http-server/zipball/2cf65048ddd601e90c1b4c3830d302bd385b9f91",
-                "reference": "2cf65048ddd601e90c1b4c3830d302bd385b9f91",
+                "url": "https://api.github.com/repos/hyperf-cloud/http-server/zipball/5f786a4b22f73ff0d838ce833ad38faf878e7f22",
+                "reference": "5f786a4b22f73ff0d838ce833ad38faf878e7f22",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1536,7 +1536,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-08-13T01:57:51+00:00"
+            "time": "2019-09-04T16:54:15+00:00"
         },
         {
             "name": "hyperf/logger",
@@ -1973,16 +1973,16 @@
         },
         {
             "name": "hyperf/server",
-            "version": "v1.0.11",
+            "version": "v1.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/server.git",
-                "reference": "f187f65a83654b0d4349ea0894ec3ff33593812e"
+                "reference": "226b0b80c1549c2561e294593b80d5bce0bd9b18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/server/zipball/f187f65a83654b0d4349ea0894ec3ff33593812e",
-                "reference": "f187f65a83654b0d4349ea0894ec3ff33593812e",
+                "url": "https://api.github.com/repos/hyperf-cloud/server/zipball/226b0b80c1549c2561e294593b80d5bce0bd9b18",
+                "reference": "226b0b80c1549c2561e294593b80d5bce0bd9b18",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2036,7 +2036,7 @@
                 "server",
                 "swoole"
             ],
-            "time": "2019-08-09T03:35:47+00:00"
+            "time": "2019-09-03T08:17:37+00:00"
         },
         {
             "name": "hyperf/utils",
@@ -2908,16 +2908,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.3.3",
+            "version": "v4.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "8b0ae5742ce9aaa8b0075665862c1ca397d1c1d9"
+                "reference": "de63799239b3881b8a08f8481b22348f77ed7b36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/8b0ae5742ce9aaa8b0075665862c1ca397d1c1d9",
-                "reference": "8b0ae5742ce9aaa8b0075665862c1ca397d1c1d9",
+                "url": "https://api.github.com/repos/symfony/console/zipball/de63799239b3881b8a08f8481b22348f77ed7b36",
+                "reference": "de63799239b3881b8a08f8481b22348f77ed7b36",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2985,7 +2985,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-07-24T17:13:59+00:00"
+            "time": "2019-08-26T08:26:39+00:00"
         },
         {
             "name": "symfony/finder",
@@ -3237,16 +3237,16 @@
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v1.1.5",
+            "version": "v1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "f391a00de78ec7ec8cf5cdcdae59ec7b883edb8d"
+                "reference": "ea7263d6b6d5f798b56a45a5b8d686725f2719a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/f391a00de78ec7ec8cf5cdcdae59ec7b883edb8d",
-                "reference": "f391a00de78ec7ec8cf5cdcdae59ec7b883edb8d",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/ea7263d6b6d5f798b56a45a5b8d686725f2719a3",
+                "reference": "ea7263d6b6d5f798b56a45a5b8d686725f2719a3",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3297,7 +3297,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2019-06-13T11:15:36+00:00"
+            "time": "2019-08-20T14:44:19+00:00"
         },
         {
             "name": "symfony/translation",
@@ -5382,18 +5382,18 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 },
                 {
                     "name": "Sebastian Heuer",
-                    "email": "sebastian@phpeople.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpeople.de"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
@@ -5726,20 +5726,20 @@
             "authors": [
                 {
                     "name": "Manuel Pichler",
-                    "role": "Project Founder",
                     "email": "github@manuel-pichler.de",
-                    "homepage": "https://github.com/manuelpichler"
+                    "homepage": "https://github.com/manuelpichler",
+                    "role": "Project Founder"
                 },
                 {
                     "name": "Marc Würth",
-                    "role": "Project Maintainer",
                     "email": "ravage@bluewin.ch",
-                    "homepage": "https://github.com/ravage84"
+                    "homepage": "https://github.com/ravage84",
+                    "role": "Project Maintainer"
                 },
                 {
                     "name": "Other contributors",
-                    "role": "Contributors",
-                    "homepage": "https://github.com/phpmd/phpmd/graphs/contributors"
+                    "homepage": "https://github.com/phpmd/phpmd/graphs/contributors",
+                    "role": "Contributors"
                 }
             ],
             "description": "PHPMD is a spin-off project of PHP Depend and aims to be a PHP equivalent of the well known Java tool PMD.",
@@ -6012,8 +6012,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
                 }
             ],
             "description": "Library that provides collection, processing, and rendering functionality for PHP code coverage information.",
@@ -6315,8 +6315,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
                 }
             ],
             "description": "The PHP Unit Testing framework.",
@@ -7675,8 +7675,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
@@ -7747,7 +7747,8 @@
     "prefer-lowest": false,
     "platform": {
         "php": ">=7.2",
-        "ext-swoole": ">=4.2"
+        "ext-swoole": ">=4.2",
+        "ext-json": "*"
     },
     "platform-dev": []
 }
