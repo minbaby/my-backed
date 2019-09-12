@@ -1,6 +1,7 @@
 <?php
 
-declare (strict_types=1);
+declare(strict_types=1);
+
 namespace App\Model;
 
 /**
@@ -19,18 +20,21 @@ class Category extends Model
      * @var string
      */
     protected $table = 'category';
+
     /**
      * The connection name for the model.
      *
      * @var string
      */
     protected $connection = 'default';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = ['id', 'name', 'cn_name', 'created_at', 'updated_at', 'deleted_at'];
+
     /**
      * The attributes that should be cast to native types.
      *

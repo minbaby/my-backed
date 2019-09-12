@@ -1,14 +1,7 @@
 <?php
 
 declare(strict_types=1);
-/**
- * This file is part of Hyperf.
- *
- * @link     https://www.hyperf.io
- * @document https://doc.hyperf.io
- * @contact  group@hyperf.io
- * @license  https://github.com/hyperf-cloud/hyperf/blob/master/LICENSE
- */
+
 
 namespace App\Exception\Handler;
 
@@ -36,7 +29,8 @@ class AppExceptionHandler extends ExceptionHandler
         if ($code >= 500) {
             $this->logger->error(sprintf('%s[%s] in %s', $throwable->getMessage(), $throwable->getLine(), $throwable->getFile()));
             $this->logger->error($throwable->getTraceAsString());
-        } if ($code < 100 && $code >= 600) {
+        }
+        if ($code < 100 && $code >= 600) {
             $code = 500;
         }
 

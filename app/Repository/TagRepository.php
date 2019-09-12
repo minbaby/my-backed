@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Repository;
@@ -11,7 +12,7 @@ use Hyperf\Paginator\LengthAwarePaginator;
 class TagRepository
 {
     /**
-     * @Inject()
+     * @Inject
      * @var Tags
      */
     protected $tags;
@@ -19,7 +20,7 @@ class TagRepository
     /**
      * @param int $page
      * @param int $limit
-     * @return LengthAwarePaginatorInterface|LengthAwarePaginator
+     * @return LengthAwarePaginator|LengthAwarePaginatorInterface
      */
     public function list(int $page, int $limit): LengthAwarePaginatorInterface
     {
@@ -36,7 +37,7 @@ class TagRepository
         return $this->tags->newQuery()->where('id', $id)->first();
     }
 
-    public function save(int $id, string $cnName, string $enName):int
+    public function save(int $id, string $cnName, string $enName): int
     {
         return $this->tags->newQuery()->where('id', $id)->update([
             'cn_name' => $cnName,

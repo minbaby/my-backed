@@ -15,14 +15,13 @@ use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\HttpServer\Contract\ResponseInterface;
 
 /**
- * Class TagsController
- * @package App\Controller
+ * Class TagsController.
  * @Controller(prefix="/api/tags")
  */
 class TagsController extends AbstractController
 {
     /**
-     * @Inject()
+     * @Inject
      * @var TagService
      */
     protected $tagService;

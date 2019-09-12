@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Service;
@@ -7,17 +8,15 @@ use App\Constants\ErrorCode;
 use App\Exception\BusinessException;
 use App\Repository\TagRepository;
 use Hyperf\Di\Annotation\Inject;
-use Hyperf\Paginator\LengthAwarePaginator;
-use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
 
 class TagService
 {
     /**
-     * @Inject()
+     * @Inject
      * @var TagRepository
      */
-
     protected $tagRepository;
+
     /**
      * @param int $page
      * @param int $limit
@@ -49,7 +48,7 @@ class TagService
      * @param string $enName
      * @return int
      */
-    public function save(int $id, string $cnName, string $enName):int
+    public function save(int $id, string $cnName, string $enName): int
     {
         $data = $this->getById($id);
         if (empty($data)) {

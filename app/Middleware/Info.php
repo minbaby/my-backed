@@ -1,19 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Middleware;
 
 use App\Utils\LogUtils;
 use Hyperf\HttpServer\Annotation\Middleware;
-use Hyperf\Logger\Logger;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
 /**
- * Class Info
- * @package App\Middleware
- * @Middleware()
+ * Class Info.
+ * @Middleware
  */
 class Info implements MiddlewareInterface
 {
@@ -39,7 +39,7 @@ class Info implements MiddlewareInterface
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
-        $this->logger->error("YES");
+        $this->logger->error('YES');
         $this->logger->error($request->getUri());
         return $handler->handle($request);
     }

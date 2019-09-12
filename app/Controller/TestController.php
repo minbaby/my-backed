@@ -10,9 +10,8 @@ use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\HttpServer\Contract\ResponseInterface;
 
 /**
- * Class TestController
- * @package App\Controller
- * @Controller()
+ * Class TestController.
+ * @Controller
  */
 class TestController
 {
