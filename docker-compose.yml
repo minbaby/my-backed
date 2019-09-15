@@ -6,6 +6,7 @@ services:
       - ${VOL_APP:-.}/:/opt/www
     ports:
       - 9501:9501
+      - 9502:9502
   redis:
     image: redis
     volumes:
