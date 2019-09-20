@@ -2228,16 +2228,16 @@
         },
         {
             "name": "hyperf/utils",
-            "version": "v1.0.14",
+            "version": "v1.0.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/utils.git",
-                "reference": "a717f15dda1258c4e9f1ebab55e6f5cd2dd115fa"
+                "reference": "7b175309870ad0ca4661037ec8062e0b43f43b0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/utils/zipball/a717f15dda1258c4e9f1ebab55e6f5cd2dd115fa",
-                "reference": "a717f15dda1258c4e9f1ebab55e6f5cd2dd115fa",
+                "url": "https://api.github.com/repos/hyperf-cloud/utils/zipball/7b175309870ad0ca4661037ec8062e0b43f43b0d",
+                "reference": "7b175309870ad0ca4661037ec8062e0b43f43b0d",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2261,6 +2261,7 @@
                 "symfony/var-dumper": "^4.1"
             },
             "suggest": {
+                "hyperf/di": "Required to use ExceptionNormalizer",
                 "symfony/property-access": "Required to use SymfonyNormalizer (^4.3)",
                 "symfony/serializer": "Required to use SymfonyNormalizer (^4.3)",
                 "symfony/var-dumper": "Required to use the dd function (^4.1)."
@@ -2293,7 +2294,7 @@
                 "swoole",
                 "utils"
             ],
-            "time": "2019-09-05T01:27:11+00:00"
+            "time": "2019-09-20T01:34:41+00:00"
         },
         {
             "name": "hyperf/websocket-server",
@@ -2631,12 +2632,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openzipkin/zipkin-php.git",
-                "reference": "d17d9d635b58982937651b5d7d564c92beec9f79"
+                "reference": "fe8a275068d909efe1c13b21ee989a1474ae074c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openzipkin/zipkin-php/zipball/d17d9d635b58982937651b5d7d564c92beec9f79",
-                "reference": "d17d9d635b58982937651b5d7d564c92beec9f79",
+                "url": "https://api.github.com/repos/openzipkin/zipkin-php/zipball/fe8a275068d909efe1c13b21ee989a1474ae074c",
+                "reference": "fe8a275068d909efe1c13b21ee989a1474ae074c",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2647,14 +2648,13 @@
             },
             "require": {
                 "ext-curl": "*",
-                "php": "^7.1",
+                "php": "^5.6 || ^7.0",
                 "psr/http-message": "~1.0",
                 "psr/log": "^1.0"
             },
             "require-dev": {
                 "guzzlehttp/psr7": "^1.4",
                 "jcchavezs/httptest": "~0.2",
-                "phpstan/phpstan": "~0.11",
                 "phpunit/phpunit": "~5.7.19",
                 "squizlabs/php_codesniffer": "3.*"
             },
@@ -2687,7 +2687,7 @@
                 "tracing",
                 "zipkin"
             ],
-            "time": "2019-07-30T08:53:06+00:00"
+            "time": "2019-07-30T09:53:13+00:00"
         },
         {
             "name": "php-di/phpdoc-reader",
@@ -6048,20 +6048,20 @@
             "authors": [
                 {
                     "name": "Manuel Pichler",
-                    "role": "Project Founder",
                     "email": "github@manuel-pichler.de",
-                    "homepage": "https://github.com/manuelpichler"
+                    "homepage": "https://github.com/manuelpichler",
+                    "role": "Project Founder"
                 },
                 {
                     "name": "Marc Würth",
-                    "role": "Project Maintainer",
                     "email": "ravage@bluewin.ch",
-                    "homepage": "https://github.com/ravage84"
+                    "homepage": "https://github.com/ravage84",
+                    "role": "Project Maintainer"
                 },
                 {
                     "name": "Other contributors",
-                    "role": "Contributors",
-                    "homepage": "https://github.com/phpmd/phpmd/graphs/contributors"
+                    "homepage": "https://github.com/phpmd/phpmd/graphs/contributors",
+                    "role": "Contributors"
                 }
             ],
             "description": "PHPMD is a spin-off project of PHP Depend and aims to be a PHP equivalent of the well known Java tool PMD.",
@@ -6334,8 +6334,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
                 }
             ],
             "description": "Library that provides collection, processing, and rendering functionality for PHP code coverage information.",
