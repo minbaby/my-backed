@@ -9,5 +9,5 @@ use Swoole\WebSocket\Frame;
 
 interface HandlerIf
 {
-    public function handler(Server $server, Frame $frame, $decodeData);
+    public function handler(Server $server, Frame $frame, Operate $operate);
 }

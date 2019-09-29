@@ -5,6 +5,7 @@ namespace App\IM;
 
 use App\IM\Handler\Impl\NoPermissionHandler;
 use App\IM\Handler\Impl\ServerErrorHandler;
+use App\IM\Handler\Operate;
 use App\Utils\LogUtils;
 use Hyperf\Di\Container;
 use Hyperf\Utils\Str;
@@ -26,16 +27,17 @@ class HandlerFactory
         $this->container = $container;
     }
 
-    public function create(array $json)
+    public function create(Operate $operate)
     {
         try {
-            LogUtils::get(__CLASS__)->info('x', $json);
+            LogUtils::get(__CLASS__)->info('x', $operate);
             $name = $this->getDiName('not_supported');
-            if ($json == null || !isset($json['op'])) {
+
+            if ($operate == null || !isset($operate['op'])) {
                 return $this->container->get($name);
             }
 
-            $opName = $this->getDiName($json['op']);
+            $opName = $this->getDiName($operate['op']);
 
             if ($this->container->has($opName)) {
                 $name = $opName;

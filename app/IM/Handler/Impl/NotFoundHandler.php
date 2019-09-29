@@ -4,14 +4,13 @@ namespace App\IM\Handler\Impl;
 
 use App\IM\Handler\AbstractHandler;
 use App\IM\Handler\CodeEnum;
+use App\IM\Handler\Operate;
 use Swoole\Server;
 use Swoole\WebSocket\Frame;
 
 class NotFoundHandler extends AbstractHandler
 {
-    public function handler(Server $server, Frame $frame, $decodeData)
+    public function handler(Server $server, Frame $frame, Operate $operate)
     {
-        $server->push($frame->fd, $this->packet->pack(['op' => CodeEnum::OP_NOT_FOUND]));
-        $this->push($server, $frame, []);
     }
 }

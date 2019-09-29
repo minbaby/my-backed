@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\IM\Handler\HandlerIf;
+use App\IM\Handler\Operate;
 use App\IM\HandlerFactory;
 use App\IM\Packet\PacketIf;
 use App\Utils\LogUtils;
@@ -50,15 +51,15 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
         $this->logger = LogUtils::get(__CLASS__);
     }
 
-
     public function onMessage(Server $server, Frame $frame): void
     {
         $this->logger->info(__METHOD__, [$frame->data, $frame->fd]);
 
+        /** @var Operate $data */
         $data = $this->packet->unpack($frame->data);
 
         /** @var HandlerIf $handler */
-        $handler = $this->handlerFactory->create($data ?? []);
+        $handler = $this->handlerFactory->create($data);
 
         $this->logger->info(__METHOD__, ['op event created']);
 

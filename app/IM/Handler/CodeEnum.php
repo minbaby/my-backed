@@ -4,8 +4,26 @@
 namespace App\IM\Handler;
 
 
-final class CodeEnum
+use Hyperf\Constants\AbstractConstants;
+
+/**
+ * @Constants
+ * @method static getMessage(int $code, $x = [])
+ */
+final class CodeEnum extends AbstractConstants
 {
+    /**
+     * @Message("success")
+     */
     const OP_SUCCESS = 0;
-    const OP_NOT_FOUND = 1;
+
+    /**
+     * @Message("op not found")
+     */
+    const OP_NOT_FOUND = 20;
+
+    /**
+     * @Message("decode error")
+     */
+    const OP_DECODE_FAILED = 10;
 }
