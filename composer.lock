@@ -1285,16 +1285,16 @@
         },
         {
             "name": "hyperf/exception-handler",
-            "version": "v1.0.8",
+            "version": "v1.0.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/exception-handler.git",
-                "reference": "3287d5b9ecda883c1aa401b9b27b0f0cf643722b"
+                "reference": "84d24ac3958e45c462f1bc9b6abd69863b73192e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/exception-handler/zipball/3287d5b9ecda883c1aa401b9b27b0f0cf643722b",
-                "reference": "3287d5b9ecda883c1aa401b9b27b0f0cf643722b",
+                "url": "https://api.github.com/repos/hyperf-cloud/exception-handler/zipball/84d24ac3958e45c462f1bc9b6abd69863b73192e",
+                "reference": "84d24ac3958e45c462f1bc9b6abd69863b73192e",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1341,7 +1341,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-07-28T15:23:28+00:00"
+            "time": "2019-09-16T01:28:45+00:00"
         },
         {
             "name": "hyperf/framework",
