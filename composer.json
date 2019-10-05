@@ -38,10 +38,11 @@
         "hyperf/utils": "~1.0.0",
         "hyperf/constants": "~1.0.0",
         "hyperf/model-cache": "~1.0.0",
-        "hyperf/tracer": "^1.0",
-        "hyperf/crontab": "^1.0",
-        "hyperf/task": "^1.0",
-        "hyperf/websocket-server": "^1.0"
+        "hyperf/tracer": "~1.0.0",
+        "hyperf/crontab": "~1.0.0",
+        "hyperf/task": "~1.0.0",
+        "hyperf/websocket-server": "~1.0.0",
+        "hyperf/websocket-client": "~1.0.0"
     },
     "require-dev": {
         "swoft/swoole-ide-helper": "^4.2",

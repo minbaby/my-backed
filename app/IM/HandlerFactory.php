@@ -34,9 +34,9 @@ class HandlerFactory
         try {
             LogUtils::get(__CLASS__)->info('create', $operate->toArray());
 
-            $name = $operate->getOp();
+            $name = CodeEnum::getOpString($operate->getOp());
             if (!$this->container->has($name)) {
-                $name = CodeEnum::OP_NOT_FOUND;
+                $name = CodeEnum::getOpString(CodeEnum::OP_NOT_FOUND);
             }
 
             LogUtils::get(__CLASS__)->info('op got ' . $name);

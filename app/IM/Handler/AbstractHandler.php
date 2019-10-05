@@ -40,10 +40,10 @@ abstract class AbstractHandler implements HandlerIf
     /**
      * @param Server $server
      * @param Frame $frame
-     * @param $data
+     * @param Operate $operate
      */
-    protected function push(Server $server, Frame $frame, $data)
+    protected function push(Server $server, Frame $frame, $operate)
     {
-        $server->push($frame->fd, $this->packet->pack($data));
+        $server->push($frame->fd, $this->packet->pack($operate));
     }
 }

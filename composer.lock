@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37728341a405094148033df2026bc674",
+    "content-hash": "e05dc6a572496adeded1224347c89173",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2299,6 +2299,68 @@
             "time": "2019-09-20T01:34:41+00:00"
         },
         {
+            "name": "hyperf/websocket-client",
+            "version": "v1.0.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf-cloud/websocket-client.git",
+                "reference": "1da913b0389368d17ef62b4e7204130a68881b7e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf-cloud/websocket-client/zipball/1da913b0389368d17ef62b4e7204130a68881b7e",
+                "reference": "1da913b0389368d17ef62b4e7204130a68881b7e",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-swoole": ">=4.3",
+                "hyperf/contract": "~1.0.0",
+                "hyperf/http-message": "~1.0.0",
+                "hyperf/utils": "~1.0.0",
+                "php": ">=7.2",
+                "psr/container": "^1.0",
+                "psr/log": "^1.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.9",
+                "malukenho/docheader": "^0.1.6",
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "hyperf": {
+                    "config": "Hyperf\\WebSocketClient\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\WebSocketClient\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A websocket client library for Hyperf.",
+            "keywords": [
+                "hyperf",
+                "php",
+                "swoole",
+                "websocket"
+            ],
+            "time": "2019-08-20T12:58:28+00:00"
+        },
+        {
             "name": "hyperf/websocket-server",
             "version": "v1.0.15",
             "source": {
@@ -2361,80 +2423,6 @@
                 "websocket"
             ],
             "time": "2019-09-11T01:57:10+00:00"
-        },
-        {
-            "name": "mongodb/mongodb",
-            "version": "1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mongodb/mongo-php-library.git",
-                "reference": "6405e91ba63955bcd187d3bab9ec7327d17cc4ce"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/6405e91ba63955bcd187d3bab9ec7327d17cc4ce",
-                "reference": "6405e91ba63955bcd187d3bab9ec7327d17cc4ce",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "ext-hash": "*",
-                "ext-json": "*",
-                "ext-mongodb": "^1.6",
-                "php": "^5.6 || ^7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.7.27 || ^6.4 || ^8.3",
-                "sebastian/comparator": "^1.0 || ^2.0 || ^3.0",
-                "squizlabs/php_codesniffer": "^3.4",
-                "symfony/phpunit-bridge": "^4.4@dev"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.5.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "MongoDB\\": "src/"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Andreas Braun",
-                    "email": "andreas.braun@mongodb.com"
-                },
-                {
-                    "name": "Jeremy Mikola",
-                    "email": "jmikola@gmail.com"
-                },
-                {
-                    "name": "Katherine Walker",
-                    "email": "katherine.walker@mongodb.com"
-                }
-            ],
-            "description": "MongoDB driver library",
-            "homepage": "https://jira.mongodb.org/browse/PHPLIB",
-            "keywords": [
-                "database",
-                "driver",
-                "mongodb",
-                "persistence"
-            ],
-            "time": "2019-09-09T13:42:06+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -5182,6 +5170,80 @@
                 "testing"
             ],
             "time": "2019-09-30T08:30:27+00:00"
+        },
+        {
+            "name": "mongodb/mongodb",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mongodb/mongo-php-library.git",
+                "reference": "6405e91ba63955bcd187d3bab9ec7327d17cc4ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/6405e91ba63955bcd187d3bab9ec7327d17cc4ce",
+                "reference": "6405e91ba63955bcd187d3bab9ec7327d17cc4ce",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-hash": "*",
+                "ext-json": "*",
+                "ext-mongodb": "^1.6",
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.27 || ^6.4 || ^8.3",
+                "sebastian/comparator": "^1.0 || ^2.0 || ^3.0",
+                "squizlabs/php_codesniffer": "^3.4",
+                "symfony/phpunit-bridge": "^4.4@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.5.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MongoDB\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Braun",
+                    "email": "andreas.braun@mongodb.com"
+                },
+                {
+                    "name": "Jeremy Mikola",
+                    "email": "jmikola@gmail.com"
+                },
+                {
+                    "name": "Katherine Walker",
+                    "email": "katherine.walker@mongodb.com"
+                }
+            ],
+            "description": "MongoDB driver library",
+            "homepage": "https://jira.mongodb.org/browse/PHPLIB",
+            "keywords": [
+                "database",
+                "driver",
+                "mongodb",
+                "persistence"
+            ],
+            "time": "2019-09-09T13:42:06+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -8367,8 +8429,7 @@
     "platform": {
         "php": ">=7.2",
         "ext-swoole": ">=4.2",
-        "ext-json": "*",
-        "ext-mongodb": "*"
+        "ext-json": "*"
     },
     "platform-dev": []
 }
