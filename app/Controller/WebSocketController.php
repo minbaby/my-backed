@@ -11,6 +11,7 @@ use App\Utils\LogUtils;
 use Hyperf\Contract\OnCloseInterface;
 use Hyperf\Contract\OnMessageInterface;
 use Hyperf\Contract\OnOpenInterface;
+use Hyperf\Di\Annotation\Inject;
 use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\Log\LoggerInterface;
 use Swoole\Http\Request;
@@ -55,15 +56,12 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
     {
         $this->logger->info(__METHOD__, [$frame->data, $frame->fd]);
 
-        /** @var Operate $data */
-        $data = $this->packet->unpack($frame->data);
+        /** @var Operate $operate */
+        $operate = $this->packet->unpack($frame->data);
 
-        /** @var HandlerIf $handler */
-        $handler = $this->handlerFactory->create($data);
+        $handler = $this->handlerFactory->create($operate);
 
-        $this->logger->info(__METHOD__, ['op event created']);
-
-        $handler->handler($server, $frame, $data);
+        $handler->handler($server, $frame, $operate);
     }
 
     public function onClose(Server $server, int $fd, int $reactorId): void

@@ -3,11 +3,10 @@
 
 namespace App\IM\Handler;
 
-
+use Hyperf\Utils\Contracts\Arrayable;
 use Hyperf\Utils\Contracts\Jsonable;
-use Swoole\Process;
 
-class Operate implements Jsonable
+class Operate implements Jsonable, Arrayable
 {
     protected $op;
 
@@ -24,11 +23,16 @@ class Operate implements Jsonable
 
     public function __toString(): string
     {
-        return json_encode([
+        return json_encode($this->toArray());
+    }
+
+    public function toArray(): array
+    {
+        return [
             'op' => $this->op,
             'message' => $this->message,
             'data' => $this->data,
-        ]);
+        ];
     }
 
     /**
@@ -66,4 +70,5 @@ class Operate implements Jsonable
             $operate->getOp() === $this->getOp() &&
             $operate->getData() === $this->getData();
     }
+
 }

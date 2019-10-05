@@ -1,10 +1,9 @@
 <?php
 
-
 namespace App\IM\Handler;
 
-
 use Hyperf\Constants\AbstractConstants;
+use Hyperf\Constants\Annotation\Constants;
 
 /**
  * @Constants

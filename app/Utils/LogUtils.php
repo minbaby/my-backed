@@ -9,6 +9,10 @@ use Hyperf\Utils\ApplicationContext;
 
 class LogUtils
 {
+    /**
+     * @param string $name
+     * @return \Psr\Log\LoggerInterface
+     */
     public static function get(string $name = 'app')
     {
         return ApplicationContext::getContainer()->get(LoggerFactory::class)->get($name);

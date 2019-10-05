@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Model;
 
+use Hyperf\DbConnection\Model\Model as BaseModel;
 /**
  * @property int $id
  * @property string $name
@@ -12,7 +13,7 @@ namespace App\Model;
  * @property \Carbon\Carbon $updated_at
  * @property string $deleted_at
  */
-class Tags extends Model
+class Tags extends BaseModel
 {
     /**
      * The table associated with the model.

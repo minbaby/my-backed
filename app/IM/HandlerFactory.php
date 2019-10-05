@@ -3,6 +3,8 @@
 
 namespace App\IM;
 
+use App\IM\Handler\CodeEnum;
+use App\IM\Handler\HandlerIf;
 use App\IM\Handler\Impl\NoPermissionHandler;
 use App\IM\Handler\Impl\ServerErrorHandler;
 use App\IM\Handler\Operate;
@@ -27,23 +29,17 @@ class HandlerFactory
         $this->container = $container;
     }
 
-    public function create(Operate $operate)
+    public function create(Operate $operate): HandlerIf
     {
         try {
-            LogUtils::get(__CLASS__)->info('x', $operate);
-            $name = $this->getDiName('not_supported');
+            LogUtils::get(__CLASS__)->info('create', $operate->toArray());
 
-            if ($operate == null || !isset($operate['op'])) {
-                return $this->container->get($name);
+            $name = $operate->getOp();
+            if (!$this->container->has($name)) {
+                $name = CodeEnum::OP_NOT_FOUND;
             }
 
-            $opName = $this->getDiName($operate['op']);
-
-            if ($this->container->has($opName)) {
-                $name = $opName;
-            }
-
-            LogUtils::get(__CLASS__)->info('op exec ' . $name);
+            LogUtils::get(__CLASS__)->info('op got ' . $name);
 
             return $this->container->get($name);
         } catch (\Exception $exception) {
@@ -52,15 +48,6 @@ class HandlerFactory
         }
     }
 
-    /**
-     * @param string $op
-     * @return string
-     */
-    protected function getDiName(string $op): string
-    {
-        LogUtils::get(__CLASS__)->info('op ' . $op);
-        return sprintf("\\App\\IM\\Handler\\Impl\\%sHandler", Str::studly($op));
-    }
 
     protected function checkPreHandler()
     {
