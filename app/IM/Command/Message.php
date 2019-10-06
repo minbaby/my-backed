@@ -2,6 +2,8 @@
 
 namespace App\IM\Command;
 
+use App\IM\Handler\CodeEnum;
+use Carbon\Carbon;
 use Hyperf\Utils\Contracts\Arrayable;
 use Hyperf\Utils\Contracts\Jsonable;
 
@@ -10,17 +12,22 @@ abstract class Message implements Jsonable, Arrayable
     /**
      * @var int
      */
-    protected $op;
+    protected $op = CodeEnum::OP_INIT;
 
     /**
-     * @var \DateTime
+     * @var string
      */
     protected $createTime;
 
     /**
      * @var int
      */
-    protected $id;
+    protected $id = 0;
+
+    /**
+     * @var array 
+     */
+    protected $ignore = [];
 
     /**
      * @var array
@@ -29,6 +36,7 @@ abstract class Message implements Jsonable, Arrayable
 
     public function __construct()
     {
+        $this->id = $this->createTime = Carbon::now()->valueOf();
     }
 
     public function __toString(): string
@@ -38,9 +46,16 @@ abstract class Message implements Jsonable, Arrayable
 
     public function toArray(): array
     {
-        return [
-            'op' => $this->op,
-        ];
+        $ret = [];
+        $map = get_object_vars($this);
+        foreach ($map as $key => $value) {
+            if (in_array($key, $this->ignore)) {
+                continue;
+            }
+            $ret[$key] =$value;
+        }
+
+        return $ret;
     }
 
     /**
@@ -80,18 +95,29 @@ abstract class Message implements Jsonable, Arrayable
     }
 
     /**
-     * @return \DateTime
+     * @param string $key
+     * @param $values
+     * @return $this
      */
-    public function getCreateTime(): \DateTime
+    public function addExtras(string $key, $values)
+    {
+        $this->extras[$key] = $values;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCreateTime(): string
     {
         return $this->createTime;
     }
 
     /**
-     * @param \DateTime $createTime
+     * @param string $createTime
      * @return Message
      */
-    public function setCreateTime(\DateTime $createTime): Message
+    public function setCreateTime(string $createTime): Message
     {
         $this->createTime = $createTime;
         return $this;

@@ -18,10 +18,10 @@ final class CodeEnum extends AbstractConstants
     const TYPE_MESSAGE = 'message';
 
     /**
-     * @Message("success")
-     * @OpString("op.%s.success")
+     * @Message("init")
+     * @OpString("op.%s.init")
      */
-    const OP_SUCCESS = 0;
+    const OP_INIT = 0;
 
     /**
      * @Message("server error")
