@@ -67,16 +67,6 @@ abstract class Message implements Jsonable, Arrayable
     }
 
     /**
-     * @param int $op
-     * @return Message
-     */
-    public function setOp(int $op): Message
-    {
-        $this->op = $op;
-        return $this;
-    }
-
-    /**
      * @return array
      */
     public function getExtras(): array

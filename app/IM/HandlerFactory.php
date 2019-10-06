@@ -7,7 +7,7 @@ use App\IM\Handler\CodeEnum;
 use App\IM\Handler\HandlerIf;
 use App\IM\Handler\Impl\NoPermissionHandler;
 use App\IM\Handler\Impl\ServerErrorHandler;
-use App\IM\Handler\Command\Message;
+use App\IM\Command\Message;
 use App\Utils\LogUtils;
 use Hyperf\Di\Container;
 use Hyperf\Utils\Str;
@@ -34,9 +34,9 @@ class HandlerFactory
         try {
             LogUtils::get(__CLASS__)->info('create', $operate->toArray());
 
-            $name = CodeEnum::getOpString($operate->getOp());
+            $name = CodeEnum::getHandlerString($operate->getOp());
             if (!$this->container->has($name)) {
-                $name = CodeEnum::getOpString(CodeEnum::OP_NOT_FOUND);
+                $name = CodeEnum::getHandlerString(CodeEnum::OP_NOT_FOUND);
             }
 
             LogUtils::get(__CLASS__)->info('op got ' . $name);
