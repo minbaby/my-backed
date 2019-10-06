@@ -2,28 +2,42 @@
 
 namespace App\IM\Packet;
 
+use App\IM\Command\Message;
 use App\IM\Handler\CodeEnum;
-use App\IM\Handler\Operate;
+use Hyperf\Di\Container;
+use Psr\Container\ContainerInterface;
 
 class JsonPacket implements PacketIf
 {
-    public function pack(Operate $operate): string
+    /**
+     * @var Container
+     */
+    private $container;
+
+    public function __construct(ContainerInterface $container)
+    {
+        $this->container = $container;
+    }
+
+
+    public function pack(Message $operate): string
     {
         return (string) $operate;
     }
 
-    public function unpack(string $data): Operate
+    /**
+     * @param string $data
+     * @return Message
+     */
+    public function unpack(string $data)
     {
         $data = @json_decode($data, true) ?? [];
 
-        if (empty($data)) {
-            return new Operate(CodeEnum::OP_DECODE_FAILED);
-        } else {
-            return new Operate(
-                data_get($data, 'op'),
-                data_get($data, 'message'),
-                data_get($data, 'data')
-            );
+        $op = CodeEnum::getOpString(data_get($data, 'op', ''), [CodeEnum::TYPE_MESSAGE]);
+
+        if (empty($data) || $op === '') {
+            $op = CodeEnum::getOpString(CodeEnum::OP_DECODE_FAILED,  [CodeEnum::TYPE_MESSAGE]);
         }
+        return $this->container->get($op);
     }
 }

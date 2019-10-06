@@ -7,7 +7,7 @@ use App\IM\Handler\CodeEnum;
 use App\IM\Handler\HandlerIf;
 use App\IM\Handler\Impl\NoPermissionHandler;
 use App\IM\Handler\Impl\ServerErrorHandler;
-use App\IM\Handler\Operate;
+use App\IM\Handler\Command\Message;
 use App\Utils\LogUtils;
 use Hyperf\Di\Container;
 use Hyperf\Utils\Str;
@@ -29,7 +29,7 @@ class HandlerFactory
         $this->container = $container;
     }
 
-    public function create(Operate $operate): HandlerIf
+    public function create(Message $operate): HandlerIf
     {
         try {
             LogUtils::get(__CLASS__)->info('create', $operate->toArray());

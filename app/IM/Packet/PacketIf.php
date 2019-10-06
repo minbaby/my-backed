@@ -4,11 +4,16 @@
 namespace App\IM\Packet;
 
 
-use App\IM\Handler\Operate;
+
+use App\IM\Command\Message;
 
 interface PacketIf
 {
-    public function pack(Operate $operate): string;
+    public function pack(Message $operate): string;
 
-    public function unpack(string $data): Operate;
+    /**
+     * @param string $data
+     * @return Message
+     */
+    public function unpack(string $data);
 }

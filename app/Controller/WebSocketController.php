@@ -3,9 +3,10 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\IM\Command\Impl\HeartBeatMessage;
 use App\IM\Handler\CodeEnum;
 use App\IM\Handler\HandlerIf;
-use App\IM\Handler\Operate;
+use App\IM\Handler\Command\Message;
 use App\IM\HandlerFactory;
 use App\IM\Packet\PacketIf;
 use App\Utils\LogUtils;
@@ -68,7 +69,7 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
     {
         $this->logger->info(__METHOD__, [$frame->data, $frame->fd]);
 
-        /** @var Operate $operate */
+        /** @var Message $operate */
         $operate = $this->packet->unpack($frame->data);
 
         $handler = $this->handlerFactory->create($operate);
@@ -87,7 +88,7 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
         $this->logger->info(__METHOD__, [$request->fd]);
         $this->timers[$request->fd] = Timer::tick(static::HEARTBEAT, function ()  use ($server, $request) {
             $this->logger->info("trigger heartbeat", [$request->fd, Carbon::now()->toDateTime()]);
-            $server->push($request->fd, (string) new Operate(CodeEnum::OP_HEARTBEAT));
+            $server->push($request->fd, (string) new HeartBeatMessage());
         });
     }
 }

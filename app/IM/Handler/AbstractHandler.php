@@ -2,6 +2,7 @@
 
 namespace App\IM\Handler;
 
+use App\IM\Command\Message;
 use App\IM\Packet\PacketIf;
 use App\Utils\LogUtils;
 use Hyperf\Logger\LoggerFactory;
@@ -40,9 +41,9 @@ abstract class AbstractHandler implements HandlerIf
     /**
      * @param Server $server
      * @param Frame $frame
-     * @param Operate $operate
+     * @param Message $operate
      */
-    protected function push(Server $server, Frame $frame, $operate)
+    protected function push(Server $server, Frame $frame, Message $operate)
     {
         $server->push($frame->fd, $this->packet->pack($operate));
     }

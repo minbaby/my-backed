@@ -4,7 +4,7 @@
 namespace App\IM\Handler\Impl;
 
 use App\IM\Handler\AbstractHandler;
-use App\IM\Handler\Operate;
+use App\IM\Command\Message;
 use Psr\Container\ContainerInterface;
 use Swoole\Server;
 use Swoole\WebSocket\Frame;
@@ -25,7 +25,7 @@ class ServerErrorHandler extends AbstractHandler
         $this->error = $error;
     }
 
-    public function handler(Server $server, Frame $frame, Operate $operate)
+    public function handler(Server $server, Frame $frame, Message $message): void
     {
     }
 }
