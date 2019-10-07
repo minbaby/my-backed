@@ -54,9 +54,17 @@ class TestClient extends HyperfCommand
         $uri = new Uri('ws://127.0.0.1:9502/ws');
         $ws = new Client($uri);
         Timer::tick(3000, function ()  use ($ws) {
-            $ws->push((string) new HeartBeatMessage());
+            $ws->push($this->packert->pack(new HeartBeatMessage()));
         });
+
+        $msg = '你好';
         while (true) {
+            echo "请输入内容:";
+            $msg = fgets(STDIN);
+            echo sprintf("输入的内容为: %s\n", $msg);
+
+            $ws->push($this->packert->pack((new MessageData())->setData(['txt' => $msg])));
+
             $frame = $ws->recv();
             if ($frame === false) {
                 usleep(300 * 000);
@@ -65,7 +73,6 @@ class TestClient extends HyperfCommand
 
             $operate = $this->packert->unpack($frame->getData());
             $this->line($operate->__toString() . "\n");
-
         }
     }
 }

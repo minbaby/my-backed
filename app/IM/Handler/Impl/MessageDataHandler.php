@@ -30,10 +30,10 @@ class MessageDataHandler extends AbstractHandler
     /**
      * @param Message|MessageData $message
      * @param SessionContext $context
-     * @return Message
+     * @return Message|MessageData
      */
     public function handler(Message $message, SessionContext $context): ?Message
     {
-        return (new ResponseBody())->setOp(CommandEnum::OP_NOT_FOUND)->addExtras('uid', $this->userService->isOnline('1'));
+        return (new MessageData())->setData(['txt' => $message->getData()['txt']]);
     }
 }
