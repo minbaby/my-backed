@@ -6,14 +6,14 @@ use App\IM\Command\CommandEnum;
 use App\IM\Command\Impl\ResponseBody;
 use App\IM\Command\Message;
 use App\IM\Handler\AbstractHandler;
-use App\Annotation\Handler;
+use App\Annotation\IMHandler;
 use App\IM\Service\UserService;
 use App\Utils\SessionContext;
 use Hyperf\Di\Annotation\Inject;
 use Swoole\WebSocket\Frame;
 
 /**
- * @Handler()
+ * @IMHandler()
  */
 class DefaultHandler extends AbstractHandler
 {
@@ -28,9 +28,9 @@ class DefaultHandler extends AbstractHandler
     /**
      * @param Message $message
      * @param SessionContext $context
-     * @return Message
+     * @return Message|null
      */
-    public function handler(Message $message, SessionContext $context): Message
+    public function handler(Message $message, SessionContext $context): ?Message
     {
         /** @var Frame $frame */
         $frame = $context->get('frame');

@@ -4,14 +4,17 @@ declare(strict_types=1);
 
 namespace App\Command;
 
+use App\IM\Command\Impl\HeartBeatMessage;
 use App\IM\Command\Impl\Message\MessageData;
 use App\IM\Packet\PacketIf;
+use Carbon\Carbon;
 use Hyperf\Command\Annotation\Command;
 use Hyperf\Command\Command as HyperfCommand;
 use Hyperf\Di\Annotation\Inject;
 use Hyperf\HttpMessage\Uri\Uri;
 use Hyperf\WebSocketClient\Client;
 use Psr\Container\ContainerInterface;
+use Swoole\Timer;
 
 /**
  * @Command
@@ -50,12 +53,14 @@ class TestClient extends HyperfCommand
 //        var_dump($hb->toArray());
         $uri = new Uri('ws://127.0.0.1:9502/ws');
         $ws = new Client($uri);
-        $ws->push((string) (new MessageData()));
+        Timer::tick(3000, function ()  use ($ws) {
+            $ws->push((string) new HeartBeatMessage());
+        });
         while (true) {
             $frame = $ws->recv();
-            if (empty($frame)) {
-                $this->line("empty" . (string) $frame);
-                continue;
+            if ($frame === false) {
+                usleep(300 * 000);
+                $ws = new Client($uri);
             }
 
             $operate = $this->packert->unpack($frame->getData());

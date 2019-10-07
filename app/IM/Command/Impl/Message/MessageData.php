@@ -4,10 +4,16 @@
 namespace App\IM\Command\Impl\Message;
 
 
+use App\Annotation\IMMessage;
 use App\IM\Command\ChatType;
 use App\IM\Command\Message;
 use App\IM\Command\CommandEnum;
 
+/**
+ * Class MessageData
+ * @package App\IM\Command\Impl\Message
+ * @IMMessage()
+ */
 class MessageData extends Message
 {
     protected $op = CommandEnum::OP_MESSAGE_DATA;

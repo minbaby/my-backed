@@ -9,14 +9,9 @@ use Hyperf\Utils\Traits\Container;
 
 /**
  * Class HandlerUtils
- * @method static HandlerIf get(string $id, $default = null);
+ * @method static get(string $id, $default = null);
  */
 class HandlerUtils
 {
     use Container;
-
-    public function x ()
-    {
-
-    }
 }

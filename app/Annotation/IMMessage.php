@@ -1,11 +1,9 @@
 <?php
 
-
 namespace App\Annotation;
 
-
-use App\IM\Handler\HandlerIf;
-use App\Utils\HandlerUtils;
+use App\IM\Command\Message;
+use App\Utils\MessageUtils;
 use Doctrine\Common\Annotations\Annotation\Target;
 use Hyperf\Di\Annotation\AbstractAnnotation;
 
@@ -13,7 +11,7 @@ use Hyperf\Di\Annotation\AbstractAnnotation;
  * @Annotation
  * @Target("CLASS")
  */
-class Handler extends AbstractAnnotation
+class IMMessage extends AbstractAnnotation
 {
     /**
      * @param string $className
@@ -22,6 +20,10 @@ class Handler extends AbstractAnnotation
     {
         parent::collectClass($className);
 
-        HandlerUtils::set($className::OP, $className);
+        /** @var Message $message */
+        $message = make($className);
+        MessageUtils::set($message->getOp(), $className);
+
+        echo $message->getOp(), $className, PHP_EOL;
     }
 }

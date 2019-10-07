@@ -2,33 +2,38 @@
 
 namespace App\IM\Handler\Impl;
 
-use App\Annotation\Handler;
+use App\Annotation\IMHandler;
 use App\IM\Command\CommandEnum;
 use App\IM\Command\Impl\Message\MessageData;
+use App\IM\Command\Impl\ResponseBody;
 use App\IM\Command\Message;
 use App\IM\Handler\AbstractHandler;
+use App\IM\Service\UserService;
 use App\Utils\SessionContext;
+use Hyperf\Di\Annotation\Inject;
 
 /**
  * Class MessageDataHandler
  * @package App\IM\Handler\Impl
- * @Handler()
+ * @IMHandler()
  */
 class MessageDataHandler extends AbstractHandler
 {
     const OP = CommandEnum::OP_MESSAGE_DATA;
 
     /**
+     * @var UserService
+     * @Inject()
+     */
+    protected $userService;
+
+    /**
      * @param Message|MessageData $message
      * @param SessionContext $context
      * @return Message
      */
-    public function handler(Message $message, SessionContext $context): Message
+    public function handler(Message $message, SessionContext $context): ?Message
     {
-    }
-
-    public function getOp(): int
-    {
-        return CommandEnum::OP_MESSAGE_DATA;
+        return (new ResponseBody())->setOp(CommandEnum::OP_NOT_FOUND)->addExtras('uid', $this->userService->isOnline('1'));
     }
 }

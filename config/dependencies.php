@@ -24,16 +24,16 @@ return [
 //        CodeEnum::getHandlerString(CodeEnum::OP_SERVER_ERROR) => ServerErrorHandler::class,
 //        CodeEnum::getHandlerString(CodeEnum::OP_DECODE_FAILED) => DecodeFailedHandler::class,
 //        CodeEnum::getHandlerString(CodeEnum::OP_HEARTBEAT) => HeartbeatHandler::class,
-        CommandEnum::getHandlerString(CommandEnum::OP_MESSAGE_DATA) => MessageDataHandler::class,
+//        CommandEnum::getHandlerString(CommandEnum::OP_MESSAGE_DATA) => MessageDataHandler::class,
 
         // end hander
 
         //begin message
-        CommandEnum::getMessageString(CommandEnum::OP_UNKNOW) => ServerError::class,
-        CommandEnum::getMessageString(CommandEnum::OP_SERVER_ERROR) => ServerError::class,
-        CommandEnum::getMessageString(CommandEnum::OP_DECODE_FAILED) => DecodeFailed::class,
-        CommandEnum::getMessageString(CommandEnum::OP_HEARTBEAT) => HeartBeatMessage::class,
-        CommandEnum::getMessageString(CommandEnum::OP_MESSAGE_DATA) => MessageData::class,
+//        CommandEnum::getMessageString(CommandEnum::OP_UNKNOW) => ServerError::class,
+//        CommandEnum::getMessageString(CommandEnum::OP_SERVER_ERROR) => ServerError::class,
+//        CommandEnum::getMessageString(CommandEnum::OP_DECODE_FAILED) => DecodeFailed::class,
+//        CommandEnum::getMessageString(CommandEnum::OP_HEARTBEAT) => HeartBeatMessage::class,
+//        CommandEnum::getMessageString(CommandEnum::OP_MESSAGE_DATA) => MessageData::class,
 
         //end message
     ],

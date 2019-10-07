@@ -17,7 +17,7 @@ interface HandlerIf
     /**
      * @param Message $message
      * @param SessionContext $context
-     * @return Message
+     * @return Message|null
      */
-    public function handler(Message $message, SessionContext $context): Message;
+    public function handler(Message $message, SessionContext $context): ?Message;
 }

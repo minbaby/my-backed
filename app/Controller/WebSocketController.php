@@ -3,7 +3,9 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\IM\Command\CommandEnum;
 use App\IM\Command\Impl\HeartBeatMessage;
+use App\IM\Handler\HandlerIf;
 use App\IM\Packet\PacketIf;
 use App\Utils\HandlerUtils;
 use App\Utils\LogUtils;
@@ -13,6 +15,7 @@ use Hyperf\Contract\OnCloseInterface;
 use Hyperf\Contract\OnMessageInterface;
 use Hyperf\Contract\OnOpenInterface;
 use Hyperf\Di\Annotation\Inject;
+use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 use Swoole\Http\Request;
 use Swoole\Server;
@@ -28,7 +31,7 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
     /**
      * 10s
      */
-    const HEARTBEAT = 10000;
+    const HEARTBEAT = 3000;
 
     /**
      * @var LoggerInterface
@@ -42,9 +45,10 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
     protected $packet;
 
     /**
-     * @var int[]
+     * @var ContainerInterface
+     * @Inject()
      */
-    protected $timers;
+    protected $container;
 
     public function __construct()
     {
@@ -64,13 +68,22 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
 
         $context = new SessionContext();
 
-        $context->set('frame', $frame)
-            ->set('port', $server->port)
-            ->set('host', $server->host);
+        $context->fromFrame($frame)->fromServer($server);
 
-        $outMessage = HandlerUtils::get((string) $inMessage->getOp())->handler($inMessage, $context);
 
-        $server->push($frame->fd, $this->packet->pack($outMessage));
+        $handlerClass = HandlerUtils::get((string) $inMessage->getOp(), '');
+
+        if (!$this->container->has($handlerClass)) {
+            $handlerClass = HandlerUtils::get((string) CommandEnum::OP_UNKNOW);
+        }
+
+        /** @var HandlerIf $handler */
+        $handler = $this->container->get($handlerClass);
+        $outMessage = $handler->handler($inMessage, $context);
+
+        if ($outMessage) {
+            $server->push($frame->fd, $this->packet->pack($outMessage));
+        }
 
         unset($context);
     }
@@ -78,15 +91,10 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
     public function onClose(Server $server, int $fd, int $reactorId): void
     {
         $this->logger->info(__METHOD__, [$fd, $reactorId]);
-        Timer::clear($this->timers[$fd]);
     }
 
     public function onOpen(Server $server, Request $request): void
     {
         $this->logger->info(__METHOD__, [$request->fd]);
-        $this->timers[$request->fd] = Timer::tick(static::HEARTBEAT, function ()  use ($server, $request) {
-            $this->logger->info("trigger heartbeat", [$request->fd, Carbon::now()->toDateTime()]);
-            $server->push($request->fd, (string) new HeartBeatMessage());
-        });
     }
 }

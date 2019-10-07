@@ -4,7 +4,9 @@ namespace App\IM\Packet;
 
 use App\IM\Command\Message;
 use App\IM\Command\CommandEnum;
+use App\Utils\HandlerUtils;
 use App\Utils\LogUtils;
+use App\Utils\MessageUtils;
 use Hyperf\Di\Container;
 use Hyperf\Logger\Logger;
 use Psr\Container\ContainerInterface;
@@ -41,12 +43,11 @@ class JsonPacket implements PacketIf
     {
         $data = @json_decode($data, true) ?? [];
 
-        $op = CommandEnum::getMessageString(data_get($data, 'op', ''));
+        $op = data_get($data, 'op', CommandEnum::OP_DECODE_FAILED);
 
-        if (empty($data) || $op === '') {
-            $op = CommandEnum::getMessageString(CommandEnum::OP_DECODE_FAILED);
-        }
-        $obj = $this->container->get($op);
+        $messageClass = MessageUtils::get($op, MessageUtils::get(CommandEnum::OP_DECODE_FAILED));
+
+        $obj = $this->container->get($messageClass);
         return $this->assign($data, $obj);
     }
 

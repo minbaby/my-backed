@@ -2,6 +2,9 @@
 
 namespace App\Utils;
 
+use Swoole\Server;
+use Swoole\WebSocket\Frame;
+
 class SessionContext
 {
 
@@ -21,5 +24,16 @@ class SessionContext
     public function has(string $id)
     {
         return isset($this->container[$id]);
+    }
+
+    public function fromServer(Server $server)
+    {
+        return $this->set('port', $server->port)
+            ->set('host', $server->host);
+    }
+
+    public function fromFrame(Frame $frame)
+    {
+        return $this->set('frame', $frame);
     }
 }

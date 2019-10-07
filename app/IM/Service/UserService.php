@@ -33,4 +33,9 @@ class UserService
     {
         return $this->uid2fd[$uid] ?? 0;
     }
+
+    public function isOnline(string $uid): bool
+    {
+        return isset($this->uid2fd[$uid]) ? true : false;
+    }
 }
