@@ -4,12 +4,13 @@
 namespace App\IM\Command\Impl\Message;
 
 
+use App\IM\Command\ChatType;
 use App\IM\Command\Message;
-use App\IM\Handler\CodeEnum;
+use App\IM\Command\CommandEnum;
 
 class MessageData extends Message
 {
-    protected $op = CodeEnum::OP_MESSAGE_DATA;
+    protected $op = CommandEnum::OP_MESSAGE_DATA;
 
     /**
      * @var string
@@ -25,6 +26,11 @@ class MessageData extends Message
      * @var array
      */
     protected $data = [];
+
+    /**
+     * @var int
+     */
+    protected $chatType = ChatType::UNKNOW;
 
     /**
      * @param string $from
@@ -78,5 +84,23 @@ class MessageData extends Message
     public function getData(): array
     {
         return $this->data;
+    }
+
+    /**
+     * @param int $chatType
+     * @return MessageData
+     */
+    public function setChatType(int $chatType): MessageData
+    {
+        $this->chatType = $chatType;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getChatType(): int
+    {
+        return $this->chatType;
     }
 }

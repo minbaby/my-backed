@@ -5,11 +5,11 @@ namespace App\IM\Command\Impl;
 
 
 use App\IM\Command\Message;
-use App\IM\Handler\CodeEnum;
+use App\IM\Command\CommandEnum;
 
 class ResponseBody extends Message
 {
-    protected $status = CodeEnum::STATUS_SUCCESS;
+    protected $status = CommandEnum::STATUS_SUCCESS;
 
     protected $message = '';
 

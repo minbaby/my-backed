@@ -5,11 +5,11 @@ namespace App\IM\Command\Impl\Auth;
 
 
 use App\IM\Command\Message;
-use App\IM\Handler\CodeEnum;
+use App\IM\Command\CommandEnum;
 
 class LoginRequest extends Message
 {
-    protected $op = CodeEnum::OP_AUTH_LOGIN_REQ;
+    protected $op = CommandEnum::OP_AUTH_LOGIN_REQ;
 
     protected $userName;
 

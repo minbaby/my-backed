@@ -1,6 +1,6 @@
 <?php
 
-namespace App\IM\Handler;
+namespace App\IM\Command;
 
 use Hyperf\Constants\AbstractConstants;
 use Hyperf\Constants\Annotation\Constants;
@@ -11,7 +11,7 @@ use Hyperf\Constants\ConstantsCollector;
  * @Constants
  * @method static getMessage(int $code, $param = [])
  */
-final class CodeEnum extends AbstractConstants
+final class CommandEnum extends AbstractConstants
 {
     const TYPE_HANDLER = 'handler';
 
@@ -23,9 +23,9 @@ final class CodeEnum extends AbstractConstants
 
     /**
      * @Message("init")
-     * @OpString("op.%s.init")
+     * @OpString("op.%s.unknow")
      */
-    const OP_INIT = 0x0001;
+    const OP_UNKNOW = 0x0001;
 
     /**
      * @Message("server error")

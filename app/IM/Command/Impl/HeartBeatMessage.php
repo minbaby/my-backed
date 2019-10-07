@@ -3,9 +3,9 @@
 namespace App\IM\Command\Impl;
 
 use App\IM\Command\Message;
-use App\IM\Handler\CodeEnum;
+use App\IM\Command\CommandEnum;
 
 class HeartBeatMessage extends Message
 {
-    protected $op = CodeEnum::OP_HEARTBEAT;
+    protected $op = CommandEnum::OP_HEARTBEAT;
 }

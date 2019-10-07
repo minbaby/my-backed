@@ -5,9 +5,9 @@ namespace App\IM\Command\Impl;
 
 
 use App\IM\Command\Message;
-use App\IM\Handler\CodeEnum;
+use App\IM\Command\CommandEnum;
 
 class ServerError extends Message
 {
-    protected $op = CodeEnum::OP_SERVER_ERROR;
+    protected $op = CommandEnum::OP_SERVER_ERROR;
 }

@@ -4,16 +4,15 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\IM\Command\Impl\HeartBeatMessage;
-use App\IM\Command\Message;
-use App\IM\HandlerFactory;
 use App\IM\Packet\PacketIf;
+use App\Utils\HandlerUtils;
 use App\Utils\LogUtils;
+use App\Utils\SessionContext;
 use Carbon\Carbon;
 use Hyperf\Contract\OnCloseInterface;
 use Hyperf\Contract\OnMessageInterface;
 use Hyperf\Contract\OnOpenInterface;
 use Hyperf\Di\Annotation\Inject;
-use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\Log\LoggerInterface;
 use Swoole\Http\Request;
 use Swoole\Server;
@@ -30,11 +29,6 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
      * 10s
      */
     const HEARTBEAT = 10000;
-    /**
-     * @var EventDispatcherInterface
-     * @Inject()
-     */
-    protected $eventDispatcher;
 
     /**
      * @var LoggerInterface
@@ -52,12 +46,6 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
      */
     protected $timers;
 
-    /**
-     * @var HandlerFactory
-     * @Inject()
-     */
-    protected $handlerFactory;
-
     public function __construct()
     {
         $this->logger = LogUtils::get(__CLASS__);
@@ -67,12 +55,24 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
     {
         $this->logger->info(__METHOD__, [$frame->data, $frame->fd]);
 
-        /** @var Message $operate */
-        $operate = $this->packet->unpack($frame->data);
+        if (!$frame->finish) {
+            $this->logger->debug("not finish");
+            return;
+        }
 
-        $handler = $this->handlerFactory->create($operate);
+        $inMessage = $this->packet->unpack($frame->data);
 
-        $handler->handler($server, $frame, $operate);
+        $context = new SessionContext();
+
+        $context->set('frame', $frame)
+            ->set('port', $server->port)
+            ->set('host', $server->host);
+
+        $outMessage = HandlerUtils::get((string) $inMessage->getOp())->handler($inMessage, $context);
+
+        $server->push($frame->fd, $this->packet->pack($outMessage));
+
+        unset($context);
     }
 
     public function onClose(Server $server, int $fd, int $reactorId): void

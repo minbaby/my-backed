@@ -8,7 +8,7 @@ use App\IM\Command\Impl\DecodeFailed;
 use App\IM\Command\Impl\HeartBeatMessage;
 use App\IM\Command\Impl\Message\MessageData;
 use App\IM\Command\Impl\ServerError;
-use App\IM\Handler\CodeEnum;
+use App\IM\Command\CommandEnum;
 use App\IM\Handler\Impl\DecodeFailedHandler;
 use App\IM\Handler\Impl\HeartbeatHandler;
 use App\IM\Handler\Impl\ServerErrorHandler;
@@ -21,19 +21,19 @@ return [
         PacketIf::class => JsonPacket::class,
 
         // begin handler
-        CodeEnum::getHandlerString(CodeEnum::OP_SERVER_ERROR) => ServerErrorHandler::class,
-        CodeEnum::getHandlerString(CodeEnum::OP_DECODE_FAILED) => DecodeFailedHandler::class,
-        CodeEnum::getHandlerString(CodeEnum::OP_HEARTBEAT) => HeartbeatHandler::class,
-        CodeEnum::getHandlerString(CodeEnum::OP_MESSAGE_DATA) => MessageDataHandler::class,
+//        CodeEnum::getHandlerString(CodeEnum::OP_SERVER_ERROR) => ServerErrorHandler::class,
+//        CodeEnum::getHandlerString(CodeEnum::OP_DECODE_FAILED) => DecodeFailedHandler::class,
+//        CodeEnum::getHandlerString(CodeEnum::OP_HEARTBEAT) => HeartbeatHandler::class,
+        CommandEnum::getHandlerString(CommandEnum::OP_MESSAGE_DATA) => MessageDataHandler::class,
 
         // end hander
 
         //begin message
-        CodeEnum::getMessageString(CodeEnum::OP_INIT) => ServerError::class,
-        CodeEnum::getMessageString(CodeEnum::OP_SERVER_ERROR) => ServerError::class,
-        CodeEnum::getMessageString(CodeEnum::OP_DECODE_FAILED) => DecodeFailed::class,
-        CodeEnum::getMessageString(CodeEnum::OP_HEARTBEAT) => HeartBeatMessage::class,
-        CodeEnum::getMessageString(CodeEnum::OP_MESSAGE_DATA) => MessageData::class,
+        CommandEnum::getMessageString(CommandEnum::OP_UNKNOW) => ServerError::class,
+        CommandEnum::getMessageString(CommandEnum::OP_SERVER_ERROR) => ServerError::class,
+        CommandEnum::getMessageString(CommandEnum::OP_DECODE_FAILED) => DecodeFailed::class,
+        CommandEnum::getMessageString(CommandEnum::OP_HEARTBEAT) => HeartBeatMessage::class,
+        CommandEnum::getMessageString(CommandEnum::OP_MESSAGE_DATA) => MessageData::class,
 
         //end message
     ],

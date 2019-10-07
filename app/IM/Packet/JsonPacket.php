@@ -3,7 +3,7 @@
 namespace App\IM\Packet;
 
 use App\IM\Command\Message;
-use App\IM\Handler\CodeEnum;
+use App\IM\Command\CommandEnum;
 use App\Utils\LogUtils;
 use Hyperf\Di\Container;
 use Hyperf\Logger\Logger;
@@ -41,10 +41,10 @@ class JsonPacket implements PacketIf
     {
         $data = @json_decode($data, true) ?? [];
 
-        $op = CodeEnum::getMessageString(data_get($data, 'op', ''));
+        $op = CommandEnum::getMessageString(data_get($data, 'op', ''));
 
         if (empty($data) || $op === '') {
-            $op = CodeEnum::getMessageString(CodeEnum::OP_DECODE_FAILED);
+            $op = CommandEnum::getMessageString(CommandEnum::OP_DECODE_FAILED);
         }
         $obj = $this->container->get($op);
         return $this->assign($data, $obj);

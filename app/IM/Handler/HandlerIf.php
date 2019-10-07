@@ -4,16 +4,20 @@
 namespace App\IM\Handler;
 
 
+use App\IM\Command\CommandEnum;
 use App\IM\Command\Message;
-use Swoole\Server;
-use Swoole\WebSocket\Frame;
+use App\Utils\SessionContext;
 
 interface HandlerIf
 {
+    const OP = CommandEnum::OP_UNKNOW;
+
+    public function getOp(): int;
+
     /**
-     * @param Server $server
-     * @param Frame $frame
      * @param Message $message
+     * @param SessionContext $context
+     * @return Message
      */
-    public function handler(Server $server, Frame $frame, Message $message): void;
+    public function handler(Message $message, SessionContext $context): Message;
 }

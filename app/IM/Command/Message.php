@@ -2,7 +2,7 @@
 
 namespace App\IM\Command;
 
-use App\IM\Handler\CodeEnum;
+use App\IM\Command\CommandEnum;
 use Carbon\Carbon;
 use Hyperf\Utils\Contracts\Arrayable;
 use Hyperf\Utils\Contracts\Jsonable;
@@ -12,7 +12,7 @@ abstract class Message implements Jsonable, Arrayable
     /**
      * @var int
      */
-    protected $op = CodeEnum::OP_INIT;
+    protected $op = CommandEnum::OP_UNKNOW;
 
     /**
      * @var string
@@ -110,6 +110,16 @@ abstract class Message implements Jsonable, Arrayable
     public function setCreateTime(string $createTime): Message
     {
         $this->createTime = $createTime;
+        return $this;
+    }
+
+    /**
+     * @param int $op
+     * @return Message
+     */
+    public function setOp(int $op): Message
+    {
+        $this->op = $op;
         return $this;
     }
 }

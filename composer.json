@@ -15,6 +15,7 @@
         "php": ">=7.2",
         "ext-swoole": ">=4.2",
         "ext-json": "*",
+        "ext-redis": "*",
         "hyperf/cache": "~1.0.0",
         "hyperf/command": "~1.0.0",
         "hyperf/config": "~1.0.0",
