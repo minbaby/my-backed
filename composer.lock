@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e05dc6a572496adeded1224347c89173",
+    "content-hash": "b634d24b2bd39d4029f9aba95e0a10f0",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -968,16 +968,16 @@
         },
         {
             "name": "hyperf/db-connection",
-            "version": "v1.0.14",
+            "version": "v1.0.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/db-connection.git",
-                "reference": "78ea9233a8838ecf8236d909871791308771832d"
+                "reference": "2c99b2973631ac9fb419603d1f6f87f7e7e4d160"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/db-connection/zipball/78ea9233a8838ecf8236d909871791308771832d",
-                "reference": "78ea9233a8838ecf8236d909871791308771832d",
+                "url": "https://api.github.com/repos/hyperf-cloud/db-connection/zipball/2c99b2973631ac9fb419603d1f6f87f7e7e4d160",
+                "reference": "2c99b2973631ac9fb419603d1f6f87f7e7e4d160",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1026,7 +1026,7 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2019-09-02T09:11:11+00:00"
+            "time": "2019-09-05T07:39:44+00:00"
         },
         {
             "name": "hyperf/devtool",
@@ -8429,7 +8429,8 @@
     "platform": {
         "php": ">=7.2",
         "ext-swoole": ">=4.2",
-        "ext-json": "*"
+        "ext-json": "*",
+        "ext-redis": "*"
     },
     "platform-dev": []
 }
