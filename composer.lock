@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e05dc6a572496adeded1224347c89173",
+    "content-hash": "b634d24b2bd39d4029f9aba95e0a10f0",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1416,16 +1416,16 @@
         },
         {
             "name": "hyperf/guzzle",
-            "version": "v1.0.15",
+            "version": "v1.0.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/guzzle.git",
-                "reference": "dea9007f4b3d9936f287375cb2cd8027fd9de3db"
+                "reference": "cdd69acf7d16804481266dc9a4a118dfd3d0acd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/guzzle/zipball/dea9007f4b3d9936f287375cb2cd8027fd9de3db",
-                "reference": "dea9007f4b3d9936f287375cb2cd8027fd9de3db",
+                "url": "https://api.github.com/repos/hyperf-cloud/guzzle/zipball/cdd69acf7d16804481266dc9a4a118dfd3d0acd1",
+                "reference": "cdd69acf7d16804481266dc9a4a118dfd3d0acd1",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1470,7 +1470,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-09-05T11:59:06+00:00"
+            "time": "2019-09-29T07:23:16+00:00"
         },
         {
             "name": "hyperf/http-message",
@@ -8429,7 +8429,8 @@
     "platform": {
         "php": ">=7.2",
         "ext-swoole": ">=4.2",
-        "ext-json": "*"
+        "ext-json": "*",
+        "ext-redis": "*"
     },
     "platform-dev": []
 }
