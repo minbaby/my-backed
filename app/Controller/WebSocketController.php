@@ -4,13 +4,11 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\IM\Command\CommandEnum;
-use App\IM\Command\Impl\HeartBeatMessage;
 use App\IM\Handler\HandlerIf;
 use App\IM\Packet\PacketIf;
 use App\Utils\HandlerUtils;
 use App\Utils\LogUtils;
 use App\Utils\SessionContext;
-use Carbon\Carbon;
 use Hyperf\Contract\OnCloseInterface;
 use Hyperf\Contract\OnMessageInterface;
 use Hyperf\Contract\OnOpenInterface;
@@ -19,8 +17,8 @@ use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 use Swoole\Http\Request;
 use Swoole\Server;
-use Swoole\Timer;
 use Swoole\Websocket\Frame;
+use Swoole\WebSocket\Server as WsServer;
 
 /**
  * Class WebSocketController
@@ -55,7 +53,7 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
         $this->logger = LogUtils::get(__CLASS__);
     }
 
-    public function onMessage(Server $server, Frame $frame): void
+    public function onMessage(WsServer $server, Frame $frame): void
     {
         $this->logger->info(__METHOD__, [$frame->data, $frame->fd]);
 
@@ -93,7 +91,7 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
         $this->logger->info(__METHOD__, [$fd, $reactorId]);
     }
 
-    public function onOpen(Server $server, Request $request): void
+    public function onOpen(WsServer $server, Request $request): void
     {
         $this->logger->info(__METHOD__, [$request->fd]);
     }

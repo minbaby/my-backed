@@ -7,7 +7,6 @@ namespace App\Command;
 use App\IM\Command\Impl\HeartBeatMessage;
 use App\IM\Command\Impl\Message\MessageData;
 use App\IM\Packet\PacketIf;
-use Carbon\Carbon;
 use Hyperf\Command\Annotation\Command;
 use Hyperf\Command\Command as HyperfCommand;
 use Hyperf\Di\Annotation\Inject;
