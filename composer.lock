@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e05dc6a572496adeded1224347c89173",
+    "content-hash": "cf74ad288bdeffeeeba085bac36757e8",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1657,16 +1657,16 @@
         },
         {
             "name": "hyperf/memory",
-            "version": "v1.0.9",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/memory.git",
-                "reference": "df00bdda75c1d0e27a7e3f5aa65971bba91ace0e"
+                "reference": "05288d576e4d723e7b330bd5eabbd9a8e984c722"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/memory/zipball/df00bdda75c1d0e27a7e3f5aa65971bba91ace0e",
-                "reference": "df00bdda75c1d0e27a7e3f5aa65971bba91ace0e",
+                "url": "https://api.github.com/repos/hyperf-cloud/memory/zipball/05288d576e4d723e7b330bd5eabbd9a8e984c722",
+                "reference": "05288d576e4d723e7b330bd5eabbd9a8e984c722",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1687,7 +1687,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1-dev"
                 },
                 "hyperf": {
                     "config": "Hyperf\\Memory\\ConfigProvider"
@@ -1709,7 +1709,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-08-02T01:57:05+00:00"
+            "time": "2019-10-07T02:15:52+00:00"
         },
         {
             "name": "hyperf/model-cache",
@@ -8429,7 +8429,8 @@
     "platform": {
         "php": ">=7.2",
         "ext-swoole": ">=4.2",
-        "ext-json": "*"
+        "ext-json": "*",
+        "ext-redis": "*"
     },
     "platform-dev": []
 }
