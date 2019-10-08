@@ -3,17 +3,23 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\IM\Command\CommandEnum;
+use App\IM\Command\Impl\HeartBeatMessage;
 use App\IM\Handler\HandlerIf;
-use App\IM\HandlerFactory;
 use App\IM\Packet\PacketIf;
+use App\Utils\HandlerUtils;
 use App\Utils\LogUtils;
+use App\Utils\SessionContext;
+use Carbon\Carbon;
 use Hyperf\Contract\OnCloseInterface;
 use Hyperf\Contract\OnMessageInterface;
 use Hyperf\Contract\OnOpenInterface;
-use Psr\EventDispatcher\EventDispatcherInterface;
+use Hyperf\Di\Annotation\Inject;
+use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 use Swoole\Http\Request;
 use Swoole\Server;
+use Swoole\Timer;
 use Swoole\Websocket\Frame;
 
 /**
@@ -23,10 +29,9 @@ use Swoole\Websocket\Frame;
 class WebSocketController implements OnMessageInterface, OnOpenInterface, OnCloseInterface
 {
     /**
-     * @var EventDispatcherInterface
-     * @Inject()
+     * 10s
      */
-    protected $eventDispatcher;
+    const HEARTBEAT = 3000;
 
     /**
      * @var LoggerInterface
@@ -40,29 +45,47 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
     protected $packet;
 
     /**
-     * @var HandlerFactory
+     * @var ContainerInterface
      * @Inject()
      */
-    protected $handlerFactory;
+    protected $container;
 
     public function __construct()
     {
         $this->logger = LogUtils::get(__CLASS__);
     }
 
-
     public function onMessage(Server $server, Frame $frame): void
     {
         $this->logger->info(__METHOD__, [$frame->data, $frame->fd]);
 
-        $data = $this->packet->unpack($frame->data);
+        if (!$frame->finish) {
+            $this->logger->debug("not finish");
+            return;
+        }
+
+        $inMessage = $this->packet->unpack($frame->data);
+
+        $context = new SessionContext();
+
+        $context->fromFrame($frame)->fromServer($server);
+
+
+        $handlerClass = HandlerUtils::get((string) $inMessage->getOp(), '');
+
+        if (!$this->container->has($handlerClass)) {
+            $handlerClass = HandlerUtils::get((string) CommandEnum::OP_UNKNOW);
+        }
 
         /** @var HandlerIf $handler */
-        $handler = $this->handlerFactory->create($data ?? []);
+        $handler = $this->container->get($handlerClass);
+        $outMessage = $handler->handler($inMessage, $context);
 
-        $this->logger->info(__METHOD__, ['op event created']);
+        if ($outMessage) {
+            $server->push($frame->fd, $this->packet->pack($outMessage));
+        }
 
-        $handler->handler($server, $frame, $data);
+        unset($context);
     }
 
     public function onClose(Server $server, int $fd, int $reactorId): void
