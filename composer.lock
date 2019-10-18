@@ -1966,16 +1966,16 @@
         },
         {
             "name": "hyperf/process",
-            "version": "v1.1.0",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/process.git",
-                "reference": "ac2370b108f25bcd0b4ed5ae8c56376e5836bdf7"
+                "reference": "f8daece7b292cc8b16d9d05f6feb6322c6a1d002"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/process/zipball/ac2370b108f25bcd0b4ed5ae8c56376e5836bdf7",
-                "reference": "ac2370b108f25bcd0b4ed5ae8c56376e5836bdf7",
+                "url": "https://api.github.com/repos/hyperf-cloud/process/zipball/f8daece7b292cc8b16d9d05f6feb6322c6a1d002",
+                "reference": "f8daece7b292cc8b16d9d05f6feb6322c6a1d002",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2027,7 +2027,7 @@
                 "php",
                 "process"
             ],
-            "time": "2019-10-07T02:15:52+00:00"
+            "time": "2019-10-11T06:26:09+00:00"
         },
         {
             "name": "hyperf/redis",
