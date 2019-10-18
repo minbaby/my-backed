@@ -799,16 +799,16 @@
         },
         {
             "name": "hyperf/contract",
-            "version": "v1.1.0",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/contract.git",
-                "reference": "7be4eea9b967d1bc96027a241025a65443603225"
+                "reference": "5d72212c0aab14915a856e083a7be901f5a1982c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/contract/zipball/7be4eea9b967d1bc96027a241025a65443603225",
-                "reference": "7be4eea9b967d1bc96027a241025a65443603225",
+                "url": "https://api.github.com/repos/hyperf-cloud/contract/zipball/5d72212c0aab14915a856e083a7be901f5a1982c",
+                "reference": "5d72212c0aab14915a856e083a7be901f5a1982c",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -848,7 +848,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-10-07T02:15:52+00:00"
+            "time": "2019-10-12T01:18:21+00:00"
         },
         {
             "name": "hyperf/crontab",
