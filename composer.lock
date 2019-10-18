@@ -909,16 +909,16 @@
         },
         {
             "name": "hyperf/database",
-            "version": "v1.1.1",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/database.git",
-                "reference": "8f8f817d6d4647f84945a09001d7327a3b96ad87"
+                "reference": "ba3725383b3e6b5bfa6c472de3fd66fe92eca0f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/database/zipball/8f8f817d6d4647f84945a09001d7327a3b96ad87",
-                "reference": "8f8f817d6d4647f84945a09001d7327a3b96ad87",
+                "url": "https://api.github.com/repos/hyperf-cloud/database/zipball/ba3725383b3e6b5bfa6c472de3fd66fe92eca0f8",
+                "reference": "ba3725383b3e6b5bfa6c472de3fd66fe92eca0f8",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -966,7 +966,7 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2019-10-08T10:03:04+00:00"
+            "time": "2019-10-16T06:29:29+00:00"
         },
         {
             "name": "hyperf/db-connection",
@@ -2626,16 +2626,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.25.1",
+            "version": "2.25.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "d59c6cea9c4a3547bb6c0dfec451319abdaa4fb1"
+                "reference": "443fe5f1498147e0fbc792142b5dc43e2e8a533f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d59c6cea9c4a3547bb6c0dfec451319abdaa4fb1",
-                "reference": "d59c6cea9c4a3547bb6c0dfec451319abdaa4fb1",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/443fe5f1498147e0fbc792142b5dc43e2e8a533f",
+                "reference": "443fe5f1498147e0fbc792142b5dc43e2e8a533f",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2695,7 +2695,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-10-05T15:52:23+00:00"
+            "time": "2019-10-14T14:18:59+00:00"
         },
         {
             "name": "nikic/fast-route",
