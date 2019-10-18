@@ -2228,16 +2228,16 @@
         },
         {
             "name": "hyperf/tracer",
-            "version": "v1.1.1",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/tracer.git",
-                "reference": "d840fa136111a79dd3d4bcd50039c69c29c3e554"
+                "reference": "3366a9cf9e003f42cf8c089f943f9da5ae6c6b20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/tracer/zipball/d840fa136111a79dd3d4bcd50039c69c29c3e554",
-                "reference": "d840fa136111a79dd3d4bcd50039c69c29c3e554",
+                "url": "https://api.github.com/repos/hyperf-cloud/tracer/zipball/3366a9cf9e003f42cf8c089f943f9da5ae6c6b20",
+                "reference": "3366a9cf9e003f42cf8c089f943f9da5ae6c6b20",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2293,7 +2293,7 @@
                 "php",
                 "zipkin"
             ],
-            "time": "2019-10-08T07:23:25+00:00"
+            "time": "2019-10-17T06:26:56+00:00"
         },
         {
             "name": "hyperf/utils",
