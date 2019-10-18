@@ -1476,16 +1476,16 @@
         },
         {
             "name": "hyperf/http-message",
-            "version": "v1.1.0",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/http-message.git",
-                "reference": "4bccad186f2755957b14b32ebddade8c3fb2cd35"
+                "reference": "eae52a20e1426a8833a25b76a14b0712e9c71bca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/http-message/zipball/4bccad186f2755957b14b32ebddade8c3fb2cd35",
-                "reference": "4bccad186f2755957b14b32ebddade8c3fb2cd35",
+                "url": "https://api.github.com/repos/hyperf-cloud/http-message/zipball/eae52a20e1426a8833a25b76a14b0712e9c71bca",
+                "reference": "eae52a20e1426a8833a25b76a14b0712e9c71bca",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1525,20 +1525,20 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-10-07T02:15:52+00:00"
+            "time": "2019-10-11T06:39:17+00:00"
         },
         {
             "name": "hyperf/http-server",
-            "version": "v1.1.0",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/http-server.git",
-                "reference": "81fae03b4cc26ef98c67c88977d7795d0dd65210"
+                "reference": "b7ff40fb12a9efef8737551988e03a935b940d4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/http-server/zipball/81fae03b4cc26ef98c67c88977d7795d0dd65210",
-                "reference": "81fae03b4cc26ef98c67c88977d7795d0dd65210",
+                "url": "https://api.github.com/repos/hyperf-cloud/http-server/zipball/b7ff40fb12a9efef8737551988e03a935b940d4b",
+                "reference": "b7ff40fb12a9efef8737551988e03a935b940d4b",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1595,7 +1595,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-10-07T02:15:52+00:00"
+            "time": "2019-10-11T06:39:17+00:00"
         },
         {
             "name": "hyperf/logger",
@@ -4278,16 +4278,16 @@
         },
         {
             "name": "zendframework/zend-mime",
-            "version": "2.7.1",
+            "version": "2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-mime.git",
-                "reference": "52ae5fa9f12845cae749271034a2d594f0e4c6f2"
+                "reference": "c91e0350be53cc9d29be15563445eec3b269d7c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-mime/zipball/52ae5fa9f12845cae749271034a2d594f0e4c6f2",
-                "reference": "52ae5fa9f12845cae749271034a2d594f0e4c6f2",
+                "url": "https://api.github.com/repos/zendframework/zend-mime/zipball/c91e0350be53cc9d29be15563445eec3b269d7c1",
+                "reference": "c91e0350be53cc9d29be15563445eec3b269d7c1",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -4311,8 +4311,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7-dev",
-                    "dev-develop": "2.8-dev"
+                    "dev-master": "2.7.x-dev",
+                    "dev-develop": "2.8.x-dev"
                 }
             },
             "autoload": {
@@ -4325,13 +4325,12 @@
                 "BSD-3-Clause"
             ],
             "description": "Create and parse MIME messages and parts",
-            "homepage": "https://github.com/zendframework/zend-mime",
             "keywords": [
                 "ZendFramework",
                 "mime",
                 "zf"
             ],
-            "time": "2018-05-14T19:02:50+00:00"
+            "time": "2019-10-16T19:30:37+00:00"
         },
         {
             "name": "zendframework/zend-stdlib",
