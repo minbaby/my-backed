@@ -1092,16 +1092,16 @@
         },
         {
             "name": "hyperf/di",
-            "version": "v1.1.0",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-cloud/di.git",
-                "reference": "897dd63fc89a53b8903fb9b562a7e4258d9b51b9"
+                "reference": "329c3883350faf3005c11ed666b34ab43ff8f382"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-cloud/di/zipball/897dd63fc89a53b8903fb9b562a7e4258d9b51b9",
-                "reference": "897dd63fc89a53b8903fb9b562a7e4258d9b51b9",
+                "url": "https://api.github.com/repos/hyperf-cloud/di/zipball/329c3883350faf3005c11ed666b34ab43ff8f382",
+                "reference": "329c3883350faf3005c11ed666b34ab43ff8f382",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1159,7 +1159,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-10-07T17:09:33+00:00"
+            "time": "2019-10-14T03:35:00+00:00"
         },
         {
             "name": "hyperf/dispatcher",
