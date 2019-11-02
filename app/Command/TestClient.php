@@ -46,10 +46,6 @@ class TestClient extends HyperfCommand
 
     public function handle()
     {
-//        /** @var PacketIf $packer */
-//        $packer = $this->container->get(PacketIf::class);
-//        $hb = $packer->unpack((string) new HeartBeatMessage());
-//        var_dump($hb->toArray());
         $uri = new Uri('ws://127.0.0.1:9502/ws');
         $ws = new Client($uri);
         Timer::tick(3000, function ()  use ($ws) {

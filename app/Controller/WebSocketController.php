@@ -64,11 +64,9 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
 
         $inMessage = $this->packet->unpack($frame->data);
 
-        $context = new SessionContext();
-
-        $context->fromFrame($frame)->fromServer($server);
-
-
+        $context = make(SessionContext::class)
+            ->fromFrame($frame)
+            ->fromServer($server);
         $handlerClass = HandlerUtils::get((string) $inMessage->getOp(), '');
 
         if (!$this->container->has($handlerClass)) {

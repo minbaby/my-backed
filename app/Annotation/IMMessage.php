@@ -23,7 +23,5 @@ class IMMessage extends AbstractAnnotation
         /** @var Message $message */
         $message = make($className);
         MessageUtils::set($message->getOp(), $className);
-
-        echo $message->getOp(), $className, PHP_EOL;
     }
 }
