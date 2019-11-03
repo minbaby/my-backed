@@ -6,6 +6,8 @@ namespace App\IM\Handler\Impl;
 
 use App\Annotation\IMHandler;
 use App\IM\Command\CommandEnum;
+use App\IM\Command\Impl\HeartBeatMessage;
+use App\IM\Command\Impl\ResponseBody;
 use App\IM\Command\Message;
 use App\IM\Handler\AbstractHandler;
 use App\Utils\SessionContext;
@@ -24,7 +26,7 @@ class HeartbeatHandler extends AbstractHandler
     public function handler(Message $message, SessionContext $context): ?Message
     {
         $this->logger->debug(__METHOD__, ['fd' => $context->get('frame')->fd]);
-        return null;
+        return new HeartBeatMessage();
     }
 
 }

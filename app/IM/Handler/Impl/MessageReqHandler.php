@@ -17,9 +17,9 @@ use Hyperf\Di\Annotation\Inject;
  * @package App\IM\Handler\Impl
  * @IMHandler()
  */
-class MessageDataHandler extends AbstractHandler
+class MessageReqHandler extends AbstractHandler
 {
-    const OP = CommandEnum::OP_MESSAGE_DATA;
+    const OP = CommandEnum::OP_GET_MESSAGE_REQ;
 
     /**
      * @var UserService
@@ -35,5 +35,10 @@ class MessageDataHandler extends AbstractHandler
     public function handler(Message $message, SessionContext $context): ?Message
     {
         return (new MessageData())->setData(['txt' => $message->getData()['txt']]);
+    }
+
+    protected function getMessageFailedPacket()
+    {
+        return new MessageData();
     }
 }

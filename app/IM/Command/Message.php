@@ -2,7 +2,6 @@
 
 namespace App\IM\Command;
 
-use App\IM\Command\CommandEnum;
 use Carbon\Carbon;
 use Hyperf\Utils\Contracts\Arrayable;
 use Hyperf\Utils\Contracts\Jsonable;

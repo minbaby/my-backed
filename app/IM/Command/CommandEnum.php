@@ -13,14 +13,6 @@ use Hyperf\Constants\ConstantsCollector;
  */
 final class CommandEnum extends AbstractConstants
 {
-    const TYPE_HANDLER = 'handler';
-
-    const TYPE_MESSAGE = 'message';
-
-    const STATUS_SUCCESS = 1;
-
-    const STATUS_ERROR = 0;
-
     /**
      * @Message("init")
      * @OpString("op.%s.unknow")
@@ -84,36 +76,7 @@ final class CommandEnum extends AbstractConstants
     /**
      * @OpString("op.%s.message_data")
      */
-    const OP_MESSAGE_DATA = 0x0200;
+    const OP_GET_MESSAGE_REQ = 0x0200;
 
-    public static function getOpString(int $code, $arguments): string
-    {
-        if (!ConstantsCollector::has(static::class)) {
-            $reader = new AnnotationReader();
-
-            $ref = new \ReflectionClass(static::class);
-            $classConstants = $ref->getReflectionConstants();
-            $data = $reader->getAnnotations($classConstants);
-
-            ConstantsCollector::set(static::class, $data);
-        }
-
-        $message = ConstantsCollector::getValue(static::class, $code, 'opstring');
-
-        if (count($arguments) > 0) {
-            return sprintf($message, ...$arguments);
-        }
-
-        return $message;
-    }
-
-    public static function getHandlerString($code)
-    {
-        return static::getOpString($code, [static::TYPE_HANDLER]);
-    }
-
-    public static function getMessageString($code)
-    {
-        return static::getOpString($code, [static::TYPE_MESSAGE]);
-    }
+    const OP_GET_MESSAGE_RESPONSE = 0x0201;
 }

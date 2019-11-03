@@ -16,7 +16,7 @@ use App\IM\Command\CommandEnum;
  */
 class MessageData extends Message
 {
-    protected $op = CommandEnum::OP_MESSAGE_DATA;
+    protected $op = CommandEnum::OP_GET_MESSAGE_REQ;
 
     /**
      * @var string

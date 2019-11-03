@@ -6,14 +6,36 @@ namespace App\IM\Command\Impl;
 
 use App\IM\Command\Message;
 use App\IM\Command\CommandEnum;
+use App\IM\Command\StatusEnum;
 
-class ResponseBody extends Message
+class ResponseBody
 {
-    protected $status = CommandEnum::STATUS_SUCCESS;
+    protected $status;
 
-    protected $message = '';
+    protected $message;
 
     protected $data = [];
+
+    protected $op;
+
+    /**
+     * @param int $op
+     * @param string $status
+     * @param string $message
+     * @param array $data
+     */
+    public function __construct(
+        int $op,
+        string $status = StatusEnum::SUCCESS,
+        string $message = '',
+        $data = []
+    ) {
+        $this->op = $op;
+        $this->status = $status;
+        $this->message = $message;
+        $this->data = $data;
+    }
+
 
     /**
      * @param int $status
@@ -67,5 +89,27 @@ class ResponseBody extends Message
     public function getData(): array
     {
         return $this->data;
+    }
+
+    /**
+     * @param mixed $op
+     * @return ResponseBody
+     */
+    public function setOp($op)
+    {
+        $this->op = $op;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getOp()
+    {
+        return $this->op;
+    }
+
+    public function reset()
+    {
     }
 }
