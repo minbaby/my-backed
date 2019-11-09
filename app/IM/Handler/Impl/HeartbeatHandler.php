@@ -4,29 +4,31 @@
 namespace App\IM\Handler\Impl;
 
 
-use App\Annotation\IMHandler;
-use App\IM\Command\CommandEnum;
-use App\IM\Command\Impl\HeartBeatMessage;
-use App\IM\Command\Impl\ResponseBody;
-use App\IM\Command\Message;
+use App\Annotation\PacketHandlerAnnotation;
+use App\Constants\CommandEnum;
+use App\Constants\StatusEnum;
+use App\IM\Packet\HeartBeatPacket;
+use App\IM\Packet\Packet;
 use App\IM\Handler\AbstractHandler;
+use App\IM\Packet\ResponseBody;
 use App\Utils\SessionContext;
-use Swoole\Server;
-use Swoole\WebSocket\Frame;
+use Swoole\Http\Response;
 
 /**
- * Class HeartbeatHandler
- * @package App\IM\Handler\Impl
- * @IMHandler()
+ * @PacketHandlerAnnotation
  */
 class HeartbeatHandler extends AbstractHandler
 {
     const OP = CommandEnum::OP_HEARTBEAT;
 
-    public function handler(Message $message, SessionContext $context): ?Message
+    /**
+     * @param Packet $message
+     * @param SessionContext $context
+     * @return Packet|null
+     */
+    public function handler(Packet $message, SessionContext $context): ?Packet
     {
         $this->logger->debug(__METHOD__, ['fd' => $context->get('frame')->fd]);
-        return new HeartBeatMessage();
+        return make(HeartBeatPacket::class)->setBody(new ResponseBody(StatusEnum::OK));
     }
-
 }

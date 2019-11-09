@@ -11,7 +11,7 @@ use Hyperf\Constants\Annotation\Constants;
  * @Constants()
  * @method static getMessage(int $code, $x = [])
  */
-class ErrorCode extends AbstractConstants
+final class ErrorCode extends AbstractConstants
 {
     /**
      * @Message("Server Error！")

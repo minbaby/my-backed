@@ -1,20 +1,18 @@
 <?php
 
 
-namespace App\IM\Command\Impl\Message;
+namespace App\IM\Packet;
 
 
-use App\Annotation\IMMessage;
-use App\IM\Command\ChatType;
-use App\IM\Command\Message;
-use App\IM\Command\CommandEnum;
+use App\Annotation\PacketAnnotation;
+use App\Constants\ChatType;
+use App\Constants\CommandEnum;
 
 /**
  * Class MessageData
- * @package App\IM\Command\Impl\Message
- * @IMMessage()
+ * @PacketAnnotation()
  */
-class MessageData extends Message
+class MessageData extends Packet
 {
     protected $op = CommandEnum::OP_GET_MESSAGE_REQ;
 
@@ -36,7 +34,7 @@ class MessageData extends Message
     /**
      * @var int
      */
-    protected $chatType = ChatType::UNKNOW;
+    protected $chatType = ChatType::UNKNOWN;
 
     /**
      * @param string $from

@@ -3,9 +3,10 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use App\IM\Command\CommandEnum;
+use App\Constants\CommandEnum;
+use App\IM\Packet\Packet;
 use App\IM\Handler\HandlerIf;
-use App\IM\Packet\PacketIf;
+use App\IM\Pack\PackIf;
 use App\Utils\HandlerUtils;
 use App\Utils\LogUtils;
 use App\Utils\SessionContext;
@@ -37,7 +38,7 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
     private $logger;
 
     /**
-     * @var PacketIf
+     * @var PackIf
      * @Inject()
      */
     protected $packet;
@@ -62,26 +63,25 @@ class WebSocketController implements OnMessageInterface, OnOpenInterface, OnClos
             return;
         }
 
-        $inMessage = $this->packet->unpack($frame->data);
+        /** @var Packet $inPacket */
+        $inPacket = $this->packet->unpack($frame->data);
 
         $context = make(SessionContext::class)
             ->fromFrame($frame)
             ->fromServer($server);
-        $handlerClass = HandlerUtils::get((string) $inMessage->getOp(), '');
+        $handlerClass = HandlerUtils::get((string) $inPacket->getOp(), '');
 
         if (!$this->container->has($handlerClass)) {
-            $handlerClass = HandlerUtils::get((string) CommandEnum::OP_UNKNOW);
+            $handlerClass = HandlerUtils::get((string) CommandEnum::OP_UNKNOWN);
         }
 
         /** @var HandlerIf $handler */
         $handler = $this->container->get($handlerClass);
-        $outMessage = $handler->handler($inMessage, $context);
+        $outPacket = $handler->handler($inPacket, $context);
 
-        if ($outMessage) {
-            $server->push($frame->fd, $this->packet->pack($outMessage));
+        if ($outPacket) {
+            $server->push($frame->fd, $this->packet->pack($outPacket));
         }
-
-        unset($context);
     }
 
     public function onClose(Server $server, int $fd, int $reactorId): void

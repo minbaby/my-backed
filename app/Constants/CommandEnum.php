@@ -1,6 +1,6 @@
 <?php
 
-namespace App\IM\Command;
+namespace App\Constants;
 
 use Hyperf\Constants\AbstractConstants;
 use Hyperf\Constants\Annotation\Constants;
@@ -15,9 +15,9 @@ final class CommandEnum extends AbstractConstants
 {
     /**
      * @Message("init")
-     * @OpString("op.%s.unknow")
+     * @OpString("op.%s.UNKNOWN")
      */
-    const OP_UNKNOW = 0x0001;
+    const OP_UNKNOWN = 0x0001;
 
     /**
      * @Message("server error")

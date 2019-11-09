@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Command;
 
-use App\IM\Command\Impl\HeartBeatMessage;
-use App\IM\Command\Impl\Message\MessageData;
-use App\IM\Packet\PacketIf;
+use App\IM\Packet\Impl\HeartBeatPacket;
+use App\IM\Packet\Impl\MessageData;
+use App\IM\Pack\PackIf;
 use Hyperf\Command\Annotation\Command;
 use Hyperf\Command\Command as HyperfCommand;
 use Hyperf\Di\Annotation\Inject;
@@ -27,7 +27,7 @@ class TestClient extends HyperfCommand
     protected $container;
 
     /**
-     * @var PacketIf
+     * @var PackIf
      * @Inject()
      */
     protected $packert;
@@ -49,7 +49,7 @@ class TestClient extends HyperfCommand
         $uri = new Uri('ws://127.0.0.1:9502/ws');
         $ws = new Client($uri);
         Timer::tick(3000, function ()  use ($ws) {
-            $ws->push($this->packert->pack(new HeartBeatMessage()));
+            $ws->push($this->packert->pack(new HeartBeatPacket()));
         });
 
         $msg = '你好';

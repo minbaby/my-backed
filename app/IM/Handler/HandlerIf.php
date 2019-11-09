@@ -4,20 +4,21 @@
 namespace App\IM\Handler;
 
 
-use App\IM\Command\CommandEnum;
-use App\IM\Command\Message;
+use App\Constants\CommandEnum;
+use App\IM\Packet\Message;
+use App\IM\Packet\Packet;
 use App\Utils\SessionContext;
 
 interface HandlerIf
 {
-    const OP = CommandEnum::OP_UNKNOW;
+    const OP = CommandEnum::OP_UNKNOWN;
 
     public function getOp(): int;
 
     /**
-     * @param Message $message
+     * @param Packet $message
      * @param SessionContext $context
-     * @return Message|null
+     * @return Packet|null
      */
-    public function handler(Message $message, SessionContext $context): ?Message;
+    public function handler(Packet $message, SessionContext $context): ?Packet;
 }

@@ -1,17 +1,19 @@
 <?php
 
-namespace App\IM\Packet;
+namespace App\IM\Pack;
 
-use App\IM\Command\Message;
-use App\IM\Command\CommandEnum;
+use App\IM\Packet\Message;
+use App\Constants\CommandEnum;
+use App\IM\Packet\Packet;
 use App\Utils\HandlerUtils;
 use App\Utils\LogUtils;
-use App\Utils\MessageUtils;
+use App\Utils\PacketUtils;
 use Hyperf\Di\Container;
 use Hyperf\Logger\Logger;
+use Hyperf\Utils\Contracts\Arrayable;
 use Psr\Container\ContainerInterface;
 
-class JsonPacket implements PacketIf
+class JsonPack implements PackIf
 {
     /**
      * @var Container
@@ -30,14 +32,14 @@ class JsonPacket implements PacketIf
     }
 
 
-    public function pack(Message $operate): string
+    public function pack(Arrayable $operate): string
     {
-        return (string)$operate;
+        return json_encode($operate->toArray());
     }
 
     /**
      * @param string $data
-     * @return Message
+     * @return Packet
      */
     public function unpack(string $data)
     {
@@ -45,9 +47,9 @@ class JsonPacket implements PacketIf
 
         $op = data_get($data, 'op', CommandEnum::OP_DECODE_FAILED);
 
-        $messageClass = MessageUtils::get($op, MessageUtils::get(CommandEnum::OP_DECODE_FAILED));
+        $packetClass = PacketUtils::get($op, PacketUtils::get(CommandEnum::OP_DECODE_FAILED));
 
-        $obj = $this->container->get($messageClass);
+        $obj = $this->container->get($packetClass);
         return $this->assign($data, $obj);
     }
 

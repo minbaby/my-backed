@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use App\IM\Packet\JsonPacket;
-use App\IM\Packet\PacketIf;
+use App\IM\Pack\JsonPack;
+use App\IM\Pack\PackIf;
 
 return [
-    PacketIf::class => JsonPacket::class,
+    PackIf::class => JsonPack::class,
 ];

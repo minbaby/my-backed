@@ -1,12 +1,10 @@
 <?php
 
-
 namespace App\Utils;
-
 
 use Hyperf\Utils\Traits\Container;
 
-class MessageUtils
+class PacketUtils
 {
     use Container;
 }

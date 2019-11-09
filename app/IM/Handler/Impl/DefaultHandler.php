@@ -2,18 +2,19 @@
 
 namespace App\IM\Handler\Impl;
 
-use App\IM\Command\CommandEnum;
-use App\IM\Command\Impl\ResponseBody;
-use App\IM\Command\Message;
+use App\Constants\CommandEnum;
+use App\IM\Packet\Impl\ResponseBody;
+use App\IM\Packet\Message;
+use App\IM\Packet\Packet;
 use App\IM\Handler\AbstractHandler;
-use App\Annotation\IMHandler;
+use App\Annotation\PacketHandlerAnnotation;
 use App\IM\Service\UserService;
 use App\Utils\SessionContext;
 use Hyperf\Di\Annotation\Inject;
 use Swoole\WebSocket\Frame;
 
 /**
- * @IMHandler()
+ * @PacketHandlerAnnotation()
  */
 class DefaultHandler extends AbstractHandler
 {
@@ -23,18 +24,17 @@ class DefaultHandler extends AbstractHandler
      */
     protected $userService;
 
-    const OP = CommandEnum::OP_UNKNOW;
+    const OP = CommandEnum::OP_UNKNOWN;
 
     /**
-     * @param Message $message
+     * @param Packet $message
      * @param SessionContext $context
-     * @return Message|null
+     * @return Packet|null
      */
-    public function handler(Message $message, SessionContext $context): ?Message
+    public function handler(Packet $message, SessionContext $context): ?Packet
     {
-        /** @var Frame $frame */
-        $frame = $context->get('frame');
-        $this->userService->online('1', $frame->fd);
-        return (new ResponseBody())->setOp(CommandEnum::OP_UNKNOW);
+        return make(Packet::class)
+            ->setOp(CommandEnum::OP_UNKNOWN)
+            ->setBody([]);
     }
 }

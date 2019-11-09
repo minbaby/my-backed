@@ -13,7 +13,7 @@ use Hyperf\Di\Annotation\AbstractAnnotation;
  * @Annotation
  * @Target("CLASS")
  */
-class IMHandler extends AbstractAnnotation
+class PacketHandlerAnnotation extends AbstractAnnotation
 {
     /**
      * @param string $className

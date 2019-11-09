@@ -1,49 +1,52 @@
 <?php
 
 
-namespace App\IM\Command\Impl;
+namespace App\IM\Packet;
 
+use App\Constants\StatusEnum;
+use App\Traits\ArrayableTrait;
+use Hyperf\Utils\Contracts\Arrayable;
 
-use App\IM\Command\Message;
-use App\IM\Command\CommandEnum;
-use App\IM\Command\StatusEnum;
-
-class ResponseBody
+class ResponseBody implements Arrayable
 {
-    protected $status;
+    use ArrayableTrait;
 
+    /**
+     * @var int
+     */
+    protected $code;
+
+    /**
+     * @var string | null
+     */
     protected $message;
 
     protected $data = [];
 
-    protected $op;
-
     /**
-     * @param int $op
-     * @param string $status
+     * @param string $code
      * @param string $message
      * @param array $data
      */
     public function __construct(
-        int $op,
-        string $status = StatusEnum::SUCCESS,
-        string $message = '',
+        string $code = StatusEnum::OK,
+        string $message = null,
         $data = []
-    ) {
-        $this->op = $op;
-        $this->status = $status;
+    )
+    {
+        $this->code = $code;
         $this->message = $message;
         $this->data = $data;
     }
 
 
     /**
-     * @param int $status
+     * @param int $code
      * @return ResponseBody
      */
-    public function setStatus(int $status): ResponseBody
+    public function setCode(int $code): ResponseBody
     {
-        $this->status = $status;
+        $this->code = $code;
         return $this;
     }
 
@@ -70,9 +73,9 @@ class ResponseBody
     /**
      * @return int
      */
-    public function getStatus(): int
+    public function getCode(): int
     {
-        return $this->status;
+        return $this->code;
     }
 
     /**
@@ -80,6 +83,9 @@ class ResponseBody
      */
     public function getMessage(): string
     {
+        if ($this->message === null && $this->getCode() !== null) {
+            return StatusEnum::getMessage($this->getCode());
+        }
         return $this->message;
     }
 
@@ -89,27 +95,5 @@ class ResponseBody
     public function getData(): array
     {
         return $this->data;
-    }
-
-    /**
-     * @param mixed $op
-     * @return ResponseBody
-     */
-    public function setOp($op)
-    {
-        $this->op = $op;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getOp()
-    {
-        return $this->op;
-    }
-
-    public function reset()
-    {
     }
 }
