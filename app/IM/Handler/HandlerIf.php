@@ -16,9 +16,9 @@ interface HandlerIf
     public function getOp(): int;
 
     /**
-     * @param Packet $message
+     * @param Packet $packet
      * @param SessionContext $context
      * @return Packet|null
      */
-    public function handler(Packet $message, SessionContext $context): ?Packet;
+    public function handler(Packet $packet, SessionContext $context): ?Packet;
 }

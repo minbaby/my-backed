@@ -22,11 +22,11 @@ class HeartbeatHandler extends AbstractHandler
     const OP = CommandEnum::OP_HEARTBEAT;
 
     /**
-     * @param Packet $message
+     * @param Packet $packet
      * @param SessionContext $context
      * @return Packet|null
      */
-    public function handler(Packet $message, SessionContext $context): ?Packet
+    public function handler(Packet $packet, SessionContext $context): ?Packet
     {
         $this->logger->debug(__METHOD__, ['fd' => $context->get('frame')->fd]);
         return make(HeartBeatPacket::class)->setBody(new ResponseBody(StatusEnum::OK));

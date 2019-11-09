@@ -8,6 +8,7 @@ use App\IM\Packet\Message;
 use App\IM\Packet\Packet;
 use App\IM\Handler\AbstractHandler;
 use App\Annotation\PacketHandlerAnnotation;
+use App\IM\Packet\UnknownPacket;
 use App\IM\Service\UserService;
 use App\Utils\SessionContext;
 use Hyperf\Di\Annotation\Inject;
@@ -27,14 +28,12 @@ class DefaultHandler extends AbstractHandler
     const OP = CommandEnum::OP_UNKNOWN;
 
     /**
-     * @param Packet $message
+     * @param Packet $packet
      * @param SessionContext $context
      * @return Packet|null
      */
-    public function handler(Packet $message, SessionContext $context): ?Packet
+    public function handler(Packet $packet, SessionContext $context): ?Packet
     {
-        return make(Packet::class)
-            ->setOp(CommandEnum::OP_UNKNOWN)
-            ->setBody([]);
+        return make(UnknownPacket::class);
     }
 }

@@ -12,5 +12,7 @@ use App\Constants\CommandEnum;
  */
 class UnknownPacket extends Packet
 {
+    protected $ignore = ['body'];
+
     protected $op =  CommandEnum::OP_UNKNOWN;
 }

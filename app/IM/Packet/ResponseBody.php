@@ -61,12 +61,16 @@ class ResponseBody implements Arrayable
     }
 
     /**
-     * @param array $data
+     * @param array|Arrayable|\ArrayAccess $data
      * @return ResponseBody
      */
-    public function setData(array $data): ResponseBody
+    public function setData($data): ResponseBody
     {
-        $this->data = $data;
+        if ($data instanceof Arrayable) {
+            $this->data = $data->toArray();
+        } else {
+            $this->data = (array) $data;
+        }
         return $this;
     }
 

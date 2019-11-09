@@ -6,6 +6,8 @@ namespace App\Constants;
 
 final class MessageDeliveryStatus
 {
+    const UNKNOWN = 0;
+
     const READ = 1;
 
     const SENDING = 2;
