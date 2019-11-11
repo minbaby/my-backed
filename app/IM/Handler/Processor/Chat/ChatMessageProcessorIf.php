@@ -1,10 +1,8 @@
 <?php
 
-
 namespace App\IM\Handler\Processor\Chat;
 
-
-use App\IM\Handler\ProcessIf;
+use App\IM\Handler\Processor\ProcessIf;
 use App\IM\Packet\ChatMessage;
 use App\Utils\SessionContext;
 

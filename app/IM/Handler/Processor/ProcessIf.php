@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\IM\Handler;
+namespace App\IM\Handler\Processor;
 
 
 interface ProcessIf
