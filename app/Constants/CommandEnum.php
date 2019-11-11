@@ -13,29 +13,15 @@ use Hyperf\Constants\ConstantsCollector;
  */
 final class CommandEnum extends AbstractConstants
 {
-    /**
-     * @Message("init")
-     * @OpString("op.%s.UNKNOWN")
-     */
     const OP_UNKNOWN = 0x0001;
 
-    /**
-     * @Message("server error")
-     * @OpString("op.%s.server_error")
-     */
     const OP_SERVER_ERROR = 0x0002;
 
-    /**
-     * @Message("no permisson")
-     * @OpString("op.%s.no_permisson")
-     */
-    const OP_NO_PERMISSION = 0x0003;
+    const OP_CHAT_REQUEST = 0x0003;
 
-    /**
-     * @Message("handler not found")
-     * @OpString("op.%s.not_found")
-     */
-    const OP_NOT_FOUND = 0x0005;
+    const OP_CHAT_RESPONSE = 0x0004;
+
+    const OP_CHAT_RESPONSE2 = 0x0004;
 
     /**
      * @Message("decode failed")

@@ -2,11 +2,17 @@
 
 namespace App\IM\Packet;
 
+use App\Annotation\PacketAnnotation;
 use App\Constants\ChatType;
 use App\Constants\MessageDeliveryStatus;
 use App\Traits\ArrayableTrait;
 
-class ChatMessage extends Packet
+/**
+ * Class ChatMessage
+ * @package App\IM\Packet
+ * @PacketAnnotation()
+ */
+class ChatMessagePacket extends Packet
 {
     /**
      * @var string

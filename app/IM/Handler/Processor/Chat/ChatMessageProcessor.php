@@ -5,7 +5,7 @@ namespace App\IM\Handler\Processor\Chat;
 
 
 use App\Constants\ChatType;
-use App\IM\Packet\ChatMessage;
+use App\IM\Packet\ChatMessagePacket;
 use App\Utils\ChatUtils;
 use App\Utils\LogUtils;
 use App\Utils\SessionContext;
@@ -28,7 +28,7 @@ class ChatMessageProcessor implements ChatMessageProcessorIf
         return 'chat-message-processor';
     }
 
-    public function process(ChatMessage $chatMessage, SessionContext $context)
+    public function process(ChatMessagePacket $chatMessage, SessionContext $context)
     {
         if ($chatMessage->getChatType() === ChatType::UNKNOWN) {
             $this->logger->debug("chatType: unknown");
@@ -53,15 +53,17 @@ class ChatMessageProcessor implements ChatMessageProcessorIf
 
     }
 
-    protected function writeMessage(string $string, string $param, ChatMessage $chatMessage)
+    protected function writeMessage(string $string, string $param, ChatMessagePacket $chatMessage)
     {
 
     }
 
     /**
-     * @param ChatMessage $chatBody
+     * @param ChatMessagePacket $chatBody
      * @param SessionContext $channelContext
      */
-    protected abstract function doHandler(ChatMessage $chatBody, SessionContext $channelContext);
+    protected function doHandler(ChatMessagePacket $chatBody, SessionContext $channelContext)
+    {
 
+    }
 }
