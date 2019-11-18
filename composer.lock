@@ -1720,16 +1720,16 @@
         },
         {
             "name": "hyperf/model-cache",
-            "version": "v1.1.3",
+            "version": "v1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/model-cache.git",
-                "reference": "136a6add97c650726f185dc8ed9f81e9f4121fa9"
+                "reference": "49344d8da654dd3762a98cd2b46b5b8bc5086bae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/model-cache/zipball/136a6add97c650726f185dc8ed9f81e9f4121fa9",
-                "reference": "136a6add97c650726f185dc8ed9f81e9f4121fa9",
+                "url": "https://api.github.com/repos/hyperf/model-cache/zipball/49344d8da654dd3762a98cd2b46b5b8bc5086bae",
+                "reference": "49344d8da654dd3762a98cd2b46b5b8bc5086bae",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1780,7 +1780,7 @@
                 "model-cache",
                 "php"
             ],
-            "time": "2019-10-22T01:35:48+00:00"
+            "time": "2019-11-13T09:32:03+00:00"
         },
         {
             "name": "hyperf/model-listener",
