@@ -854,16 +854,16 @@
         },
         {
             "name": "hyperf/crontab",
-            "version": "v1.1.5",
+            "version": "v1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/crontab.git",
-                "reference": "dfbc783c3652b990e657338f8d1ae5f1f5321626"
+                "reference": "2860e6ceaa0df865ca98896b2751a3b75536c6ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/crontab/zipball/dfbc783c3652b990e657338f8d1ae5f1f5321626",
-                "reference": "dfbc783c3652b990e657338f8d1ae5f1f5321626",
+                "url": "https://api.github.com/repos/hyperf/crontab/zipball/2860e6ceaa0df865ca98896b2751a3b75536c6ce",
+                "reference": "2860e6ceaa0df865ca98896b2751a3b75536c6ce",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -907,7 +907,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-11-04T07:25:57+00:00"
+            "time": "2019-11-12T13:02:22+00:00"
         },
         {
             "name": "hyperf/database",
@@ -4076,16 +4076,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v4.3.6",
+            "version": "v4.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "a3aa590ce944afb3434d7a55f81b00927144d5ec"
+                "reference": "bbce239b35b0cd47bd75848b23e969f17dd970e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/a3aa590ce944afb3434d7a55f81b00927144d5ec",
-                "reference": "a3aa590ce944afb3434d7a55f81b00927144d5ec",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/bbce239b35b0cd47bd75848b23e969f17dd970e7",
+                "reference": "bbce239b35b0cd47bd75848b23e969f17dd970e7",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -4154,7 +4154,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2019-10-30T12:53:54+00:00"
+            "time": "2019-11-06T23:21:49+00:00"
         },
         {
             "name": "symfony/translation-contracts",
