@@ -2036,16 +2036,16 @@
         },
         {
             "name": "hyperf/redis",
-            "version": "v1.1.5",
+            "version": "v1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/redis.git",
-                "reference": "1c1fc94edf091bfe113abbe0b0ab17f4091d6817"
+                "reference": "cb7fc6d92083ad23991dac25b8069f24315737aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/redis/zipball/1c1fc94edf091bfe113abbe0b0ab17f4091d6817",
-                "reference": "1c1fc94edf091bfe113abbe0b0ab17f4091d6817",
+                "url": "https://api.github.com/repos/hyperf/redis/zipball/cb7fc6d92083ad23991dac25b8069f24315737aa",
+                "reference": "cb7fc6d92083ad23991dac25b8069f24315737aa",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2096,7 +2096,7 @@
                 "pool",
                 "redis"
             ],
-            "time": "2019-11-07T03:34:19+00:00"
+            "time": "2019-11-11T14:15:14+00:00"
         },
         {
             "name": "hyperf/server",
