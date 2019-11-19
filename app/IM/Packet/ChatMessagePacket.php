@@ -14,6 +14,7 @@ use App\Traits\ArrayableTrait;
  */
 class ChatMessagePacket extends Packet
 {
+    protected $op = 1;
     /**
      * @var string
      */
