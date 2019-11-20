@@ -52,7 +52,7 @@ class ChatMessagePacket extends Packet
 
     /**
      * @param string $from
-     * @return Message
+     * @return self
      */
     public function setFrom(string $from): self
     {
@@ -70,7 +70,7 @@ class ChatMessagePacket extends Packet
 
     /**
      * @param string $to
-     * @return Message
+     * @return self
      */
     public function setTo(string $to): self
     {
