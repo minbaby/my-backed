@@ -547,16 +547,16 @@
         },
         {
             "name": "hyperf/cache",
-            "version": "v1.1.3",
+            "version": "v1.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/cache.git",
-                "reference": "432c6653414c327a7805c76b7d47e066426e86b1"
+                "reference": "847c147c695268ca33e5748957711c01778aaa67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/cache/zipball/432c6653414c327a7805c76b7d47e066426e86b1",
-                "reference": "432c6653414c327a7805c76b7d47e066426e86b1",
+                "url": "https://api.github.com/repos/hyperf/cache/zipball/847c147c695268ca33e5748957711c01778aaa67",
+                "reference": "847c147c695268ca33e5748957711c01778aaa67",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -608,7 +608,7 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2019-10-22T01:35:48+00:00"
+            "time": "2019-11-28T10:57:30+00:00"
         },
         {
             "name": "hyperf/command",
