@@ -18,7 +18,7 @@ use Hyperf\Di\Annotation\Inject;
 use PHPMD\TextUI\Command;
 
 /**
- * Class ChatHandler
+ * 聊天請求
  * @package App\IM\Handler\Impl
  * @PacketHandlerAnnotation()
  */
@@ -40,7 +40,7 @@ class ChatRequestHandler extends AbstractHandler
         $response = make(ResponseBody::class)->setCode(StatusEnum::SEND_FAILED);
         $retPacket = make(ChatMessagePacket::class)->setOp(CommandEnum::OP_CHAT_RESPONSE);
 
-        if ($packet->getChatType() == null || $packet->getTo() == null) {
+        if ($packet instanceof ChatMessagePacket && ($packet->getChatType() == null || $packet->getTo() == null)) {
             return $retPacket->setBody($response);
         }
 

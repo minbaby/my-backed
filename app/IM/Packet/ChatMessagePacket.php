@@ -4,6 +4,7 @@ namespace App\IM\Packet;
 
 use App\Annotation\PacketAnnotation;
 use App\Constants\ChatType;
+use App\Constants\CommandEnum;
 use App\Constants\MessageDeliveryStatus;
 use App\Traits\ArrayableTrait;
 
@@ -14,7 +15,7 @@ use App\Traits\ArrayableTrait;
  */
 class ChatMessagePacket extends Packet
 {
-    protected $op = 1;
+    protected $op = CommandEnum::OP_GET_MESSAGE_REQ;
     /**
      * @var string
      */

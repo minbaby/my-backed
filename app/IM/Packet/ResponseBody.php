@@ -24,12 +24,12 @@ class ResponseBody implements Arrayable
     protected $data = [];
 
     /**
-     * @param string $code
+     * @param  $code
      * @param string $message
      * @param array $data
      */
     public function __construct(
-        string $code = StatusEnum::OK,
+        $code = StatusEnum::OK,
         string $message = null,
         $data = []
     )

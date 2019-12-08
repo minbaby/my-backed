@@ -88,3 +88,15 @@ presence:
   "records": "d"
 }
 ```
+
+----
+
+### heartbeat
+```json
+{"op":7,"version":"v1"}
+```
+
+### message
+```json
+{"op":512,"version":"v1"}
+```

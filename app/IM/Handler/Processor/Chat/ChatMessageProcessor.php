@@ -30,20 +30,24 @@ class ChatMessageProcessor implements ChatMessageProcessorIf
 
     public function process(ChatMessagePacket $chatMessage, SessionContext $context)
     {
-        if ($chatMessage->getChatType() === ChatType::UNKNOWN) {
-            $this->logger->debug("chatType: unknown");
-            return;
-        }
+//        if ($chatMessage->getChatType() === ChatType::UNKNOWN) {
+//            $this->logger->debug("chatType: unknown");
+//            return;
+//        }
+//
+//        if ($chatMessage->getChatType() === ChatType::PUBLIC) {
+//            $this->pushGroupMessage();
+//        } else {
+//            $sessionId = ChatUtils::sessionId($chatMessage->getFrom(), $chatMessage->getTo());
+//            $this->writeMessage(ChatUtils::MESSAGE_STORE, "user:" . $sessionId, $chatMessage);
+//            if (ChatUtils::isOnline($chatMessage->getFrom())) {
+//                $this->writeMessage(ChatUtils::MESSAGE_PUSH, "user:" . $sessionId, $chatMessage);
+//            }
+//        }
 
-        if ($chatMessage->getChatType() === ChatType::PUBLIC) {
-            $this->pushGroupMessage();
-        } else {
-            $sessionId = ChatUtils::sessionId($chatMessage->getFrom(), $chatMessage->getTo());
-            $this->writeMessage(ChatUtils::MESSAGE_STORE, "user:" . $sessionId, $chatMessage);
-            if (ChatUtils::isOnline($chatMessage->getFrom())) {
-                $this->writeMessage(ChatUtils::MESSAGE_PUSH, "user:" . $sessionId, $chatMessage);
-            }
-        }
+        $this->logger->info(__METHOD__, [
+            'xx' => $chatMessage->toArray(),
+        ]);
 
         $this->doHandler($chatMessage, $context);
     }
