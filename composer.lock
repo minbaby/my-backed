@@ -972,16 +972,16 @@
         },
         {
             "name": "hyperf/db-connection",
-            "version": "v1.1.6",
+            "version": "v1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/db-connection.git",
-                "reference": "f38429e215c66e83d02cb6a6985204c10258f438"
+                "reference": "c3389ee3b1fc614487dccb61f3d747a408218095"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/db-connection/zipball/f38429e215c66e83d02cb6a6985204c10258f438",
-                "reference": "f38429e215c66e83d02cb6a6985204c10258f438",
+                "url": "https://api.github.com/repos/hyperf/db-connection/zipball/c3389ee3b1fc614487dccb61f3d747a408218095",
+                "reference": "c3389ee3b1fc614487dccb61f3d747a408218095",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1030,7 +1030,7 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2019-11-09T08:12:58+00:00"
+            "time": "2019-11-20T14:16:17+00:00"
         },
         {
             "name": "hyperf/devtool",
@@ -1784,16 +1784,16 @@
         },
         {
             "name": "hyperf/model-listener",
-            "version": "v1.1.3",
+            "version": "v1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/model-listener.git",
-                "reference": "4e54ad5d3eeb700e42cfa799c6a34f490770e4ba"
+                "reference": "1728589f3cf96700b1f1004100f307f5b7b1cd11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/model-listener/zipball/4e54ad5d3eeb700e42cfa799c6a34f490770e4ba",
-                "reference": "4e54ad5d3eeb700e42cfa799c6a34f490770e4ba",
+                "url": "https://api.github.com/repos/hyperf/model-listener/zipball/1728589f3cf96700b1f1004100f307f5b7b1cd11",
+                "reference": "1728589f3cf96700b1f1004100f307f5b7b1cd11",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1843,7 +1843,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-10-22T01:35:48+00:00"
+            "time": "2019-11-18T09:36:33+00:00"
         },
         {
             "name": "hyperf/paginator",
