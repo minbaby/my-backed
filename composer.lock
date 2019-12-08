@@ -1847,16 +1847,16 @@
         },
         {
             "name": "hyperf/paginator",
-            "version": "v1.1.3",
+            "version": "v1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/paginator.git",
-                "reference": "b0797bfbbadc30cc5943551779e350637326291d"
+                "reference": "b03201428585aadf5b6904feb12c9da5084f0bb2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/paginator/zipball/b0797bfbbadc30cc5943551779e350637326291d",
-                "reference": "b0797bfbbadc30cc5943551779e350637326291d",
+                "url": "https://api.github.com/repos/hyperf/paginator/zipball/b03201428585aadf5b6904feb12c9da5084f0bb2",
+                "reference": "b03201428585aadf5b6904feb12c9da5084f0bb2",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1908,7 +1908,7 @@
                 "paginator",
                 "php"
             ],
-            "time": "2019-10-22T01:35:48+00:00"
+            "time": "2019-11-16T15:50:59+00:00"
         },
         {
             "name": "hyperf/pool",
