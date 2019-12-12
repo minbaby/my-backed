@@ -912,16 +912,16 @@
         },
         {
             "name": "hyperf/database",
-            "version": "v1.1.8",
+            "version": "v1.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/database.git",
-                "reference": "55d68979f3e0966027a05a901e4fd0b266d8d583"
+                "reference": "47f25c257cb53dec8db19c69e57d3f6a550e786a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/database/zipball/55d68979f3e0966027a05a901e4fd0b266d8d583",
-                "reference": "55d68979f3e0966027a05a901e4fd0b266d8d583",
+                "url": "https://api.github.com/repos/hyperf/database/zipball/47f25c257cb53dec8db19c69e57d3f6a550e786a",
+                "reference": "47f25c257cb53dec8db19c69e57d3f6a550e786a",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -969,7 +969,7 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2019-11-25T06:35:43+00:00"
+            "time": "2019-12-08T06:06:28+00:00"
         },
         {
             "name": "hyperf/db-connection",
