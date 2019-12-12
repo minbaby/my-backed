@@ -2303,16 +2303,16 @@
         },
         {
             "name": "hyperf/utils",
-            "version": "v1.1.6",
+            "version": "v1.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/utils.git",
-                "reference": "b2d81346bfa640571bb9c92181d86a7fb37daf5f"
+                "reference": "c10cba6fd8a683e797ab7df9b5c43b06d112c408"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/utils/zipball/b2d81346bfa640571bb9c92181d86a7fb37daf5f",
-                "reference": "b2d81346bfa640571bb9c92181d86a7fb37daf5f",
+                "url": "https://api.github.com/repos/hyperf/utils/zipball/c10cba6fd8a683e797ab7df9b5c43b06d112c408",
+                "reference": "c10cba6fd8a683e797ab7df9b5c43b06d112c408",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2370,7 +2370,7 @@
                 "swoole",
                 "utils"
             ],
-            "time": "2019-11-14T01:24:45+00:00"
+            "time": "2019-12-11T08:14:57+00:00"
         },
         {
             "name": "hyperf/websocket-client",
