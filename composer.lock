@@ -548,16 +548,16 @@
         },
         {
             "name": "hyperf/cache",
-            "version": "v1.1.9",
+            "version": "v1.1.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/cache.git",
-                "reference": "847c147c695268ca33e5748957711c01778aaa67"
+                "reference": "f13bb502b71a77382ec98b3636d7b650c7269dc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/cache/zipball/847c147c695268ca33e5748957711c01778aaa67",
-                "reference": "847c147c695268ca33e5748957711c01778aaa67",
+                "url": "https://api.github.com/repos/hyperf/cache/zipball/f13bb502b71a77382ec98b3636d7b650c7269dc3",
+                "reference": "f13bb502b71a77382ec98b3636d7b650c7269dc3",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -609,7 +609,7 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2019-11-28T10:57:30+00:00"
+            "time": "2019-12-27T05:37:21+00:00"
         },
         {
             "name": "hyperf/command",
@@ -4346,6 +4346,7 @@
                 "mime",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-mime",
             "time": "2019-10-16T19:30:37+00:00"
         },
         {
@@ -4398,6 +4399,7 @@
                 "stdlib",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-stdlib",
             "time": "2018-08-28T21:34:05+00:00"
         }
     ],
