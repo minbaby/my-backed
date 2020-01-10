@@ -2303,16 +2303,16 @@
         },
         {
             "name": "hyperf/utils",
-            "version": "v1.1.6",
+            "version": "v1.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/utils.git",
-                "reference": "b2d81346bfa640571bb9c92181d86a7fb37daf5f"
+                "reference": "1385749b3268e46672edb9f556ad0a1024c6cdf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/utils/zipball/b2d81346bfa640571bb9c92181d86a7fb37daf5f",
-                "reference": "b2d81346bfa640571bb9c92181d86a7fb37daf5f",
+                "url": "https://api.github.com/repos/hyperf/utils/zipball/1385749b3268e46672edb9f556ad0a1024c6cdf5",
+                "reference": "1385749b3268e46672edb9f556ad0a1024c6cdf5",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2370,7 +2370,7 @@
                 "swoole",
                 "utils"
             ],
-            "time": "2019-11-14T01:24:45+00:00"
+            "time": "2020-01-10T01:51:58+00:00"
         },
         {
             "name": "hyperf/websocket-client",
@@ -4346,6 +4346,7 @@
                 "mime",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-mime",
             "time": "2019-10-16T19:30:37+00:00"
         },
         {
@@ -4398,6 +4399,7 @@
                 "stdlib",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-stdlib",
             "time": "2018-08-28T21:34:05+00:00"
         }
     ],
