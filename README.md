@@ -109,3 +109,33 @@ S1: server1
 
 C1 -> 发送消息, 问C2在线吗 -> S1 -> 看了以下，回复消息，C2在线
 C1-> 发送消息给C2 -> S1 -> 看了一下C2在线 -> 给C2发送消息说 “C1 给你发了一条消息”
+
+
+-----
+https://github.com/winlion/chat/blob/e6fe40db51/ctrl/chat.go
+```go
+/**
+消息发送结构体
+1、MEDIA_TYPE_TEXT
+{id:1,userid:2,dstid:3,cmd:10,media:1,content:"hello"}
+2、MEDIA_TYPE_News
+{id:1,userid:2,dstid:3,cmd:10,media:2,content:"标题",pic:"http://www.baidu.com/a/log,jpg",url:"http://www.a,com/dsturl","memo":"这是描述"}
+3、MEDIA_TYPE_VOICE，amount单位秒
+{id:1,userid:2,dstid:3,cmd:10,media:3,url:"http://www.a,com/dsturl.mp3",anount:40}
+4、MEDIA_TYPE_IMG
+{id:1,userid:2,dstid:3,cmd:10,media:4,url:"http://www.baidu.com/a/log,jpg"}
+5、MEDIA_TYPE_REDPACKAGR //红包amount 单位分
+{id:1,userid:2,dstid:3,cmd:10,media:5,url:"http://www.baidu.com/a/b/c/redpackageaddress?id=100000","amount":300,"memo":"恭喜发财"}
+6、MEDIA_TYPE_EMOJ 6
+{id:1,userid:2,dstid:3,cmd:10,media:6,"content":"cry"}
+7、MEDIA_TYPE_Link 6
+{id:1,userid:2,dstid:3,cmd:10,media:7,"url":"http://www.a,com/dsturl.html"}
+7、MEDIA_TYPE_Link 6
+{id:1,userid:2,dstid:3,cmd:10,media:7,"url":"http://www.a,com/dsturl.html"}
+8、MEDIA_TYPE_VIDEO 8
+{id:1,userid:2,dstid:3,cmd:10,media:8,pic:"http://www.baidu.com/a/log,jpg",url:"http://www.a,com/a.mp4"}
+9、MEDIA_TYPE_CONTACT 9
+{id:1,userid:2,dstid:3,cmd:10,media:9,"content":"10086","pic":"http://www.baidu.com/a/avatar,jpg","memo":"胡大力"}
+*/
+```
+
