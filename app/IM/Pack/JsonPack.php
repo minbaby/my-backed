@@ -11,6 +11,7 @@ use App\Utils\PacketUtils;
 use Hyperf\Di\Container;
 use Hyperf\Logger\Logger;
 use Hyperf\Utils\Contracts\Arrayable;
+use Hyperf\Utils\Str;
 use Psr\Container\ContainerInterface;
 
 class JsonPack implements PackIf
@@ -50,10 +51,20 @@ class JsonPack implements PackIf
         $packetClass = PacketUtils::get($op, PacketUtils::get(CommandEnum::OP_DECODE_FAILED));
 
         $obj = $this->container->get($packetClass);
-        return $this->assign($data, $obj);
+
+        if (is_array($data)) {
+            $obj = $this->assign($data, $obj);
+        }
+
+        return $obj;
     }
 
-    private function assign(array $data, object $obj)
+    /**
+     * @param array $data
+     * @param object $obj
+     * @return Packet
+     */
+    private function assign(array $data, Packet $obj)
     {
         foreach ($data as $key => $value) {
             $method = setter($key);

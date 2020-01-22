@@ -6,7 +6,6 @@ use App\Annotation\PacketAnnotation;
 use App\Constants\CommandEnum;
 
 /**
- * Class DecodeFailed
  * @PacketAnnotation()
  */
 class DecodeFailedPacket extends Packet

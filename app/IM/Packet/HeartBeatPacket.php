@@ -10,7 +10,5 @@ use App\Constants\CommandEnum;
  */
 class HeartBeatPacket extends Packet
 {
-    protected $ignore = ['body'];
-
     protected $op = CommandEnum::OP_HEARTBEAT;
 }

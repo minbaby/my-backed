@@ -12,6 +12,7 @@ use App\IM\Packet\UnknownPacket;
 use App\IM\Service\UserService;
 use App\Utils\SessionContext;
 use Hyperf\Di\Annotation\Inject;
+use Hyperf\Utils\Str;
 use Swoole\WebSocket\Frame;
 
 /**
@@ -34,6 +35,6 @@ class DefaultHandler extends AbstractHandler
      */
     public function handler(Packet $packet, SessionContext $context): ?Packet
     {
-        return make(UnknownPacket::class);
+        return make(UnknownPacket::class)->setId(Str::random());
     }
 }

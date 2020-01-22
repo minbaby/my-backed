@@ -13,56 +13,17 @@ use Hyperf\Constants\ConstantsCollector;
  */
 final class CommandEnum extends AbstractConstants
 {
-    const OP_UNKNOWN = 0x0001;
-
-    const OP_SERVER_ERROR = 0x0002;
-
-    const OP_CHAT_REQUEST = 0x0003;
-
-    const OP_CHAT_RESPONSE = 0x0004;
-
-    const OP_CHAT_RESPONSE2 = 0x0004;
-
-    /**
-     * @Message("decode failed")
-     * @OpString("op.%s.decode_failed")
-     */
-    const OP_DECODE_FAILED = 0x0006;
+    const OP_UNKNOWN = 0;
 
     /**
      * @Message("heartbeat")
      * @OpString("op.%s.heartbeat")
      */
-    const OP_HEARTBEAT = 0x0007;
+    const OP_HEARTBEAT = 1;
 
-    /**
-     * @Message("??")
-     * @OpString("op.%s.login_request")
-     */
-    const OP_AUTH_LOGIN_REQ = 0x0100;
+    const OP_DECODE_FAILED = 2;
 
-    /**
-     * @Message("?")
-     * @OpString("op.%s.login_response")
-     */
-    const OP_AUTH_LOGIN_RESP = 0x0101;
+    const OP_SINGLE_MESSAGE = 100;
 
-    /**
-     * @Message("??")
-     * @OpString("op.%s.logout_request")
-     */
-    const OP_AUTH_LOGOUT_REQ = 0x0102;
-
-    /**
-     * @Message("?")
-     * @OpString("op.%s.logout_response")
-     */
-    const OP_AUTH_LOGOUT_RESP = 0x0103;
-
-    /**
-     * @OpString("op.%s.message_data")
-     */
-    const OP_GET_MESSAGE_REQ = 0x0200;
-
-    const OP_GET_MESSAGE_RESPONSE = 0x0201;
+    const OP_GROUP_MESSAGE = 200;
 }
