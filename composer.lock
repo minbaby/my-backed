@@ -858,16 +858,16 @@
         },
         {
             "name": "hyperf/crontab",
-            "version": "v1.1.6",
+            "version": "v1.1.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/crontab.git",
-                "reference": "2860e6ceaa0df865ca98896b2751a3b75536c6ce"
+                "reference": "56d777599fc909339e32c9753d54ebf43316a1e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/crontab/zipball/2860e6ceaa0df865ca98896b2751a3b75536c6ce",
-                "reference": "2860e6ceaa0df865ca98896b2751a3b75536c6ce",
+                "url": "https://api.github.com/repos/hyperf/crontab/zipball/56d777599fc909339e32c9753d54ebf43316a1e2",
+                "reference": "56d777599fc909339e32c9753d54ebf43316a1e2",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -911,7 +911,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-11-12T13:02:22+00:00"
+            "time": "2020-01-21T04:00:33+00:00"
         },
         {
             "name": "hyperf/database",
