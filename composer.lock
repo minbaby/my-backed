@@ -1172,16 +1172,16 @@
         },
         {
             "name": "hyperf/dispatcher",
-            "version": "v1.1.3",
+            "version": "v1.1.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/dispatcher.git",
-                "reference": "3c077a025568c6f2b332dcf76df47b31c09b628c"
+                "reference": "1f97c16374f57fdd3f7765c11248be2ca2b96697"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/dispatcher/zipball/3c077a025568c6f2b332dcf76df47b31c09b628c",
-                "reference": "3c077a025568c6f2b332dcf76df47b31c09b628c",
+                "url": "https://api.github.com/repos/hyperf/dispatcher/zipball/1f97c16374f57fdd3f7765c11248be2ca2b96697",
+                "reference": "1f97c16374f57fdd3f7765c11248be2ca2b96697",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1230,7 +1230,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-10-22T01:35:48+00:00"
+            "time": "2020-02-02T02:19:44+00:00"
         },
         {
             "name": "hyperf/event",
