@@ -1038,16 +1038,16 @@
         },
         {
             "name": "hyperf/devtool",
-            "version": "v1.1.9",
+            "version": "v1.1.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/devtool.git",
-                "reference": "1803468044e2199cfc1bc175d3019fcdde59a7f4"
+                "reference": "eb1556dbcbba1580e6213a47db18c56a77f394a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/devtool/zipball/1803468044e2199cfc1bc175d3019fcdde59a7f4",
-                "reference": "1803468044e2199cfc1bc175d3019fcdde59a7f4",
+                "url": "https://api.github.com/repos/hyperf/devtool/zipball/eb1556dbcbba1580e6213a47db18c56a77f394a7",
+                "reference": "eb1556dbcbba1580e6213a47db18c56a77f394a7",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1094,7 +1094,7 @@
                 "php",
                 "swoole"
             ],
-            "time": "2019-12-01T08:07:28+00:00"
+            "time": "2020-03-12T01:53:51+00:00"
         },
         {
             "name": "hyperf/di",
