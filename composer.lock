@@ -1916,16 +1916,16 @@
         },
         {
             "name": "hyperf/pool",
-            "version": "v1.1.14",
+            "version": "v1.1.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/pool.git",
-                "reference": "ac1497080788f57b3f3b9955a868ae8a8f80e0b0"
+                "reference": "1fc45f75e6edc1c73c84b19b9bfbb6aff45d53ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/pool/zipball/ac1497080788f57b3f3b9955a868ae8a8f80e0b0",
-                "reference": "ac1497080788f57b3f3b9955a868ae8a8f80e0b0",
+                "url": "https://api.github.com/repos/hyperf/pool/zipball/1fc45f75e6edc1c73c84b19b9bfbb6aff45d53ce",
+                "reference": "1fc45f75e6edc1c73c84b19b9bfbb6aff45d53ce",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1965,13 +1965,14 @@
                 "MIT"
             ],
             "description": "An independent universal connection pool component.",
+            "homepage": "https://hyperf.io",
             "keywords": [
                 "connection-pool",
                 "hyperf",
                 "php",
                 "swoole"
             ],
-            "time": "2019-12-20T01:47:04+00:00"
+            "time": "2020-03-19T06:42:43+00:00"
         },
         {
             "name": "hyperf/process",
