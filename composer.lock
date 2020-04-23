@@ -1851,16 +1851,16 @@
         },
         {
             "name": "hyperf/paginator",
-            "version": "v1.1.7",
+            "version": "v1.1.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/paginator.git",
-                "reference": "b03201428585aadf5b6904feb12c9da5084f0bb2"
+                "reference": "80a946b58a94fb427f83232a4c990b32583379a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/paginator/zipball/b03201428585aadf5b6904feb12c9da5084f0bb2",
-                "reference": "b03201428585aadf5b6904feb12c9da5084f0bb2",
+                "url": "https://api.github.com/repos/hyperf/paginator/zipball/80a946b58a94fb427f83232a4c990b32583379a3",
+                "reference": "80a946b58a94fb427f83232a4c990b32583379a3",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1907,12 +1907,13 @@
                 "MIT"
             ],
             "description": "A paginator component for hyperf.",
+            "homepage": "https://hyperf.io",
             "keywords": [
                 "hyperf",
                 "paginator",
                 "php"
             ],
-            "time": "2019-11-16T15:50:59+00:00"
+            "time": "2020-04-16T03:41:10+00:00"
         },
         {
             "name": "hyperf/pool",
