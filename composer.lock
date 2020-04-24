@@ -2306,16 +2306,16 @@
         },
         {
             "name": "hyperf/utils",
-            "version": "v1.1.14",
+            "version": "v1.1.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/utils.git",
-                "reference": "1385749b3268e46672edb9f556ad0a1024c6cdf5"
+                "reference": "aa152d3d707e8ccd0fc0585b3f73140a97695c1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/utils/zipball/1385749b3268e46672edb9f556ad0a1024c6cdf5",
-                "reference": "1385749b3268e46672edb9f556ad0a1024c6cdf5",
+                "url": "https://api.github.com/repos/hyperf/utils/zipball/aa152d3d707e8ccd0fc0585b3f73140a97695c1f",
+                "reference": "aa152d3d707e8ccd0fc0585b3f73140a97695c1f",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2367,13 +2367,14 @@
                 "MIT"
             ],
             "description": "A tools package that could help developer solved the problem quickly.",
+            "homepage": "https://hyperf.io",
             "keywords": [
                 "hyperf",
                 "php",
                 "swoole",
                 "utils"
             ],
-            "time": "2020-01-10T01:51:58+00:00"
+            "time": "2020-04-23T04:10:45+00:00"
         },
         {
             "name": "hyperf/websocket-client",
