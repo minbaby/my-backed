@@ -1038,16 +1038,16 @@
         },
         {
             "name": "hyperf/devtool",
-            "version": "v1.1.9",
+            "version": "v1.1.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/devtool.git",
-                "reference": "1803468044e2199cfc1bc175d3019fcdde59a7f4"
+                "reference": "8e9e6e1c2fa43cd29abdde2545219e899d65ea44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/devtool/zipball/1803468044e2199cfc1bc175d3019fcdde59a7f4",
-                "reference": "1803468044e2199cfc1bc175d3019fcdde59a7f4",
+                "url": "https://api.github.com/repos/hyperf/devtool/zipball/8e9e6e1c2fa43cd29abdde2545219e899d65ea44",
+                "reference": "8e9e6e1c2fa43cd29abdde2545219e899d65ea44",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1088,13 +1088,14 @@
                 "MIT"
             ],
             "description": "A Devtool for Hyperf.",
+            "homepage": "https://hyperf.io",
             "keywords": [
                 "devtool",
                 "hyperf",
                 "php",
                 "swoole"
             ],
-            "time": "2019-12-01T08:07:28+00:00"
+            "time": "2020-05-04T03:59:11+00:00"
         },
         {
             "name": "hyperf/di",
